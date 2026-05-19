@@ -1,0 +1,114 @@
+SOURCE: https://www.centralbank.go.ke/bank-supervision/
+
+emoji { display: inline !important; border: none !important; box-shadow: none !important; height: 1em !important; width: 1em !important; margin: 0
+07em !important; vertical-align: -0
+1em !important; background: none !important; padding: 0 !important; } body
+custom-background { background-color: #ffffff; } +254202860000 comms@centralbank
+ke Facebook Twitter Facebook Twitter Website Navigation Guide Contact Us Old Email New Email Home About CBK AT 50 Our Mission History Bank History Introduction Key Milestones Governors Banking Development Currency History Governance Careers Contact Us Core Functions Monetary Policy Financial Markets Forex Bank Supervision National Payments System Banking Services Currency Services Invest DhowCSD Portal Kenya Securities Treasury Bills Treasury Bonds Regulations and Licensing Government Securities Auction Rules Benchmark Bond Programme Guidelines Kenya Master Repurchase Agreement Learning Centre Publications Reports Monetary Policy Reports Bank Supervision &#038; Banking Sector Reports AML/CFT/CPF CBK Reports &#038; Financial Statements Financial Sector Stability Reports Financial Inclusion and Datasets Foreign Investment Survey Diaspora Remittances Survey National Payments Strategy 2022-2025 Kenya Electronic Payment and Settlement System Report Research Books Journal Articles Working Papers Discussion Papers White Papers Releases Weekly Bulletin Monthly Economic Indicators Quarterly Economic Review Statistical Bulletin Monthly Economic Review CBK Newsletter Metadata Public Notices Diaspora Remittances CBK Working Paper Series Lists of Licencees Conversions Mergers &#038; Acquisitions Shareholding Information Member Firms of the NSE Licensing Procedures Legislation &#038; Guidelines Circulars Forms Treasury Bills and Bonds Financial Institutions KEPSS/RTGS Commemorative Coins Internet Banking Statistics Rates Foreign Exchange Rates KESONIA KESONIA Compounded Index Repo &#038; Reverse Repo Horizontal Repo Market Central Bank Rate Discount Window Bills &#038; Bonds Treasury Bills Treasury Bonds Macroeconomic Statistics Balance of Payment Statistics Foreign Trade Summary Principal Exports: Volume, Value and Unit Prices Value of Selected Domestic Exports Value of Exports to Selected African Countries Value of Exports to Selected Rest of World Countries Value of Direct Imports per Commodities Value of Direct Imports from Selected African Countries Value of Direct Imports from Selected Rest of World Countries Monetary &#038; Finance Statistics Inflation Rates Government Finance Statistics National Accounts Statistics Annual GDP Exchange Rates Interest Rates Commercial Banks Weighted Average Rates Central Bank Rates National Payments System KEPSS/RTGS Automated Clearing House Cheques &#038; EFTs DFCC Payment Cards Number of ATMs, ATM Cards, &#038; POS Machines Number of Transactions Value of Transactions Mobile Payments Diaspora Remittances News News Multimedia Press Releases Speeches Presentations i-Supplier Portal Tenders Fraud Safety Select Page Bank Supervision One of the statutory objects of the Central Bank of Kenya under the Central Bank Act (Cap 491) is the promotion of financial stability through maintenance of a well-functioning banking system
+Bank Supervision Overview One of the Central Bank of Kenya’s mandates is to foster the liquidity, solvency and proper functioning of a market-based financial system
+This is achieved through the following: • Developing appropriate laws, regulations and guidelines that govern the players in the banking sector
+• Continuous review of the banking sector laws, regulations and guidelines to ensure that they remain relevant to the operating environment
+These include the Banking Act (Cap 488), Microfinance Act (2006), Central Bank of Kenya Act (Cap 491) and Prudential Guidelines and Regulations issued thereunder
+• Licensing banks, non-bank financial institutions, mortgage finance companies, credit reference bureaus, foreign exchange bureaus, money remittance providers and microfinance banks
+• Inspection of commercial banks, microfinance banks, non-bank financial institutions, mortgage finance companies, building societies, credit reference bureaus, foreign exchange bureaus, money remittance providers and representative offices of foreign banks to ensure that they comply with all the relevant laws, regulations and guidelines and protect the interests of depositors and other users of the banking sector
+• Analysis of financial reports and other returns from banking sector players to ensure compliance with the relevant laws, regulations and guidelines
+• Contributing towards initiatives that promote financial inclusion
+Commercial Banks and Mortgage Finance Companies Commercial banks and mortgage finance institutions are licensed and regulated in accordance with the provisions of the Banking Act and the Regulations and Prudential Guidelines issued thereunder
+As key players in the banking sector, commercial banks and mortgage finance companies are subject to regulatory requirements governing their prudential position and market conduct in order to safeguard the overall soundness and stability of the financial system
+Commercial Banks and Mortgage Finance Companies As at the end of June 2016, out of the 43 institutions, 39 commercial banks and the sole mortgage finance institution are privately owned while the Kenya Government holds controlling stakes in the remaining 3 commercial banks
+Twenty-four of the 39 privately owned banks and the one mortgage finance institution are locally owned (i
+their controlling shareholders are domiciled in Kenya), while 15 are foreign owned
+The ownership structure of licensed commercial banks and mortgage finance institutions is as depicted in the chart below
+1 &#8211; With more than 50% shareholding by Government and State Corporation
+2 &#8211; As at the end of June 2016, of the 24 locally controlled institutions, 3 were not in operation &#8211; one was under statutory management and two were in receivership
+See our directory of licensed commercial banks and mortgage finance companies Here
+See the KBA commercial banks branch listings HERE Other institutions regulated and supervised by the Central Bank of Kenya include: Microfinance Banks Microfinance banks are classified into two categories: community-based microfinance banks and nationwide microfinance banks
+These institutions have proved instrumental in expanding financial inclusion or access to financial services, throughout Kenya
+Microfinance Institutions The Microfinance Act 2006 and the Microfinance (Deposit Taking Institutions) Regulations 2008 set out the legal, regulatory and supervisory framework for the microfinance industry in Kenya
+The Microfinance Act 2006 became operational with effect from May 2, 2008
+The principal object of the Microfinance Act 2006 is to regulate the establishment, business and operations of deposit taking microfinance institutions in Kenya through licensing and supervision
+The Act enables microfinance banks (MFBs) licensed by the Central Bank of Kenya to mobilise deposits from the general public, thus promoting savings, competition, efficiency and financial access
+As financial intermediaries, MFBs play a complimentary role to commercial banks, as opposed to being competitors, by offering a vital service channel to the significant proportion of the population in Kenya that lacks access to commercial banks
+The microfinance industry therefore plays a pivotal role in deepening financial markets and enhancing access to financial services by a significant proportion of the population
+See our directory of licensed microfinance banks HERE
+Forex Bureaus and Money Remittance Providers Forex bureaus and money remittance providers play a pivotal role in ensuring fair foreign exchange rates, as more competition in the market reduces the spread of exchange rates
+Forex bureaus deal purely with spot exchange of foreign currencies, while money remittance providers also enable customers to transfer money within or outside the country
+Forex Bureaus Forex Bureaus in Kenya were established and first licensed in January 1995 to foster competition in the foreign exchange market and to narrow the exchange rate spread in the market
+As authorised dealers, forex bureaus conduct business and are regulated under the provisions of the sections 33A to 33(O) of the Central Bank of Kenya Act (Cap 491) and Forex Bureau Guidelines issued thereunder
+See our directory of licensed forex bureaus Here and our directory of money remittance providers Here
+Credit Reference Bureaus A Credit Reference Bureau (CRB) is an entity licensed to collect and collate credit information on individuals and businesses from different sources and provide that information upon request mainly by credit providers in the form of a credit report
+Credit Reference Bureaus Section 31(4) of the Banking Act, mandates the Central Bank to licence and supervise credit reference bureaus (CRB)
+The Credit Reference Bureau Regulations, 2013, govern the licensing, operation and supervision of CRBs by the Central Bank of Kenya
+Background The Kenyan banking sector was, particularly in the 1980s and 1990s, saddled with significant non-performing loans (NPLs), which led to the collapse of some financial institutions
+One of the major contributors to this state of affairs were “serial defaulters,” who thrived in the “information asymmetry” environment that prevailed due to lack of a credit information sharing mechanism amongst financial institutions
+The development of a sustainable information sharing mechanism is recognised as a key component in improving the efficiency of financial intermediation
+Towards this objective, banking sector stakeholders came together in 2008 and developed the Banking (Credit Reference Bureau) Regulations 2008, which governed the sharing of credit information on borrowers between providers of credit
+Regulations initially provided for the sharing of only negative information
+However, in 2013 revised CRB Regulations were issued that provided for the sharing of full file information (i
+Benefits to the customer • A credit report makes it easier for good customers to distinguish themselves from persistent defaulters, thereby attracting favourable loan terms
+• Financial institutions have online access to credit reports generated by the CRBs, resulting in reduced paperwork for the customer and faster processing of loans
+• By making credit histories more portable, customers are able to easily switch between financial institutions and thereby take advantage of competition to secure better credit terms
+Benefits to Credit Providers/Lenders • CIS strengthens the credit risk management processes for financial institutions
+• It facilitates faster and more efficient reviews of customers’ credit or loan applications
+Benefits to the economy • CIS creates an opportunity for a wider cross section of the population to access credit, particularly those with no access to tangible collateral
+• It is expected to reduce lending transaction costs while widely availing credit through reduced cost of credit and enhanced competition
+Key Highlights of the Credit Reference Bureau Regulations 2013 • A customer shall be entitled to a free copy of his credit report from a Bureau at least once per year
+• The consent of a customer is required for the submission or sharing of credit information, and such consent may be obtained by the customer signing any document giving express consent or authorisation for the sharing of credit information
+• A financial institution licensed under the Banking Act or Microfinance Act is required to submit both positive and negative credit information to CRBs on a monthly basis
+• A Bureau may, with the approval of the Central Bank, collect, receive, collate, compile and disseminate information relating to a customer of an institution that is obtained from a third party
+• Financial institutions have a duty to provide accurate credit information to CRBs
+• A customer has a right to dispute information contained in a credit report
+See our directory of licensed credit reference bureaus HERE
+Third-Party Credit Information Providers The Credit Information Sharing mechanism is regulated in accordance with the Credit Reference Bureau Regulations (2020)
+The Regulations allow Credit Reference Bureaus (CRBs) to source for credit information from third parties in order to enhance their databases, to provide a complete and comprehensive credit history of the borrower
+Through this arrangement, CRBs have been able to broaden their databases with data from third-party Credit Information providers (CIPs) after conducting due diligence on the sources and obtaining approval of CBK
+Third-party CIPs are providers of credit information other than commercial banks, microfinance banks and deposit-taking savings and credit co-operative societies which are mandatory subscribers
+The Regulations require that customers are protected and a mechanism for handling customer complaints be in place to ensure that customers’ complaints / disputes are handled expeditiously
+As at December 31, 2024, CBK had granted approval to CRBs to partner with the Third-Party Credit Information Providers listed in this Directory
+Representative Offices of Foreign Banks Representative Offices in Kenya are established by foreign banks who wish to have a presence in the country without having to launch fully fledged banking operations
+They are authorized and overseen by the Central Bank under the Banking Act and only permitted to undertake research, marketing and liaison roles on behalf of their parent and affiliated institutions
+They are therefore not allowed to conduct banking business
+See our directory of foreign bank representative offices HERE
+Digital Credit Providers The Central Bank of Kenya (Amendment) Act, 2021, which became effective on December 23, 2021, empowered CBK to license, regulate and supervise digital credit providers (DCPs) to ensure a fair and non-discriminatory marketplace for access to credit
+Subsequently, the CBK Digital Credit Providers Regulations, 2022, were issued and operationalized on March 18, 2022
+See our directory of licensed digital credit providers Here Other Financial Institutions Non Bank Financial Institutions Non Bank Financial Institutions (NBFI) are licensed under the Banking Act and are obligated to comply with all requirements applying to banks subject to any stipulated conditions
+Currently, there are no NBFIs licensed in Kenya
+Building Societies Building Societies are licensed under the Building Societies Act by the Registrar of Building Societies
+In their day to day operations, however, they are overseen by the Central Bank
+Currently there are no licensed Building Societies in Kenya
+Risk Based Supervisory Framework Risk Based Supervision (RBS) is a supervisory approach adopted by the CBK in supervision of licensed financial institutions in Kenya
+Under this approach, the CBK assesses the risk profile of each institution and ascertains the effectiveness of the systems and procedures to identify, measure, monitor and control risks
+A supervisory plan, detailing the supervisory resources needed for each institution (staff and time), is formulated having regard to the institution’s risk profile and risk management systems
+RBS Framework The CBK Risk Based Supervisory (RBS) framework is designed to allow CBK conduct high-quality supervision as the financial sector develops and as risk profiles of institutions change in reaction to competitive forces
+The enhanced supervisory regime seeks to promote competition, safety and soundness of the financial sector
+This approach benefits institutions as regulatory efforts are more focused on high-risk areas and provides for more efficient supervision
+Risk based supervision is an approach that places strong emphasis on understanding and assessing the adequacy of each institution’s risk management systems which are expected to identify, measure, monitor and control risk in an appropriate and timely manner
+The framework enables CBK to be more proactive and better positioned to pre-empt any serious threat to the stability of the financial system from current or emerging risks
+The assessment of the effectiveness of risk management has become even more important as new technologies, product innovation, regional expansion, the size and speed of financial transactions have changed the nature of the banking sector
+The principal benefits of the risk based supervisory approach are: • Better evaluation of risks through separate assessment of inherent risks and risk management processes
+• Greater emphasis on early identification of emerging risks and system-wide issues
+• Cost effective use of resources through a sharper focus on risk
+• Reporting of risk focused assessments to institutions
+The Central Bank of Kenya’s RBS methodology is dynamic and will continue to be enhanced in line with international best practice and developments in the local, regional and international arena
+tg {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+tg-rlfi{background-color:#f9f9f9;font-weight:bold;text-align:right;vertical-align:top}
+tg-hgcj{font-weight:bold;text-align:center}
+tg-4eph{background-color:#f9f9f9} @media screen and (max-width: 767px) {
+tg col {width: auto !important;}
+tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}} Daily KES Exchange Rates US DOLLAR 129
+tg {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+tg-rlfi{background-color:#f9f9f9;font-weight:bold;text-align:right;vertical-align:top}
+tg-hgcj{font-weight:bold;text-align:center}
+tg-4eph{background-color:#f9f9f9} @media screen and (max-width: 767px) {
+tg col {width: auto !important;}
+tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}} Key Rates Central Bank Rate 8
+7470% 18/05/2026 CBK Discount Window 9
+25% 15/10/2025 Inflation Rate 5
+75% 18/05/2026 Kesonia Compound Rate 0
+00% 19/05/2026 --> QuickLinks Forex Tenders Invest News Multimedia Press Releases Careers Cost of Credit Website MPC Press Briefing i-Supplier Portal Research Books Journal Articles Working Papers Discussion Papers Auction Results Treasury Bills Treasury Bonds Recent News Next MPC Meeting Banking Sector Innovation Survey 2025 CEOs Survey of March 2026 Market Perceptions Survey of March 2026 QuickLinks Forex Tenders Invest News Multimedia Press Releases Careers Cost of Credit Website MPC Press Briefing i-Supplier Portal Important Links National Treasury Kenya School of Monetary Studies Kenya Deposit Insurance Corporation Kenya Bankers Association Bankreturns Portal Non-Bankreturns Portal Templates/Software Downloads M-AKIBA Recent News Next MPC Meeting Banking Sector Innovation Survey 2025 CEOs Survey of March 2026 Market Perceptions Survey of March 2026 Central Bank of Kenya Haile Selassie Avenue P
+O Box 60000 - 00200 Nairobi, Kenya +254 20 286 0000 +254 20 286 1000 +254 20 286 3000 +254 709 081 000 +254 709 083 000 comms@centralbank
+ke Facebook Twitter © 2017 Central Bank of Kenya

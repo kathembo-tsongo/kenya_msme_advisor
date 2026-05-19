@@ -1,0 +1,85 @@
+SOURCE: https://www.ca.go.ke/licensing-overview
+
+site-branding-logo{max-width:280px!important;}header
+header-inner{padding-left:280px!important;} header
+branding{width:280px!important;} Licensing Overview | Communications Authority of Kenya header
+gva_menu > li > a {padding-top: 12px;padding-bottom: 12px;}header
+gva-search-region {right: 0px;top: 45px;}header
+header-main {padding: 5px 0;background: #fff;}
+gva_menu > li > a {font-size: 13px;font-weight:600;padding: 35px 10px;}
+sub-menu > li > a {font-weight: 600;text-transform: Capitalize;}
+post-title {font-size: 14px;line-height: 20px;}
+btn-inline {font-size: 13px;font-weight:400;}
+contact-info ul li {margin-bottom: 5px;padding-bottom: 5px;}
+contact-info ul li i {color: #ffffff;}
+block-title::after {content: '';background: #99ccff;}
+sub-title {text-transform: Capitalize;color: #1e4f9d !important;}
+text-gray {color: #000000 !important;}#footer
+footer-center {padding: 40px 0 20px;}
+title {color: #1e4f9d;font-size: 15px;}
+gva_menu > li > a {background: #ffffff;}
+block {margin-top: 20px;margin-right: 20px;background: #ffffff;padding-bottom:0px;}
+block-menu ul li a {font-family: inherit;font-size: 14px;border-bottom: 1px solid rgba(163,163,163,0
+title {font-size: 14px;line-height: 18px;}
+category a {font-size: 12px;text-transform: capitalize;}
+contact-info ul li {font-size: 13px;}header
+gva-search-region {right: 9px;}
+sub-menu > li {padding: 4px 0;}
+sub-menu > li {padding: 4px 0;}
+sub-menu {background-color: #ffffff;}
+sub-menu > li {padding: 4px 0;}
+sub-menu {background-color: #e7feff;}
+sub-menu > li > a {border-bottom: 1px solid rgba(236,97,100,0
+team-job {font-size: 12px;}header
+desc {font-size: 11px;color:#163ff5;}header
+header-icon span {height: 16px;}header
+post-meta {font-size: 10px;text-transform: capitalize;}header
+site-branding-logo img {width: 60%;padding-top: 8px;padding-bottom: 8px;}
+menu-bar span {background-color: #fff; }
+three {bottom: 6px;left: -40px;}
+my-iframe {margin: 0;padding: 0;width: 100%;height: 300px;overflow: hidden;border: 1px solid transparent !important; }
+my-iframe-container { position: relative; } body,
+info{font-family: Open Sans!important;} h1, h2, h3, h4, h5, h6,
+item-information span:first-child,
+pricing-vertical div[class*='col-']
+col-heading ul li, #user-login-form
+slide-style-1, #gavias_slider_single
+slide-style-2, #gavias_slider_single
+slide-style-3, #gavias_slider_single
+btn-slide a, #gavias_slider_single
+btn-slide, #gavias_slider_single
+btn-slide-white a, #gavias_slider_single
+btn-slide-white a{font-family: Open Sans!important;} body{font-size: 13px;}body
+body-page a{color: #1e4f9d!important;}body
+body-page a:hover{color: #163f82!important;}
+topbar{background: #ffffff!important;}header
+header-main a:hover{color: #00009f!important;}
+stuck{background: #173c78!important;}
+icaret{color: #ffffff!important;}
+icaret{color: #ffffff!important;}
+sub-menu{background: #ffffff!important;color: #000000!important;}
+sub-menu{color: #000000!important;}
+icaret{color: #000000!important;}
+icaret{color: #163ff5!important;} #footer
+footer-center{background: #173c78!important;} #footer
+block-title span{color: #ffffff !important;}#footer
+footer a{color: #ffffff!important;}#footer
+footer-center a:hover{color: #99ccff !important;}
+copyright{background: #0a1a33 !important;}
+copyright{color: #ffffff !important;}
+copyright a{color: $customize['copyright_color_link'] ?>!important;} Skip to main content info@ca
+ke For Enquiries: +254 703 042 000 Mobile: chukuahatua@ca
+ke Consumer Complaints Main navigation Home About CA Who We Are Leadership Access to Information Annual Reports Careers Licensing Licensing Overview Market Structure Licensing Procedures License Application Forms & Fees Licensee Register Compliance and Enforcement Monitoring and Inspections Regulatory Sandbox Consumer Protection IMEI Checker Our Role in your Protection Consumer Education Outreach Quality of Service Customer Satisfaction Survey Child Online Protection Statutes & Regulations Universal Access Universal Access Overview Universal Service Fund Purpose of the Fund Universal Access Projects ICT Services Coverage Geo-Portal ICT Access Gap Study Universal Service Advisory Council Data Dictionaries Projects Tenders Open Tenders Certificate of Award Closed Tenders Awarded Contracts Access to Procurement Opportunities Media Centre News & Events News Upcoming Events Press Statements Speeches Public Consultations Open Consultations Closed Consultations Published Findings KICA Regulations RIA Reports & Statistics Reports Statistics Others Campaigns Corporate Social Responsibility Information Centre International Obligations Public Notices Contact Us Search Licensing Overview Licensing Licensing Overview The Communications Authority of Kenya (CA) is mandated to license all communications systems and services in the country
+In executing this and its other responsibilities, CA is guided by relevant statutes, including the Kenya Information and Communications Act, 1998
+The Authority What We Do Statutes & Regulations Work With Us Do Business With Us Cyber Security Licensing Overview Market Structure Guidelines License Forms and Fees Licensee Register Compliance and Enforcement Monitoring and Inspections Numbering Management System Affiliations Ministry of Information, Communications and the Digital Economy International Telecommunication Union Universal Postal Union African Telecommunications Union Pan African Postal Union Commonwealth Telecommunications Organization East African Communications Organization African Advanced Level Telecommunications Institute */ Open toolbar Accessibility Tools Increase Text Decrease Text Grayscale High Contrast Negative Contrast Light Background Links Underline Readable Font Reset Contact info Communications Authority of Kenya P
+O Box 14448 - 00800 Nairobi,Kenya CA Centre, Waiyaki Way, Westlands P
+O Box 14448 -00800 Nairobi +254 (20) 424000 +254 703 042 000 +254 730 172 000 info@ca
+ke © Copyright 2025 | Communications Authority of Kenya | All Rights Reserved
+pojo-a11y-toolbar-toggle a{ background-color:#004E98; color: #ffffff; border-radius: 50%;} #pojo-a11y-toolbar
+pojo-a11y-toolbar-overlay, #pojo-a11y-toolbar
+pojo-a11y-links{ border-color: #bb8114;} body
+pojo-a11y-focusable a:focus{ outline-style: solid !important; outline-width: 1px !important; outline-color: #FF0000 !important;} #pojo-a11y-toolbar
+pojo-a11y-toolbar-overlay{ background-color: #ffffff;} #pojo-a11y-toolbar
+pojo-a11y-toolbar-item a, #pojo-a11y-toolbar
+pojo-a11y-toolbar-title{ color: #333333;} #pojo-a11y-toolbar
+active{ background-color: #4054b2; color: #ffffff;}

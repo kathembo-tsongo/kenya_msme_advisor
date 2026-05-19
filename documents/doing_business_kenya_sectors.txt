@@ -1,0 +1,728 @@
+SOURCE: https://www.doingbusinesskenya.go.ke/launch-your-business/
+
+Launch your Business &#8211; Doing Business Kenya img
+emoji { display: inline !important; border: none !important; box-shadow: none !important; height: 1em !important; width: 1em !important; margin: 0
+07em !important; vertical-align: -0
+1em !important; background: none !important; padding: 0 !important; } html{background-color: #FCFCFC;}#Wrapper,#Content{background-color: #FCFCFC;}body:not(
+template-slider) #Header{min-height: 0px;}body
+template-slider) #Header{padding-top: 0px;}#Footer
+widgets_wrapper {padding: 70px 0;}body, button, span
+timeline_items li h3 span, input[type="submit"], input[type="reset"], input[type="button"],input[type="text"], input[type="password"], input[type="tel"], input[type="email"], textarea, select,
+title h3 {font-family: "Maven Pro", Helvetica, Arial, sans-serif;}#menu > ul > li > a, a
+action_button, #overlay-menu ul li a {font-family: "Maven Pro", Helvetica, Arial, sans-serif;}#Subheader
+title {font-family: "Maven Pro", Helvetica, Arial, sans-serif;}h1, h2, h3, h4,
+text-logo #logo {font-family: "Maven Pro", Helvetica, Arial, sans-serif;}h5, h6 {font-family: "Maven Pro", Helvetica, Arial, sans-serif;}blockquote {font-family: "Maven Pro", Helvetica, Arial, sans-serif;}
+price {font-family: "Maven Pro", Helvetica, Arial, sans-serif;}body {font-size: 14px;line-height: 25px;font-weight: 400;letter-spacing: 0px;}
+big {font-size: 16px;line-height: 28px;font-weight: 400;letter-spacing: 0px;}#menu > ul > li > a, a
+action_button, #overlay-menu ul li a{font-size: 15px;font-weight: 400;letter-spacing: 0px;}#overlay-menu ul li a{line-height: 22
+title {font-size: 30px;line-height: 35px;font-weight: 600;letter-spacing: 1px;}h1,
+text-logo #logo {font-size: 48px;line-height: 50px;font-weight: 400;letter-spacing: 0px;}h2 {font-size: 30px;line-height: 34px;font-weight: 300;letter-spacing: 0px;}h3 {font-size: 25px;line-height: 29px;font-weight: 300;letter-spacing: 0px;}h4 {font-size: 21px;line-height: 25px;font-weight: 500;letter-spacing: 0px;}h5 {font-size: 15px;line-height: 25px;font-weight: 700;letter-spacing: 0px;}h6 {font-size: 14px;line-height: 25px;font-weight: 400;letter-spacing: 0px;}#Intro
+intro-title {font-size: 70px;line-height: 70px;font-weight: 400;letter-spacing: 0px;}@media only screen and (min-width: 768px) and (max-width: 959px){body {font-size: 13px;line-height: 21px;letter-spacing: 0px;}
+big {font-size: 14px;line-height: 24px;letter-spacing: 0px;}#menu > ul > li > a, a
+action_button, #overlay-menu ul li a {font-size: 13px;letter-spacing: 0px;}#overlay-menu ul li a{line-height: 19
+5px;letter-spacing: 0px;}#Subheader
+title {font-size: 26px;line-height: 30px;letter-spacing: 1px;}h1,
+text-logo #logo {font-size: 41px;line-height: 43px;letter-spacing: 0px;}h2 {font-size: 26px;line-height: 29px;letter-spacing: 0px;}h3 {font-size: 21px;line-height: 25px;letter-spacing: 0px;}h4 {font-size: 18px;line-height: 21px;letter-spacing: 0px;}h5 {font-size: 13px;line-height: 21px;letter-spacing: 0px;}h6 {font-size: 13px;line-height: 21px;letter-spacing: 0px;}#Intro
+intro-title {font-size: 60px;line-height: 60px;letter-spacing: 0px;}blockquote { font-size: 15px;}
+num { font-size: 45px; line-height: 45px; }
+number-wrapper { font-size: 45px; line-height: 45px;}
+title { font-size: 14px; line-height: 18px;}
+title { font-size: 38px; line-height: 38px; }
+title h3 { font-size: 32px; line-height: 32px; }
+title h3 {font-size: 32px; line-height: 32px; }
+plan-header h2 { font-size: 27px; line-height: 27px; }
+price > span { font-size: 40px; line-height: 40px; }
+currency { font-size: 18px; line-height: 18px; }
+period { font-size: 14px; line-height: 14px;}
+number { font-size: 80px; line-height: 80px;}
+desc h2 { font-size: 27px; line-height: 27px; }
+widget > h3 { font-size: 17px; line-height: 20px; }}@media only screen and (min-width: 480px) and (max-width: 767px){body {font-size: 13px;line-height: 19px;letter-spacing: 0px;}
+big {font-size: 13px;line-height: 21px;letter-spacing: 0px;}#menu > ul > li > a, a
+action_button, #overlay-menu ul li a {font-size: 13px;letter-spacing: 0px;}#overlay-menu ul li a{line-height: 19
+5px;letter-spacing: 0px;}#Subheader
+title {font-size: 23px;line-height: 26px;letter-spacing: 1px;}h1,
+text-logo #logo {font-size: 36px;line-height: 38px;letter-spacing: 0px;}h2 {font-size: 23px;line-height: 26px;letter-spacing: 0px;}h3 {font-size: 19px;line-height: 22px;letter-spacing: 0px;}h4 {font-size: 16px;line-height: 19px;letter-spacing: 0px;}h5 {font-size: 13px;line-height: 19px;letter-spacing: 0px;}h6 {font-size: 13px;line-height: 19px;letter-spacing: 0px;}#Intro
+intro-title {font-size: 53px;line-height: 53px;letter-spacing: 0px;}blockquote { font-size: 14px;}
+num { font-size: 40px; line-height: 40px; }
+number-wrapper { font-size: 40px; line-height: 40px;}
+title { font-size: 13px; line-height: 16px;}
+title { font-size: 34px; line-height: 34px; }
+title h3 { font-size: 28px; line-height: 28px; }
+title h3 {font-size: 28px; line-height: 28px; }
+plan-header h2 { font-size: 24px; line-height: 24px; }
+price > span { font-size: 34px; line-height: 34px; }
+currency { font-size: 16px; line-height: 16px; }
+period { font-size: 13px; line-height: 13px;}
+number { font-size: 70px; line-height: 70px;}
+desc h2 { font-size: 24px; line-height: 24px; }
+widget > h3 { font-size: 16px; line-height: 19px; }}@media only screen and (max-width: 479px){body {font-size: 13px;line-height: 19px;letter-spacing: 0px;}
+big {font-size: 13px;line-height: 19px;letter-spacing: 0px;}#menu > ul > li > a, a
+action_button, #overlay-menu ul li a {font-size: 13px;letter-spacing: 0px;}#overlay-menu ul li a{line-height: 19
+5px;letter-spacing: 0px;}#Subheader
+title {font-size: 18px;line-height: 21px;letter-spacing: 1px;}h1,
+text-logo #logo {font-size: 29px;line-height: 30px;letter-spacing: 0px;}h2 {font-size: 18px;line-height: 20px;letter-spacing: 0px;}h3 {font-size: 15px;line-height: 19px;letter-spacing: 0px;}h4 {font-size: 13px;line-height: 19px;letter-spacing: 0px;}h5 {font-size: 13px;line-height: 19px;letter-spacing: 0px;}h6 {font-size: 13px;line-height: 19px;letter-spacing: 0px;}#Intro
+intro-title {font-size: 42px;line-height: 42px;letter-spacing: 0px;}blockquote { font-size: 13px;}
+num { font-size: 35px; line-height: 35px; }
+number-wrapper { font-size: 35px; line-height: 35px;}
+title { font-size: 13px; line-height: 26px;}
+title { font-size: 30px; line-height: 30px; }
+title h3 { font-size: 26px; line-height: 26px; }
+title h3 {font-size: 26px; line-height: 26px; }
+plan-header h2 { font-size: 21px; line-height: 21px; }
+price > span { font-size: 32px; line-height: 32px; }
+currency { font-size: 14px; line-height: 14px; }
+period { font-size: 13px; line-height: 13px;}
+number { font-size: 60px; line-height: 60px;}
+desc h2 { font-size: 21px; line-height: 21px; }
+widget > h3 { font-size: 15px; line-height: 18px; }}
+sections_group {width: 64%;margin-left: 18%;}@media only screen and (min-width:1240px){#Wrapper,
+content_wrapper {max-width: 1240px;}
+is-sticky{max-width: 1240px;}}@media only screen and (max-width: 767px){
+widget-area { max-width: 480px !important; }}
+button {background-color: #f7f7f7;color: #747474;}
+button {border-color: #f7f7f7;color: #747474;}
+button:hover{background-color: #f7f7f7;color: #fff;}
+button-default input[type="button"],
+button-default input[type="reset"],
+button-default input[type="submit"],
+button-flat input[type="button"],
+button-flat input[type="reset"],
+button-flat input[type="submit"],
+button-round input[type="button"],
+button-round input[type="reset"],
+button-round input[type="submit"],
+woocommerce #respond input#submit,
+woocommerce #respond input#submit:hover,
+button-stroke input[type="submit"]:hover,
+button-stroke input[type="reset"]:hover,
+button-stroke input[type="button"]:hover,
+woocommerce #respond input#submit:hover,
+button:hover {color: #ffffff !important;}
+button_icon i{color: #ffffff !important;}
+remove{color: #ffffff!important;}
+action_button:hover{background-color: #f7f7f7;color: #747474;}
+action_button{border-color: #f7f7f7;}
+action_button:hover{background-color: #f7f7f7!important;}
+footer_button{color: #65666C!important;background-color:transparent;box-shadow:none!important;}
+footer_button:after{display:none!important;}
+button-custom input[type="button"],
+button-custom input[type="reset"],
+button-custom input[type="submit"],
+woocommerce #respond input#submit,
+button{font-family: Roboto;font-size: 14px;line-height: 14px;font-weight: 400;letter-spacing: 0px;padding: 12px 20px 12px 20px;border-width: 0px;border-radius: 0px;}
+button{color: #626262;background-color: #dbdddf;border-color: transparent;}
+button:hover{color: #626262;background-color: #d3d3d3;border-color: transparent;}
+button-custom input[type="button"],
+button-custom input[type="reset"],
+button-custom input[type="submit"],
+woocommerce #respond input#submit,
+button{color: #ffffff;background-color: #0095eb;border-color: transparent;}
+button-custom input[type="button"]:hover,
+button-custom input[type="reset"]:hover,
+button-custom input[type="submit"]:hover,
+woocommerce #respond input#submit:hover,
+button:hover{color: #ffffff;background-color: #007cc3;border-color: transparent;}
+action_button{color: #626262;background-color: #dbdddf;border-color: transparent;}
+action_button:hover{color: #626262;background-color: #d3d3d3;border-color: transparent;}
+remove{line-height: 14px!important;padding: 12px 20px 12px 20px!important;color: #ffffff!important;background-color: #0095eb!important;}
+single_add_to_cart_button:hover,
+remove:hover{color: #ffffff!important;background-color: #007cc3!important;}#Top_bar #logo,
+header-transparent #Top_bar #logo {height: 60px;line-height: 60px;padding: 15px 0;}
+menu > li > a {padding: 15px 0;}
+menu > li > a {margin: 20px 0;}
+description) {line-height: 90px;}
+menu > li > a {padding: 30px 0;}#Top_bar
+top_bar_right {height: 90px;}#Top_bar
+top_bar_right_wrapper {top: 25px;}
+header-plain #Top_bar a#header_cart,
+header-plain #Top_bar a#search_button,
+wpml-languages {line-height: 90px;}
+action_button {line-height: 90px!important;}@media only screen and (max-width: 767px){#Top_bar a
+responsive-menu-toggle {top: 40px;}
+mobile-header-mini #Top_bar #logo{height:50px!important;line-height:50px!important;margin:5px 0;}}
+twentytwenty-before-label::before{content:"Before"}
+twentytwenty-after-label::before{content:"After"}#Side_slide{right:-250px;width:250px;}#Side_slide
+desc{background-position-y:-1px;}@media only screen and ( max-width: 767px ){body:not(
+template-slider) #Header{min-height: ;}#Subheader{padding: ;}}@media only screen and (min-width: 1240px){body:not(
+header-simple) #Top_bar #menu{display:block!important}
+tr-menu #Top_bar #menu{background:none!important}#Top_bar
+mfn-megamenu{width:984px}#Top_bar
+mfn-megamenu > li{float:left}#Top_bar
+mfn-megamenu-cols-1{width:100%}#Top_bar
+mfn-megamenu-cols-2{width:50%}#Top_bar
+mfn-megamenu-cols-4{width:25%}#Top_bar
+mfn-megamenu-cols-5{width:20%}#Top_bar
+mfn-megamenu > li > ul{display:block!important;position:inherit;left:auto;top:auto;border-width:0 1px 0 0}#Top_bar
+mfn-megamenu > li:last-child > ul{border:0}#Top_bar
+mfn-megamenu > li > ul li{width:auto}#Top_bar
+mfn-megamenu-title{text-transform:uppercase;font-weight:400;background:none}#Top_bar
+mfn-megamenu{left:auto;right:0}
+mfn-megamenu-bg{box-sizing:border-box}#Top_bar
+mfn-megamenu-bg{padding:20px 166px 20px 20px;background-repeat:no-repeat;background-position:right bottom}
+mfn-megamenu-bg{padding-left:166px;padding-right:20px;background-position:left bottom}#Top_bar
+mfn-megamenu-bg > li{background:none}#Top_bar
+mfn-megamenu-bg > li a{border:none}#Top_bar
+mfn-megamenu-bg > li > ul{background:none!important;-webkit-box-shadow:0 0 0 0;-moz-box-shadow:0 0 0 0;box-shadow:0 0 0 0}
+menu > li ul{box-shadow:0 0 0 0 transparent!important;background-image:none;}
+mfn-megamenu{width:98%!important;margin:0 1%;padding:20px 0;}
+mfn-megamenu{width:100%!important;margin:0;}
+mfn-megamenu > li{display:table-cell;float:none!important;width:10%;padding:0 15px;border-right:1px solid rgba(0, 0, 0, 0
+mfn-megamenu > li:last-child{border-right-width:0}
+hide-border{border-right-width:0}
+mfn-megamenu > li a{border-bottom-width:0;padding:9px 15px;line-height:120%;}
+mfn-megamenu-title{font-weight:700;}
+mfn-megamenu > li:first-child{border-right-width:0}
+mfn-megamenu > li:last-child{border-right-width:1px}
+top_bar_left{width:auto!important}
+header-center #Top_bar #menu{display:inline-block!important}
+header-simple #Top_bar #menu{display:none;height:auto;width:300px;bottom:auto;top:100%;right:1px;position:absolute;margin:0}
+responsive-menu-toggle{display:block;right:10px}
+header-simple #Top_bar #menu > ul{width:100%;float:left}
+header-simple #Top_bar #menu ul li{width:100%;padding-bottom:0;border-right:0;position:relative}
+header-simple #Top_bar #menu ul li a{padding:0 20px;margin:0;display:block;height:auto;line-height:normal;border:none}
+header-simple #Top_bar #menu ul li a:after{display:none}
+header-simple #Top_bar #menu ul li a span{border:none;line-height:44px;display:inline;padding:0}
+header-simple #Top_bar #menu ul li
+menu-toggle{display:block;position:absolute;right:0;top:0;width:44px;height:44px;line-height:44px;font-size:30px;font-weight:300;text-align:center;cursor:pointer;color:#444;opacity:0
+header-simple #Top_bar #menu ul li
+header-simple #Top_bar #menu ul li
+header-simple #Top_bar #menu ul li
+header-simple #Top_bar #menu ul
+header-simple #Top_bar #menu ul li ul{position:relative!important;left:0!important;top:0;padding:0;margin:0!important;width:auto!important;background-image:none}
+header-simple #Top_bar #menu ul li ul li{width:100%!important;display:block;padding:0;}
+header-simple #Top_bar #menu ul li ul li a{padding:0 20px 0 30px}
+header-simple #Top_bar #menu ul li ul li a
+header-simple #Top_bar #menu ul li ul li a span{padding:0}
+header-simple #Top_bar #menu ul li ul li a span:after{display:none!important}
+mfn-megamenu-title{text-transform:uppercase;font-weight:400}
+mfn-megamenu > li > ul{display:block!important;position:inherit;left:auto;top:auto}
+header-simple #Top_bar #menu ul li ul li ul{border-left:0!important;padding:0;top:0}
+header-simple #Top_bar #menu ul li ul li ul li a{padding:0 20px 0 40px}
+header-simple #Top_bar #menu{left:1px;right:auto}
+responsive-menu-toggle{left:10px;right:auto}
+header-simple #Top_bar #menu ul li
+header-simple #Top_bar #menu ul li ul{left:auto!important;right:0!important}
+header-simple #Top_bar #menu ul li ul li a{padding:0 30px 0 20px}
+header-simple #Top_bar #menu ul li ul li ul li a{padding:0 40px 0 20px}
+menu > li > a{margin:20px 0;padding:0;-webkit-border-radius:5px;border-radius:5px}
+menu > li > a:after{display:none}
+menu > li > a{margin:10px 0!important}
+header-simple #Top_bar #menu ul li,
+header-creative #Top_bar #menu ul li{margin:0}
+header-simple #Top_bar #menu ul li > a,
+header-creative #Top_bar #menu ul li > a{-webkit-border-radius:0;border-radius:0}
+menu > li > a{margin:10px 0!important;padding:5px 0!important}
+menu > li > a span{line-height:30px!important}
+menu_wrapper{margin-right:20px}
+menu > li > a:after{top:auto;bottom:-4px}
+menu > li > a:after{top:auto;bottom:-4px}
+menu-line-below-80 #Top_bar:not(
+menu > li > a:after{height:4px;left:10%;top:50%;margin-top:20px;width:80%}
+menu-line-below-80-1 #Top_bar:not(
+menu > li > a:after{height:1px;left:10%;top:50%;margin-top:20px;width:80%}
+menu > li > a:after{display:none!important}
+menu > li > a:after{background:none repeat scroll 0 0 rgba(0,0,0,0)!important;border-color:#ccc transparent transparent;border-style:solid;border-width:7px 7px 0;display:block;height:0;left:50%;margin-left:-7px;top:0!important;width:0}
+menu > li > a:after{top:0!important}
+menu > li > a:after{background:none!important;border-color:transparent transparent #ccc;border-style:solid;border-width:0 7px 7px;display:block;height:0;left:50%;margin-left:-7px;top:auto;bottom:0;width:0}
+menu > li > a:after{top:auto;bottom:0}
+menu > li > a span{border-width:0!important}
+menuo-no-borders #Header_creative #Top_bar
+menu > li > a span{border-bottom-width:0}
+header-plain #Top_bar a#header_cart,
+header-plain #Top_bar a#search_button,
+menu_wrapper{margin-right:150px}body
+header-creative{padding-left:50px}body
+header-open{padding-left:250px}body
+template-blank{padding-left:0!important}
+is-sticky{box-sizing:border-box;padding-left:50px;}
+is-sticky{padding-left:0;padding-right:50px;}
+is-sticky{padding-right:250px;}#Header_creative{background-color:#fff;position:fixed;width:250px;height:100%;left:-200px;top:0;z-index:9002;-webkit-box-shadow:2px 0 4px 2px rgba(0,0,0,
+15);box-shadow:2px 0 4px 2px rgba(0,0,0,
+container{width:100%}#Header_creative
+creative-wrapper{opacity:0;margin-right:50px}#Header_creative a
+creative-menu-toggle{display:block;width:34px;height:34px;line-height:34px;font-size:22px;text-align:center;position:absolute;top:10px;right:8px;border-radius:3px}
+creative-menu-toggle{top:42px}#Header_creative #Top_bar{position:static;width:100%}#Header_creative #Top_bar
+top_bar_left{width:100%!important;float:none}#Header_creative #Top_bar
+top_bar_right{width:100%!important;float:none;height:auto;margin-bottom:35px;text-align:center;padding:0 20px;top:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}#Header_creative #Top_bar
+top_bar_right:before{display:none}#Header_creative #Top_bar
+top_bar_right_wrapper{top:0}#Header_creative #Top_bar
+logo{float:none;text-align:center;margin:15px 0}#Header_creative #Top_bar #menu{background-color:transparent}#Header_creative #Top_bar
+menu_wrapper{float:none;margin:0 0 30px}#Header_creative #Top_bar
+menu > li{width:100%;float:none;position:relative}#Header_creative #Top_bar
+menu > li > a{padding:0;text-align:center}#Header_creative #Top_bar
+menu > li > a:after{display:none}#Header_creative #Top_bar
+menu > li > a span{border-right:0;border-bottom-width:1px;line-height:38px}#Header_creative #Top_bar
+menu li ul{left:100%;right:auto;top:0;box-shadow:2px 2px 2px 0 rgba(0,0,0,0
+03);-webkit-box-shadow:2px 2px 2px 0 rgba(0,0,0,0
+mfn-megamenu{margin:0;width:700px!important;}#Header_creative #Top_bar
+mfn-megamenu > li > ul{left:0}#Header_creative #Top_bar
+menu li ul li a{padding-top:9px;padding-bottom:8px}#Header_creative #Top_bar
+menu li ul li ul{top:0}#Header_creative #Top_bar
+description{display:block;font-size:13px;line-height:28px!important;clear:both}#Header_creative #Top_bar
+search_wrapper{left:100%;top:auto;bottom:0}#Header_creative #Top_bar a#header_cart{display:inline-block;float:none;top:3px}#Header_creative #Top_bar a#search_button{display:inline-block;float:none;top:3px}#Header_creative #Top_bar
+wpml-languages{display:inline-block;float:none;top:0}#Header_creative #Top_bar
+active{padding-bottom:11px}#Header_creative #Top_bar
+action_button{display:inline-block;float:none;top:16px;margin:0}#Header_creative #Top_bar
+banner_wrapper{display:block;text-align:center}#Header_creative #Top_bar
+banner_wrapper img{max-width:100%;height:auto;display:inline-block}#Header_creative #Action_bar{display:none;position:absolute;bottom:0;top:auto;clear:both;padding:0 20px;box-sizing:border-box}#Header_creative #Action_bar
+contact_details{text-align:center;margin-bottom:20px}#Header_creative #Action_bar
+contact_details li{padding:0}#Header_creative #Action_bar
+social{float:none;text-align:center;padding:5px 0 15px}#Header_creative #Action_bar
+social li{margin-bottom:2px}#Header_creative #Action_bar
+social-menu{float:none;text-align:center}#Header_creative #Action_bar
+social-menu li{border-color:rgba(0,0,0,
+social li a:hover{color:#000}#Header_creative
+creative-social{position:absolute;bottom:10px;right:0;width:50px}#Header_creative
+creative-social li{display:block;float:none;width:100%;text-align:center;margin-bottom:5px}
+fixed-nav-prev{margin-left:50px}
+fixed-nav-prev{margin-left:250px}
+menuo-last #Header_creative #Top_bar
+header-open #Header_creative{left:0}
+creative-wrapper{opacity:1;margin:0!important;}
+header-open #Header_creative #Action_bar{display:block}body
+header-creative{padding-left:0;padding-right:50px}
+header-rtl #Header_creative{left:auto;right:-200px}
+creative-wrapper{margin-left:50px;margin-right:0}
+creative-menu-toggle{left:8px;right:auto}
+creative-social{left:0;right:auto}
+header-rtl #Footer #back_to_top
+header-rtl #popup_contact{right:70px}
+header-rtl #Header_creative #Top_bar
+menu li ul{left:auto;right:100%}
+header-rtl #Header_creative #Top_bar
+search_wrapper{left:auto;right:100%;}
+fixed-nav-prev{margin-left:0!important}
+fixed-nav-next{margin-right:50px}body
+header-open{padding-left:0;padding-right:250px!important}
+header-open #Header_creative{left:auto;right:0}
+header-open #Footer #back_to_top
+header-open #popup_contact{right:270px}
+fixed-nav-next{margin-right:250px}#Header_creative
+active{left:auto;right:-1px;}#Header_creative
+creative-wrapper{opacity:1;margin:0}
+vc_row[data-vc-full-width]{padding-left:50px}
+vc_row[data-vc-full-width]{padding-left:250px}
+vc_parallax-inner { left:auto; width: calc(100% - 250px); }
+vc_parallax-inner { left:0; right:auto; }#Header_creative
+scroll{height:100%;overflow-y:auto}#Header_creative
+menu li ul{display:none!important}#Header_creative
+scroll #Action_bar{position:static}#Header_creative
+dropdown{outline:none}#Header_creative
+menu_wrapper{float:left}#Header_creative
+dropdown #Top_bar #menu ul li{position:relative;float:left}#Header_creative
+dropdown #Top_bar #menu ul li a:after{display:none}#Header_creative
+dropdown #Top_bar #menu ul li a span{line-height:38px;padding:0}#Header_creative
+menu-toggle{display:block;position:absolute;right:0;top:0;width:38px;height:38px;line-height:38px;font-size:26px;font-weight:300;text-align:center;cursor:pointer;color:#444;opacity:0
+menu-toggle:after{content:"+"}#Header_creative
+menu-toggle:after{content:"-"}#Header_creative
+hover a{border-bottom:0}#Header_creative
+menu-toggle{display:none}#Header_creative
+dropdown #Top_bar #menu ul li ul{position:relative!important;left:0!important;top:0;padding:0;margin-left:0!important;width:auto!important;background-image:none}#Header_creative
+dropdown #Top_bar #menu ul li ul li{width:100%!important}#Header_creative
+dropdown #Top_bar #menu ul li ul li a{padding:0 10px;text-align:center}#Header_creative
+dropdown #Top_bar #menu ul li ul li a
+menu-arrow{display:none}#Header_creative
+dropdown #Top_bar #menu ul li ul li a span{padding:0}#Header_creative
+dropdown #Top_bar #menu ul li ul li a span:after{display:none!important}#Header_creative
+mfn-megamenu-title{text-transform:uppercase;font-weight:400}#Header_creative
+mfn-megamenu > li > ul{display:block!important;position:inherit;left:auto;top:auto}#Header_creative
+dropdown #Top_bar #menu ul li ul li ul{border-left:0!important;padding:0;top:0}#Header_creative{transition: left
+5s ease-in-out;}#Header_creative
+creative-wrapper{transition: opacity
+5s ease-in-out, margin 0s ease-in-out
+creative-wrapper{transition: opacity
+5s ease-in-out, margin 0s ease-in-out;}}@media only screen and (min-width: 1240px){#Top_bar
+is-sticky{position:fixed!important;width:100%;left:0;top:-60px;height:60px;z-index:701;background:#fff;opacity:
+97;-webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,0
+1);-moz-box-shadow:0 2px 5px 0 rgba(0,0,0,0
+1);box-shadow:0 2px 5px 0 rgba(0,0,0,0
+is-sticky{max-width:1240px;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}#Top_bar
+top_bar_right:before{background:none;box-shadow:unset}#Top_bar
+top_bar_right{top:-4px;height:auto;}#Top_bar
+top_bar_right_wrapper{top:15px}
+top_bar_right_wrapper{top:0}#Top_bar
+logo{width:auto;margin:0 30px 0 20px;padding:0}#Top_bar
+custom-logo-link{padding:5px 0!important;height:50px!important;line-height:50px!important}
+logo-no-sticky-padding #Top_bar
+is-sticky #logo{height:60px!important;line-height:60px!important}#Top_bar
+logo-main{display:none}#Top_bar
+logo-sticky{display:inline;max-height:35px;width:auto}#Top_bar
+menu_wrapper{clear:none}#Top_bar
+menu > li > a{padding:15px 0}#Top_bar
+menu > li > a span{line-height:30px}#Top_bar
+menu > li > a:after{top:auto;bottom:-4px}#Top_bar
+description{display:none}#Top_bar
+secondary_menu_wrapper,#Top_bar
+is-sticky #menu{background:rgba(0,0,0,
+current-menu-item) > a{color:#fff}
+action_button){color:rgba(255,255,255,
+wpml-lang-dropdown{background:rgba(0,0,0,0
+is-sticky #menu{background:rgba(255,255,255,
+current-menu-item) > a{color:#222}
+action_button){color:rgba(0,0,0,
+wpml-lang-dropdown{background:rgba(255,255,255,0
+1)}}@media only screen and (min-width: 768px) and (max-width: 1240px){
+header_placeholder{height:0!important}}@media only screen and (max-width: 1239px){#Top_bar #menu{display:none;height:auto;width:300px;bottom:auto;top:100%;right:1px;position:absolute;margin:0}#Top_bar a
+responsive-menu-toggle{display:block}#Top_bar #menu > ul{width:100%;float:left}#Top_bar #menu ul li{width:100%;padding-bottom:0;border-right:0;position:relative}#Top_bar #menu ul li a{padding:0 25px;margin:0;display:block;height:auto;line-height:normal;border:none}#Top_bar #menu ul li a:after{display:none}#Top_bar #menu ul li a span{border:none;line-height:44px;display:inline;padding:0}#Top_bar #menu ul li a span
+description{margin:0 0 0 5px}#Top_bar #menu ul li
+menu-toggle{display:block;position:absolute;right:15px;top:0;width:44px;height:44px;line-height:44px;font-size:30px;font-weight:300;text-align:center;cursor:pointer;color:#444;opacity:0
+menu-toggle:after{content:"+"}#Top_bar #menu ul li
+menu-toggle:after{content:"-"}#Top_bar #menu ul li
+hover a{border-bottom:0}#Top_bar #menu ul li a span:after{display:none!important}#Top_bar #menu ul
+menu-toggle{display:none}#Top_bar #menu ul li ul{position:relative!important;left:0!important;top:0;padding:0;margin-left:0!important;width:auto!important;background-image:none!important;box-shadow:0 0 0 0 transparent!important;-webkit-box-shadow:0 0 0 0 transparent!important}#Top_bar #menu ul li ul li{width:100%!important}#Top_bar #menu ul li ul li a{padding:0 20px 0 35px}#Top_bar #menu ul li ul li a
+menu-arrow{display:none}#Top_bar #menu ul li ul li a span{padding:0}#Top_bar #menu ul li ul li a span:after{display:none!important}#Top_bar
+mfn-megamenu-title{text-transform:uppercase;font-weight:400}#Top_bar
+mfn-megamenu > li > ul{display:block!important;position:inherit;left:auto;top:auto}#Top_bar #menu ul li ul li ul{border-left:0!important;padding:0;top:0}#Top_bar #menu ul li ul li ul li a{padding:0 20px 0 45px}
+rtl #Top_bar #menu{left:1px;right:auto}
+responsive-menu-toggle{left:20px;right:auto}
+menu-toggle{left:15px;right:auto;border-left:none;border-right:1px solid #eee}
+rtl #Top_bar #menu ul li ul{left:auto!important;right:0!important}
+rtl #Top_bar #menu ul li ul li a{padding:0 30px 0 20px}
+rtl #Top_bar #menu ul li ul li ul li a{padding:0 40px 0 20px}
+responsive-menu-toggle{position:static!important;margin:11px 0!important}
+menu_wrapper #menu{left:0;right:auto}
+header-stack #Top_bar #menu{left:auto;right:0}
+admin-bar #Header_creative{top:32px}
+layout-full-width #Wrapper{padding-top:60px}#Header_creative{position:fixed;width:100%;left:0!important;top:0;z-index:1001}#Header_creative
+creative-wrapper{display:block!important;opacity:1!important}#Header_creative
+creative-menu-toggle,#Header_creative
+creative-social{display:none!important;opacity:1!important}#Header_creative #Top_bar{position:static;width:100%}#Header_creative #Top_bar #logo,#Header_creative #Top_bar
+custom-logo-link{height:50px;line-height:50px;padding:5px 0}#Header_creative #Top_bar #logo img
+logo-sticky{max-height:40px!important}#Header_creative #logo img
+logo-main{display:none}#Header_creative #logo img
+logo-sticky{display:inline-block}
+logo-no-sticky-padding #Header_creative #Top_bar #logo{height:60px;line-height:60px;padding:0}
+logo-no-sticky-padding #Header_creative #Top_bar #logo img
+logo-sticky{max-height:60px!important}#Header_creative #Action_bar{display:none}#Header_creative #Top_bar
+top_bar_right{height:60px;top:0}#Header_creative #Top_bar
+top_bar_right:before{display:none}#Header_creative #Top_bar
+top_bar_right_wrapper{top:0;padding-top:9px}#Header_creative
+scroll{overflow:visible!important}} form input
+display-none{display:none!important} table td { padding: 10px; text-align: left!important; } #Top_bar
+menu > li > a { line-height: 20px!important; } #Top_bar
+logo { margin: 0 30px 0 0px!important; }
+1em; background: #fff; border: 1px solid #ccc; } #Top_bar
+menu > li > a { padding: 7px 0!important; } #Footer a { color: #ffffff!important; }
+wpb_animate_when_almost_visible { opacity: 1; } /** Mega Menu CSS: fs **/ Navigating the Kenyan Business Regulatory Environment About https://youtu
+be/k9yizQMKKDc About the toolkit The Government’s economic plan, implemented over the past six years, has addressed various bottlenecks facing businesses
+read more Government Reforms To improve Kenya’s business environment, the Government in 2014 established a multi-institutional Business Environment Delivery Unit, which draws membership from various ministries, departments and agencies
+Read more Download Regulatory Map Plan Business Download Document Plan your Business Training and Capacity Building Finance Market Information Intellectual Property Research and Development Support Agencies https://www
+com/watch?v=n9Caa_S1Y-8 Launch Business Download Document Launch your Business Launch your Business Application for Single Business Permit Sector Specific Regulations Launch Stage Regulators https://www
+com/watch?v=gt8CvYgpZks Manage Business Download Document Manage your Business Regulators Statutory Deductions Intellectual Property Product Quality Standards Business Support Human Resource Dispute Resolution Counties https://www
+com/watch?v=vNztvs2V-bQ Scale Business Download Document Scale your Business Scale your Business Scale Stage Regulators https://www
+com/watch?v=YfoMlDrm51g Doing Business in Counties Invest in Kenya Financial Services Sector Energy Sector ICT Sector Agriculture Sector Infrastructure Sector Manufacturing Sector Real Estate and Construction Sector Tourism Sector Facebook Twitter Instagram Email Launch your Business Home Launch your Business Launch your business Application for Single Business Permit Sector Specific Regulations Launch Stage Regulators Launch your business Introduction The Registrar of Companies is responsible for business registrations in Kenya
+He/she issues certificates of compliance for foreign companies, certificates of incorporation for local companies and certificates of registration for sole proprietorship and partnerships
+Basics of Business Registration What is incorporation? Incorporation is the process by which a new or existing business registers as a company
+A business cannot be registered as a company unless it has been incorporated and registered at the Companies Registry under the Companies Act, 2015
+Who can incorporate a company? One or more legal persons (which includes individuals, companies, government-owned entities, non-profit organizations and other legal persons excluding an unincorporated Trust) can form a company by subscribing their names to a memorandum of association
+Which types of companies are available? There are five types of companies: Company Type Details Private company limited by shares This type of company has share capital and the liability of each member is limited to the amount, if any, unpaid on their shares
+A private company cannot offer its shares for sale to the general public and may not have more than fifty (50) members
+Unlimited company This type of company has no limit on the liability of its members Public limited company A public company has share capital and limits the liability of each member to the amount unpaid on their shares
+It may offer its shares for sale to the general public and may be listed at the securities Company limited by guarantee This type of company does not have share capital and its members are guarantors rather than shareholders
+The liability of members is limited to the amount they agree to contribute to the company’s assets if it is liquidated Foreign Companies This type of a Company is a Branch of a Company registered outside of Kenya, that has established a place of business in Kenya (For more details, see PN/07 – Foreign Companies) Requirements for registering a company Requirement Company registration form (Form CR1) Application for reservation of a company name (Form CR14) NB: The name search process and company registration have been combined into one process and the applicant is no longer required to have form CR14 (Application for reservation of company name) Applicant must submit at least 3 names and then proceed to apply for company registration
+The registrar of companies will register the approved name (amongst the minimum of 3 submitted for reservation) Memorandum of association Particulars of the directors and secretary (Form CR2and Form CR10) Statement of nominal capital Articles of association (however if model articles are adopted in entirety, there is no need for a copy to be lodged at the Companies Registry for filing) Notification of the residential address of directors and company secretary (Form CR8 and CR12) Kenyan national identification numbers of each director and secretary or, Kenyan foreigner certificate number, or in the case of a director who is not a Kenyan citizen and is not resident in Kenya, the director’s passport number will suffice a passport-sized photograph of each director and the company secretary d-What is the registered office? Every company must have a registered office
+The registered office must be a physical location where notices and other communication can be delivered to the company
+The registered office does not need to be the place where the company carries on its day-to-day business
+e-How many shareholders should a company have? A company may have one natural shareholder
+A private company must not have more than 50 members
+There is no limit on the number of members that a company limited by guarantee, a public company or an unlimited company may have
+f-How many directors can a company have? A private company may have one director while a public company or a company limited by guarantee must have at least two directors
+At least one company director must be a natural person
+All directors who are natural persons must be at least 18 years old
+g-Must a company have a Company secretary? Private companies with a share capital of less than KES 5,000,000 are not required to have a secretary
+However, all public companies must have a secretary
+A company secretary must be qualified under the Certified Public Secretaries of Kenya Act
+h-Certificate of incorporation The certificate of incorporation is conclusive evidence that the requirements of the Companies Act 2015 as to registration have been complied with and that the company is duly registered under the Act
+The certificate will state: the name and registration number of the company the date of incorporation whether it’s a limited or unlimited company, and if limited whether it is limited by shares or by guarantee whether it is a private or public company With a verifiable security feature
+The certificate of incorporation must be signed, sealed and authenticated by the Registrar of Companies
+i-How much does it cost to register a company? The total registration fees for all companies is KES
+10,750/= (or as statutorily prescribed), and is regardless of the nominal share capital, where applicable
+This comprises of the registration fee, Official Search Results and convenience fee
+No stamp duty is payable at the point of incorporation of a company
+Registering your Business The incorporation of a Company is a one step, one day process
+This is done online on the eCitizen website https://www
+It is important to note the following when choosing a company name (s): A company name may not contain more than 160 characters
+The name of a limited company that is a private company must end with “Limited” or “Ltd”
+The name of a limited company that is a public company incorporated under the 2015 Act must end with “plc” or “Public Limited Company”
+Offensive or abusive words are not allowed either
+Offensive words in vernacular (mother tongue) are not allowed either
+Political names The name should not be identical to an already reserved name or to the name of an already registered company, business name, LLP, partnership
+(Unless the existing company, business, LLP or partnership is part of the same group as the company and consents in writing to the use of the proposed name)
+The name should not be the same as or similar to that of a registered trademark
+(it may therefore be important to also conduct a search at the trademarks registry) Names containing the words “co-operative”, “society”, or “trade union” are not allowed Numbers may be used in any part of a name A full stop, comma, colon, semi-colon or hyphen may be used The following punctuation marks may be used: an apostrophe (‘), brackets/parenthesis (), exclamation mark (!), Guillemet (<<>>), inverted comma, question mark, solidus (\ /) The following signs and symbols may be used only if they are not one of the first three letters of a company name: *; =; #; % The name should not start with the words “Kenya” as the same is reserved for government owned entities
+Applicants can now obtain the Certificate of Incorporation, Official Search (previously CR12; list of directors/shareholders of the new registered company), KRA PIN, PAYE, VAT, NHIF and NSSF numbers electronically as part of the online company registration process
+Registration of local companies by foreigners The procedure of registration of a local company by a foreigner is almost similar to the registration of local company by a citizen but for the requirements
+During the registration process, a foreigner will only use their passport to register the company unlike for locals who require a Kenya Revenue Authority PIN for registration
+More about registration { https://eregulations
+ke/objective/search?l=en&embed=&includeSearch=true&filter_tab=1&flt_4=42&flt_31=325 } Application for Single Business Permit Business Permit Basics As part of the Kenya Government efforts to improve the business environment for SMEs the following are selected reforms under single business permit (Ease of doing Business Reform milestone report 2020) Through the Industrial Training (Training Levy) (Amendment) Order, 2020, Kenya has waived the registration requirement for companies with up to 100 employees for the first 12 months after registration
+Kenya waived registration of a business premise with the Directorate of Occupational Safety and Health
+The following counties have a self-service portal for obtaining a single business permit: Nairobi- County self-service portal Kisumu- county e-services portal Mombasa- County e-services portal
+Uasin Gishu- County Revenue Self Service Portal Business Permit Application Process Application for a single business permit in Nairobi follows four steps Verification of business permit application form Assessment of business license fees Obtain the invoice for business licence fees Pay for licence fees and obtain a unified business permit 1-Verification of business permit Requirements Tick Additional Information Business permit application form (Original) The applicant ought to have an office or premises in which the company operations will be carried out before one can apply for the business permit Certificate of incorporation (Copy) or Certificate of incorporation (copy) For local companies Or Business registration certificate (copy) For sole proprietorships and partnerships Or Certificate of compliance (copy) For branches of foreign companies Identity card (copy) Of one of the directors if local or Passport (original) Of one of the directors if foreign Company PIN certificate 2-Assessment of business license fees Requirements Tick Business permit application form (Original) Certificate of incorporation (Copy) or Certificate of incorporation (copy) For local companies Or Business registration certificate (copy) For sole proprietorships and partnerships Or Certificate of compliance (copy) For branches of foreign companies Identity card (copy) Of one of the directors if local or Passport (original) Of one of the directors if foreign PIN certificate (copy) For the registered entity or for the directors if its a sole proprietor or a partnership 3-Obtain invoice for business licence fees Requirement Approved business permit application form (original) 4- Pay for licence fees and obtain unified business permit Requirement Cost Tick Additional Information Permit payment Invoice Application fees Ksh 200 Business Permit Fee for a small workshop of up to 5 employees
+Ksh 15,000 Fire Permit Licence Ksh 4,500 (Estimated) Advertisement Licence Ksh 4,200 (Estimated) 1-All business entities ought to have a trading licence and a fire clearance certificate
+2-Entities dealing with consumables must in addition have a health certificate and a food hygiene licence
+3-An advertising signage licence is applicable for all entities with advertising signage (300mm by 600 mm or less) 4-It is a legal requirement that the trade licence be displayed in a conspicuous place
+5-Licensee who fails to display the permit shall be guilty of an offense and liable to a fine not exceeding five hundred shillings 6-The licence is valid for one calendar year i
+The procedure of obtaining the single business permit can be accessed here { https://eregulations
+ke/procedure/266/169?l=en } Other interesting Start a business reforms Business Area Baseline-2014 2019 Number of procedures 10 7 Time taken to set up business 32 Days 14 Days Cost of setting up business 38% Income per capita 22% Income per capita Sector Specific Regulations Agriculture Permits and licenses in the agricultural sector vary depending on the sub sector
+Below is a list Sub sector Licencing Body Detail Business Permit Requirements Milk Kenya Dairy Board Milk dealers are required to obtain relevant licenses and permits from Kenya Dairy Board
+Premises dealing with milk and milk products are first inspected to establish compliance to milk quality and safety requirements prior to licensing
+Routine inspections are subsequently conducted to monitor continued compliance
+Non compliances may lead to suspension of license
+Processor license Cooling Plant License Milk Bar License Primary Producer License Dairy Manager License Export Permit Import Permit Milk Carriage Permit https://www
+ke/license-categories-and-fees/ Meat, Piggery County Government Slaughterhouse Slaughter man Meat Transport Slaughterhouse { https://eregulations
+ke/procedure/268?l=en&includeSearch=true } Slaughter man License { https://eregulations
+ke/procedure/271?l=en&includeSearch=true } Meat Transport { https://eregulations
+ke/procedure/272?l=en&includeSearch=true } Pig Producer License { https://eregulations
+ke/procedure/274?l=en&includeSearch=true } Horticulture Horticultural Crops Directorate ( HCD) The Horticultural Crops Directorate ( HCD) which was formerly known as Horticultural Crops Development Authority (‘HCDA’) was established under the Agriculture Act, Chapter 318 of the Laws of Kenya, through Legal Notice No
+The statutory objective of the Directorate is to promote, develop and coordinate the production and marketing of horticultural produce Export license
+Marketing agent Ship chandlers Horticultural nursery operators
+Horticultural importers Clearing and forwarding agents https://horticulture
+php/our-services/licensing-and-regulation Tea Coffee Directorate NB: The Government of Kenya through Coffee Act aims to set up Coffee Board of Kenya which will take up the mandate of the Coffee directorate { https://infotradekenya
+ke/media/Coffee%20Act%20Chapter%20333
+pdf } Regulates the tea value chain Tea manufactures Tea Dealers http://tea
+php/our-services/regulation-and-compliance#regulation-and-compliance Coffee Coffee Directorate NB: The Government of Kenya through Coffee Act aims to set up Coffee Board of Kenya which will take up the mandate of the Coffee directorate { https://infotradekenya
+ke/media/Coffee%20Act%20Chapter%20333
+pdf } Regulates the coffee value chain Coffee Buyers Warehouse man Importer of processed coffee Independent Cupping Centre Liquorer’s practitioners http://coffee
+php/our-services/regulation-and-compliance#licences-issued-by-the-regulation-and-compliance-department Nuts and Oils Nuts and Oils Directorate Nuts and Oil Crops Directorate is an arm of Agriculture and Food Authority (AFA) mandated to develop, promote and regulate the nuts and oil crops industry in Kenya
+Importer and Exports of nuts and oils http://nuts
+php/our-services/enforcement-and-compliance Sisal Cotton Fiber Crops Directorate In 2014, the Agriculture and Food Authority (AFA) was established under Section 3 of the Agriculture and Food Authority following the operationalization of the Crops Act 2013 that repealed the Acts Cotton Act, Cap 335 Cap 335 in 1990 and Sisal Industry Act, 1946 (No
+Subsequently the Fibre Crops Directorate was established and assumed the functions of the Sisal Board of Kenya and Cotton Development Authority
+To date, the regulatory, development and promotion mandate of the fibre value chains is under the AFA-Fibre Crops Directorate Fiber Retailers Fiber collection center Fiber crops manufacturing factory (Ginneries/ Sisal Factories) Fiber exporters and importers http://fibre
+php/our-services/regulations-compliance#registration-and-licensing Food Crops Food Crops Directorate The Food Directorate was established in August 2014 pursuant to section 11(1) of Agriculture and Food Authority Act 2013 , with a mandate to regulate, promote and develop scheduled food crops which are broadly categorized into three; 1-Cereals 2-Legumes 3-Roots & Tubers
+Large scale growers Grower associations Dealers-Market agents, Transporters, processors Import/Export http://food
+php/our-services/licensing-regulation#minimum-requirements-for-the-regulatory-services Sugar Sugar Directorate The regulatory, development, and promotion mandate of the sugar value chain is under the AFA – Sugar Directorate
+Dealers, out growers’ institutions, umbrella out growers’ institutions and umbrella millers’ associations Jaggery or a Sugar Miller Molasses dealers Importer/Exporters of sugar http://sugar
+ke/ Industrial Crops Miraa, Pyrethrum and Other Industrial Crops Directorate Miraa, Pyrethrum and Other Industrial Crops Directorate (MPICD) is one of the Directorates created under the Agriculture and Food Authority (AFA)
+The mandate of the Directorate is to regulate, develop and promote Miraa, Pyrethrum and Other Industrial crops sub-sectors in Kenya
+The Directorate draws its mandate from the Agriculture and Food Authority Act ( Act No
+13 of 2013 ) and the Crops Act ( Act No
+The Directorate is in the process of developing the Crops (Pyrethrum) Regulations and the Crops (Miraa) to streamline operations in the sub-sector
+The functions of the Directorate are also aligned to the Constitution of Kenya 2010 and Vision 2030
+Grower Associations Aggregators Commercial Transporters Import/Export http://pyrethrum
+php/our-services/enforcement-compliance Pest Control Products Pest Control Products Board The Pest Control Products Board is a Statutory organization of Kenya Government established under an Act of parliament, the Pest Control Products Act, Cap 346, Laws of Kenya of 1982 to regulate the importation and exportation, manufacture, distribution and use of pest control products Pest Product dealers https://www
+ke/2816-2/ Seed and Plants Kenya Plant Health Inspectorate services Kenya Plant Health Inspectorate Service (KEPHIS) is the government parastatal whose responsibility is to assure the quality of agricultural inputs and produce to prevent adverse impacts on the economy, the environment and human health
+Importation of seeds and the Biological Based Organisms and Related Products
+org/# Education Licensing Body Detail Business Permit and Licenses Requirements Commission for University Education To promote the objectives of university education, by regulating and accrediting universities and programmes, among other functions Universities Accreditation https://cue
+ke/images/phocadownload/university%20regulations%202014
+pdf National Commission for science, Technology and Innovation The objective of the Commission shall be to regulate and assure quality in the science, technology and innovation sector and advise the Government in matters related thereto
+Research Institutions Research License https://research-portal
+ke/ Energy The Energy and Petroleum Regulatory Authority (EPRA) is established as the successor to the Energy Regulatory Commission (ERC) under the Energy Act, 2019 with an expanded mandate of inter alia regulation of upstream petroleum and coal
+ERC has a mandate among others of licensing and regulations as illustrated below Sub sector Permit and Licence Requirements Petroleum sub sector Petroleum licenses and permits application guide https://www
+ke/services/petroleum/licencing-information/ Electricity sub sector Online license application guide-Facilities inspection, Electrician consent letter https://www
+ke/services/electricity/requirement-for-license-or-permit/ Renewable energy Renewable Energy Registers https://www
+ke/services/renewable-energy-2/energy-audit-firm-register/ Energy efficiency Standards and Labelling-Manufacturers/Importers of the listed appliances are required to have them subjected to energy performance testing as per the applicable Kenyan Standard https://www
+ke/services/energy-efficiency-project/standards-and-labelling/ Health The health sector has various bodies regulated various aspect of health as follows; Health facility Nursing/Midwifery training Pharmacy Practice and Manufacture and Trade of drugs and poison Nutrition and dietetics Training Public Health Officers and Technician Training Regulator About License Requirements The Kenya medical practitioners and dentist council To regulate the training, practice and licensing of medicine & dentistry and healthcare institutions that include private & mission hospitals, medical, dental centers & clinics, nursing and maternity homes and standalone funeral homes
+Health Facility License https://kmpdc
+ke/licensing-of-a-health-facility/ The Nursing Council of Kenya The Nursing Council of Kenya is a body corporate established by the Nurses Act Cap 257 of the Laws of Kenya to regulate standards of nursing & midwifery education and practice
+Accredited nursing/midwifery training institution https://nckenya
+com/accredation/ The Pharmacy and Poisons Board is the Drug Regulatory Authority The Pharmacy and Poisons Board is the Drug Regulatory Authority established under the Pharmacy and Poisons Act, Chapter 244 of the Laws of Kenya
+The Board regulates the Practice of Pharmacy and the Manufacture and Trade in drugs and poisons
+The Board aims to implement the appropriate regulatory measures to achieve the highest standards of safety, efficacy and quality for all drugs, chemical substances and medical devices, locally manufactured, imported, exported, distributed, sold, or used, to ensure the protection of the consumer as envisaged by the laws regulating drugs in force in Kenya
+Pharmacy Practice Manufacture and Trade of drugs and poison https://www
+org/downloads Kenya Nutritionist and Dieticians Institute KNDI is mandated: 1
+To provide for training, registration and licensing of Nutritionists and Dieticians
+To provide for the regulations of the standards and practice of the profession
+To ensure effective participation in matters relating to nutrition and dietetics and for connected purposes Nutrition and dietetics Training Institution https://www
+institute/accreditation/ Public Health Officers and Technicians Council [PHOTC Public Health Officers and Technicians Council [PHOTC] is a professional regulatory body established by the Public Health Officers [Training, registration and Licensing] Act No
+12 of 2013 with a mandate of regulating the training, practice and employment of Public Health Officers and Technicians and to advise the Government in relation to all aspects thereof
+Public Health Officers and Technician Training Institutions https://photc
+org/about/registration/ Manufacturing A manufacturer or importer of excisable good is required to obtain a license to manufacture excisable goods before commencement of operations
+This license is issued by the Kenya Revenue Authority and is renewed annually
+Second every package of excisable goods to be manufactured in or imported into Kenya is required to be affixed with an excise stamp except for motor vehicles
+These stamps are issued by the Kenya Revenue Authority
+The Kenya Bureau of Standards (KEBS) is the government agency that provides Standards, Metrology and Conformity Assessment (SMCA) services
+KEBS activities have grown from the development of standards and quality control for a limited number of locally made products in the 1970s to the provision of : Comprehensive Standards development, Metrology, Conformity Assessment, Training Certification services The following table provides details of various approvals for manufacturers Business Standard Name Detail Requirements Fees Manufacturing Standardization mark permit This is a mandatory product certification scheme for locally manufactured products provided for under section 10 of the Standards Act Cap 496, Laws of Kenya
+To acquire the mark, manufactured goods are expected to meet quality requirements as specified in the various Kenya/Approved Standards
+A permit to use a Standardization Mark is issued to a firm to certify that a particular product conforms to requirements in a Standard
+Steps to acquire standardization mark permit Manufacturing Diamond Mark of Quality (D-Mark) The Diamond Mark of Quality (also referred to as D-Mark) is a voluntary product certification scheme operated by KEBS
+It is a mark of excellence awarded to manufacturers (either based locally or abroad) which has demonstrated high degree of excellence in product manufacturing and quality
+D-Mark permit holders thus qualify automatically for the standardization mark (SM) without any additional payments
+The permit to use the mark is valid for period of 3 years subject to satisfactory quality performance and full compliance to other contractual obligations signed between KEBS and the permit holder
+Steps to acquire D-Mark Manufacturing-Food Fortification Food Fortification Mark Food fortification is the addition of one or more vitamin and/or mineral to a food to correct or prevent a demonstrated micronutrient deficiency
+It is one of the four key cost effective strategies recommended by WHO in curbing micronutrient deficiency
+The Ministry of Public Health and Sanitation through a Legal Notice no
+62 of 15th June 2012 has therefore declared it mandatory to fortify the following food products; 1-Wheat Flour – with Zinc & Iron 2-Dry Milled Maize Products- with Zinc & Iron 3-Salt- with Iodine 4-Vegetable Fats & Oils- with vitamin A Steps to acquire food fortification mark permit- Food fortification Mark application form Manufacturing-Water Bottling Product Standard KS EAS 153 for drinking water, KS EAS 13 for Mineral water and the Code of Hygiene Standard KS 459 Tourism Tourism Regulatory Authority (TRA) is a corporate body established under section 4 of the Tourism Act No
+28 of 2011 and is mandated to regulate the tourism sector in Kenya
+This entails developing regulations, standards and guidelines that are necessary to ensure an all-round quality service delivery in the tourism sector
+Tourism licensing is premised on ensuring customer satisfaction and competitiveness of the country as a tourist destination
+Thus, all activities and services as outlined in the 9th Schedule of Tourism Act, 2011 need to manage customer expectations by maintaining minimum standards
+In particular, regulation has a number of benefits which include: Bringing order to the sector : Licensing is a deterrent to would-be unscrupulous businessmen since punitive measures are taken against those who contravene laws
+Ensuring Customer Satisfaction : Tourist handlers are expected to demonstrate high levels of professionalism and integrity
+Licensing ensures that only qualified personnel are engaged in the industry
+Helps Enforce Standards : Overseas suppliers have more confidence in dealing with ground handlers who are not only licensed by the Government but are also members of recognized trade associations
+The Associations follow codes of ethic approved by the Authority
+Compilation of a data base and directory: Licensed operators and businesses will comprise a database and directory that would be instrumental for planning, marketing of the destination and other decision making processes
+Licensing benefits specific to the licensee The operator with TRA licenses will benefit greatly in that the license will facilitate:- Promotion and marketing Access to Government incentives e
+custom duty waivers Access to training and capacity building programmes by government agencies
+Access to Government financing e
+loans from Tourism Finance Corporation
+Endorsement for membership to industry associations Tourism License Requirements In order to be issued with a tourism license, the applicant has to provide some documents to TRA for registration and subsequent licensing
+These are different depending on the type of operations the applicant is engaged in
+Besides duly filled in application Form and upon payment of prescribed licence fees in the fourth schedule of the TRA regulations, below are the requirements for the different classes of tourism licenses which will be considered by the Licensing Committees { https://www
+php/licensing/license-requirements } ICT Postal courier operator’s license &#8211; Providers of postal and courier services are required to register with the Communication Authority of Kenya
+The procedure of obtaining the Postal and courier licence is the same though the categories and licence duration vary
+Content service provider license &#8211; This is a telecommunications licence issued to a person providing content services either through facilities of Network Facilities Providers and /or services of Application Service Providers
+Content services mean information of any kind normally provided at a fee and delivered over electronic communications networks and services
+They include financial information services and other information services
+Applications service provider licence &#8211; This is a telecommunications licence issued to a person providing application services
+Application services are electronic communications services which are normally provided for remuneration and consists wholly or mainly in the conveyance of signals on electronic communications networks including telecommunications and transmission services over electronic communications networks
+Telecommunication&#8217;s contractor licence- This is a licence issued to a person / entity that wishes to install or maintain a telecommunications system
+Financial Services Financial Sector Regulators in Kenya comprises the following key players: Central Bank The Central Bank of Kenya is responsible for formulating monetary policy to achieve and maintain price stability
+The Central Bank also promotes financial stability; an effective and efficient payment, clearing and settlement system; formulates and implements foreign exchange policies; holds and manages foreign exchange reserves; issuing of currency; and is the banker for, adviser to and fiscal agent of the Government
+The table bellows enumerates all financial institutions regulated under the Central Bank and license requirement Regulation Mandate Details Business License Requirement Commercial banks and mortgage finance institutions are licensed and regulated in accordance with the provisions of the Banking Act and the Regulations and Prudential Guidelines issued thereunder
+As key players in the banking sector, commercial banks and mortgage finance companies are subject to regulatory requirements governing their prudential position and market conduct in order to safeguard the overall soundness and stability of the financial system
+Commercial Banks and Mortgage Finance Companies https://www
+ke/contact-us/ The Microfinance Act 2006 and the Microfinance (Deposit Taking Institutions) Regulations 2008 set out the legal, regulatory and supervisory framework for the microfinance industry in Kenya
+The Microfinance Act 2006 became operational with effect from May 2, 2008
+The principal object of the Microfinance Act 2006 is to regulate the establishment, business and operations of deposit taking microfinance institutions in Kenya through licensing and supervision
+The Act enables microfinance banks (MFBs) licensed by the Central Bank of Kenya to mobilise deposits from the general public, thus promoting savings, competition, efficiency and financial access
+ke/contact-us/ Forex Bureaus in Kenya were established and first licensed in January 1995 to foster competition in the foreign exchange market and to narrow the exchange rate spread in the market
+As authorised dealers, forex bureaus conduct business and are regulated under the provisions of the sections 33A to 33(O) of the Central Bank of Kenya Act (Cap 491) and Forex Bureau Guidelines issued thereunder
+Forex Bureaus and Money Remittance Providers https://www
+ke/contact-us/ Section 31(4) of the Banking Act, mandates the Central Bank to licence and supervise credit reference bureaus (CRB)
+The Credit Reference Bureau Regulations, 2013, govern the licensing, operation and supervision of CRBs by the Central Bank of Kenya
+Credit Reference Bureaus https://www
+ke/contact-us/ Representative Offices in Kenya are established by foreign banks who wish to have a presence in the country without having to launch fully fledged banking operations
+They are authorized and overseen by the Central Bank under the Banking Act and only permitted to undertake research, marketing and liaison roles on behalf of their parent and affiliated institutions
+They are therefore not allowed to conduct banking business
+Representative Offices of Foreign Banks https://www
+ke/contact-us/ Capital Market Authority Business License Compliance with License requirements Securities exchange https://www
+php?option=com_phocadownload&view=category&download=180:securities-exchange-checklist&id=51:licensing-checklists&Itemid=241 Stockbroker https://www
+php?option=com_phocadownload&view=category&download=181:stockbrokers-checklist&id=51:licensing-checklists&Itemid=241 Dealer https://www
+php?option=com_phocadownload&view=category&download=174:dealers-checklist&id=51:licensing-checklists&Itemid=241 Investment Adviser https://www
+php?option=com_phocadownload&view=category&download=176:investment-advisers-checklist&id=51:licensing-checklists&Itemid=241 Fund Manager https://www
+php?option=com_phocadownload&view=category&download=175:fund-managers-checklist&id=51:licensing-checklists&Itemid=241 Investment Banker https://www
+php?option=com_phocadownload&view=category&download=177:investment-bank-checklist&id=51:licensing-checklists&Itemid=241 Authorized Securities dealer https://www
+php?option=com_phocadownload&view=category&download=169:authorised-securities-dealer-licesnse-checklist&id=51:licensing-checklists&Itemid=241 Authorized Depository https://www
+php?option=com_phocadownload&view=category&download=472:authorized-depositories-checklist&id=51:licensing-checklists&Itemid=241 CMA Sandbox https://www
+ke/images/sandbox/Capital-Markets-Authority-Regulatory-Sandbox-Application-Form
+pdf Retirement Benefit Authority Retirement Benefits Authority is mandated to: Regulate and supervise the establishment and management of retirement benefits schemes; Protect the interests of members and sponsors of retirement benefits sector; Promote the development of the retirement benefits sector Advise the Cabinet Secretary, National Treasury on the national policy to be followed with regard to retirement benefits industry Implement all government policies relating to the industry Schemes in Kenya are required under section 23 to apply for registration in order to be allowed to operate
+The application for registration shall be made in a prescribed form
+The Authority shall consider the application and proceed to register the scheme and forward to the applicant a certificate of registration
+Where the application is not acceptable the applicant will be notified in writing the reason(s) for refusal
+The following table enumerates the types of schemes and registration requirement Types of schemes Compliance Requirement Requirements Defined Contribution and Defined Benefit Provident Fund and Pension Fund https://www
+ke/schemes-registration-compliance-forms/ https://www
+ke/licensing-requirements/ Insurance Regulatory Authority The Insurance regulatory authority&#8217;s mandate is to regulate, supervise and develop the insurance industry in Kenya
+The following table enumerates the businesses category licensed under the authority and license requirement Business Requirements Insurance Broker https://www
+php/regulatory-framework/licensing/licensing-requirement/brokers Insurance Brokers, Reinsurance Brokers and Medical Insurance Providers (MIPs) https://www
+php/regulatory-framework/licensing/licensing-requirement/broker-s-mips Agents https://www
+php/regulatory-framework/licensing/licensing-requirement/agents Other Providers https://www
+php/regulatory-framework/licensing/licensing-requirement/providers Sacco societies regulatory authority (sasra) The mandate of the Authority as provided by the Act includes the following: License Sacco societies to carry out deposit-taking business in accordance with this Act; Regulate and supervise Sacco societies; Hold, manage and apply the General Fund of the Authority in accordance with the provisions of this Act; Levy contributions in accordance with this Act; Do all such other things as may be lawfully directed by the Minister; and Perform such other functions as are conferred on it by this Act or by any other written law licensing Requirements for Sacco’s can be found here {https://www
+php?option=com_content&view=article&id=13:licensing&catid=9&Itemid=103#
+YBz9YugzZPY } Import Export Businesses that are either involved in import-export in their day to day or purely deal in import-export must be aware of the following regulations
+Businesses identified are based on priority areas identified during toolkit validation
+Regulator About Business Type Compliance Requirement Requirement Government Reforms Kenya Bureau of Standards (KEBS) PVOC Program is a conformity assessment program applied to products at the respective exporting countries, to ensure their compliance with the applicable Kenyan Technical Regulations and Mandatory Standards or approved specifications
+General Import-Export Pre- Verification of Conformity and issuance of the Certificate of Conformity General- https://www
+org/images /PvOC/PVOC _MANUAL_v10_2020_08_21
+pdf Incase Goods arrive without certificate of conformity- https://www
+org/ images/pdf/new/ without_coc_ procedure
+php?option=com_content&view= article&id=713:doing-business-made-easier-for-imports&catid=23&Itemid=180 Export- https://www
+php?option=com_content&view= article&id=712:doing-business -made-easier-for-exports&catid= 23&Itemid=180 Kenya Bureau of Standards (KEBS) Petroleum product Petroleum product inspection https://www
+org /images/pdf/new/ petroleum_inpection_manual
+pdf KEBS has appointed Quality Inspection Services Inc
+Japan (QISJ) to offer Pre-Export Verification of Conformity services in Japan, United Arab Emirates, United Kingdom, Thailand and South Africa -Used vehicle -Mobile Equipment -Used spare parts for vehicles and spare parts Pre-Export Verification of Conformity https://www
+php?option=com_content&view =article&id=670&Itemid=560 KEBS This protocol provides best practices on the importation and sale of used textiles and used shoes and how the supply chain operators conduct their operations while ensuring the health and safety of the sellers, importers, wholesalers and buyers from the risk of spread of COVID-19 virus Used Textile and Footwear Protocols for importation of used textiles and used footwear into Kenya https://www
+php?option=com_content&view=article&id= 758:protocols-for-importation-of-used-textiles-and-used-footwear-into-kenya-2&catid=23&Itemid=180 Kenya Plant Health Inspectorate Service (KEPHIS) The Plant Import and Quarantine Regulatory System (PIQRS) is a Business to Government and Government to business web based system designed to enhance efficiency in plant import regulation Seed Import Seed Import-Export certification https://kephis
+php /import-export-requirements/ seed-import Kenya Plant Health Inspectorate Service (KEPHIS) The Automated Support System for the Importation of Phytosanitary Consignments (ASSIP) is a revolutionary e-commerce platform that regulates the importation of plants, plant products and regulated articles into Kenya
+Importation of plants, plant products and regulated articles Certificate for Importation of Phytosanitary Consignments (ASSIP)
+php/import-export-requirements/import-certification-system Kenya Plant Health Inspectorate Service (KEPHIS) Kenya Plant Health Inspectorate Service (KEPHIS), as the secretariat to The Kenya Standing Technical Committee on Imports and Exports (KSTCIE), facilitates the process of risk assessment before the introduction of live organisms as per Guidelines for Introduction and Use of Bio Products, biological control agents and related products -Live biological controls, -bio-fertilizers, -Bio-stimulants, Organic fertilizers, their products Importation of the Biological Based Organisms & Related Products https://kephis
+php/import-export-requirements/biological-requirements Kenya National Chamber s of commerce and Industry The Chamber issues Certificates of Origin to the local products
+The Certificate of Origin (COO) in Kenya has been issued by Kenya Bureau of Standards (KEBS) until recently when it was reverted back to the Chamber in the government effort to revive it
+General Export Certificate of origin https://www
+ke/ kncci-services/ Kenya Export promotion and Bran ding Agency KEPROBA provides basic information on export requirements General Export Preparing and processing export documents -Basic export documentation -Export procedures https://brand
+php/kenyan -exporters/guide-to-exporting/288- preparing-and-processing-export-documents#Basicexportdocumentation Kenya Trade Network Agency (KenTrade) KenTrade is a state corporation under the National Treasury to implement, operationalize and manage the National Electronic Single Window System(Kenya TradeNet System) and to facilitate trade
+Kenya TradeNet is an online platform that serves as a single entry point for parties involved in international trade and transport logistics to lodge documents electronically for processing, approvals and to make payments electronically for fees, levies, duties and taxes due to the government, on goods imported/ exported into and from the country
+Import-Export Guide on foreign trade Procedures https://infotradekenya
+ke/ Construction Construction Businesses in the construction sector have to obtain permits and licenses from the following key regulators; Regulator About License Requirement National Construction Authority The National Construction Authority is empowered by the National Construction Authority Act no
+41 of 2011 to accredit and certify skilled construction workers and construction site supervisors as well as Project registration is so as to facilitate planning and maintaining of construction records that makes quality assurance not just easier but more systematic
+Project Registration https://www
+ke/developers/project-registration County (Nairobi) County (Nairobi)NB: Sample taken from Ease of doing business milestone report 2020 The Nairobi City County, a successor of the defunct City Council of Nairobi, is a creation of the Constitution of Kenya 2010
+The County operates under the Constitution, the county Governments Act, 2012; the Public Finance Management Act, the Physical Planning Act, Cap
+286; and a host of other Acts and regulations Construction permit http://ccn-ecp
+ke/ Other County portals: Mombasa https://edams
+ke/ Water and Sewage (Nairobi City Water and Sewerage Co Ltd) Ease of doing business milestone report 2020 Nairobi City Water and Sewerage Company Ltd (NCWSC) was incorporated in December 2003 under the Companies Act cap 486
+It is a wholly owned subsidiary of Nairobi City County
+The mandate of the Company is to provide clean water and sewerage services to the residents of Nairobi County, in a financially sustainable manner and within the Government regulations Water connection application https://www
+ke/images/public_notice/online_application
+pdf National Environmental Management Authority NEMA exercises general supervision and coordination over all matters relating to the environment Environmental Impact Approval https://www
+php?option=com_content&view=article&id=302&Itemid=458 Government reforms in Construction sector Regulator Baseline Current status Reference National Environmental Management Authority Time taken to review and issue its Record of Decision on Summary Project Reports for low risk projects was 30 days Time taken to review and issue its Record of Decision on Summary Project Reports for low risk project is five (5) days
+php?option=com_content&view=article&id=201&Itemid=120# Water and Sewage (Nairobi City Water and Sewerage Co Ltd) Water & sewer connectivity was 30 days Water & sewer connectivity 14 Days https://www
+ke/images/public_notice/online_application
+pdf Other Reforms (2014-2019) Eliminating clearance fees from NEMA and NCA from 2017 Increasing transparency by making building permit requirements publicly available online Reduction of cost of construction permits by county Government of Nairobi Launch Stage Regulators General Organization About Where to find them Registrar of companies-Office of the attorney general Business Registration Service (BRS) is mandated to oversee the operations of the Companies Registry, Movable Property Security Rights Registry (Collateral Registry), Insolvency (Official Receivers) Registry and the Hire Purchase Registry
+php Kenya Investment Authority Kenya Investment Authority (KenInvest) is a statutory body established in 2004 through an Act of Parliament (Investment Promotion Act No
+6 of 2004) with the main objective of promoting investments in Kenya
+It is responsible for facilitating the implementation of new investment projects, providing After Care services for new and existing investments, as well as organizing investment promotion activities both locally and internationally
+ke/ The Kenya Revenue Authority The Kenya Revenue Authority was established by an Act of Parliament, Chapter 469 of the laws of Kenya, which became effective on 1st July 1995
+KRA is charged with collecting revenue on behalf of the government of Kenya
+ke/en/ National Hospital Insurance Fund The National Hospital Insurance Fund (NHIF) is Kenya’s national social health insurer that provides affordable, accessible, sustainable and quality health insurance through strategic resource pooling and healthcare purchasing in collaboration with stakeholders
+ke/member/ National Social Services Fund NSSF offers social protection to all Kenyan workers
+NSSF provides social security protection to workers in the formal and informal sectors
+NSSF registers members, receives their contributions, manages funds of the scheme, processes and ultimately pays out benefits to eligible members or dependents
+ke/ Sector Specific Regulator Organization About Where to find them National Environmental Management Authority NEMA issues a wide range of environmental licenses and permits under various environmental regulations
+These include licenses on: Environmental Impacts Assessment (EIA)
+Effluent discharge Waste Management, transporters, incinerators and recyclers Import Export for controlled substances Permits for: Access genetic resources trans boundary movement of waste Sand Harvesting sale and transportation https://www
+php?option=com_content&view=article&id=10&Itemid=146 Kenya Plant Health Inspectorate service Kenya Plant Health Inspectorate Service (KEPHIS) is the government parastatal whose responsibility is to assure the quality of agricultural inputs and produce to prevent adverse impact on the economy, the environment and human health
+org/# Horticultural Crops Directorate ( HCD The Horticultural Crops Directorate ( HCD) which was formerly known as Horticultural Crops Development Authority (‘HCDA’) was established under the Agriculture Act, Chapter 318 of the Laws of Kenya, through Legal Notice No
+The statutory objective of the Directorate is to promote, develop and coordinate the production and marketing of horticultural produce https://horticulture
+php/our-services/licensing-and-regulatio Energy Regulatory Authority The Energy and Petroleum Regulatory Authority (EPRA) is established as the successor to the Energy Regulatory Commission (ERC) under the Energy Act, 2019 with an expanded mandate of inter alia regulation of upstream petroleum and coal
+ke/about/ Coffee Directorate Regulates coffee value chain and conducts market research http://coffee
+ke/ NB: The Coffee Act seeks to establish The Coffee Board of Kenya to replace the directorate { https://infotradekenya
+ke/media/Coffee%20Act%20Chapter%20333
+pdf } Nuts and Oils Directorate Nuts and Oil Crops Directorate is an arm of Agriculture and Food Authority (AFA) mandated to develop, promote and regulate the nuts and oil crops industry in Kenya
+ke/ Fibre Crops Directorate In 2014, the Agriculture and Food Authority (AFA) was established under Section 3 of the Agriculture and Food Authority following the operationalization of the Crops Act 2013 that repealed the Acts Cotton Act, Cap 335 Cap 335 in 1990 and Sisal Industry Act, 1946 (No
+Subsequently the Fibre Crops Directorate was established and assumed the functions of the Sisal Board of Kenya and Cotton Development Authority
+To date, the regulatory, development and promotion mandate of the fibre value chains is under the AFA-Fibre Crops Directorate http://fibre
+ke/ Food Crops Directorate The Food Directorate was established in August 2014 pursuant to section 11(1) of Agriculture and Food Authority Act 2013 , with a mandate to regulate, promote and develop scheduled food crops which are broadly categorized into three; 1
+The Directorate has developed the Crops (Irish Potato) Regulations, 2019 , and the Crops (Food Crops) Regulations, 2019
+These were gazetted and acceded to by Parliament on May 2019 and April 2020 respectively to enable the Directorate to operationalize its mandate
+ke/ Sugar The regulatory, development, and promotion mandate of the sugar value chain is under the AFA – Sugar Directorate
+ke/ Miraa, Pyrethrum and Other Industrial Crops Directorate (MPICD) Miraa, Pyrethrum and Other Industrial Crops Directorate (MPICD) is one of the Directorates created under the Agriculture and Food Authority (AFA)
+The mandate of the Directorate is to regulate, develop and promote Miraa, Pyrethrum and Other Industrial crops sub-sectors in Kenya
+The Directorate draws its mandate from the Agriculture and Food Authority Act ( Act No
+13 of 2013 ) and the Crops Act ( Act No
+The Directorate is in the process of developing the Crops (Pyrethrum) Regulations and the Crops (Miraa) to streamline operations in the sub-sector
+The functions of the Directorate are also aligned to the Constitution of Kenya 2010 and Vision 2030
+ke/ Commission for University Education To promote the objectives of university education, by regulating and accrediting universities and programmes, among other functions https://cue
+ke/ National Commission for science, Technology and Innovation The objective of the Commission shall be to regulate and assure quality in the science, technology and innovation sector and advise the Government in matters related thereto
+Services offered by Directorate of Research, Accreditation And Quality Assurance (DRAQA) are: 1- Registration of research institutions; 2- Accreditation of Research Institutions; 3- Accreditation of Institutional Ethics Review Committees (IERCs) 4-Quality Assurance of Research; 5- Licensing of Research; 6-Monitoring and Evaluation of licensed research 7-Capacity building of scientist and Institutional Ethics Review Committee
+ke/ Energy Regulatory Authority The Energy and Petroleum Regulatory Authority (EPRA) is established as the successor to the Energy Regulatory Commission (ERC) under the Energy Act, 2019 with an expanded mandate of inter alia regulation of upstream petroleum and coal
+ke/about/ Tourism Regulatory Authority Tourism Regulatory Authority (TRA) is a corporate body established under section 4 of the Tourism Act No
+28 of 2011 and is mandated to regulate the tourism sector in Kenya
+This entails developing regulations, standards and guidelines that are necessary to ensure an all-round quality service delivery in the tourism sector
+php/licensing/license-requirements Kenya Bureau of Standards The Kenya Bureau of Standards (KEBS) is the government agency that provides Standards, Metrology and Conformity Assessment (SMCA) services
+KEBS activities have grown from the development of standards and quality control for a limited number of locally made products in the 1970s to the provision of : 1
+Comprehensive Standards development, 2
+Certification services https://www
+org/ Communication Authority of Kenya The Communications Authority of Kenya (CA) is the regulatory authority for the communications sector in Kenya
+The Authority is responsible for facilitating the development of the information and communications sectors including; broadcasting, cybersecurity, multimedia, telecommunications, electronic commerce, postal and courier services
+ke/ Insurance Regulatory Authority The Insurance Regulatory Authority is a statutory government agency established under the Insurance Act (Amendment) 2006, CAP 487 of the Laws of Kenya to regulate, supervise and develop the insurance industry
+It is governed by a Board of Directors which is vested with the fiduciary responsibility overseeing operations of the Authority and ensuring that they are consistent with provisions of the Insurance Act
+ke/ Capital Markets Authority The Capital Markets Authority is an independent public agency established by an Act of Parliament, Cap 485 A under The National Treasury
+The CMA is a regulating body charged with the responsibility of supervising, licensing & monitoring the activities of market intermediaries, including the stock exchange & the central depository & settlement system and all the other persons licensed under the Capital Markets Act
+ke/ Central Bank of Kenya The Central Bank of Kenya is responsible for formulating monetary policy to achieve and maintain price stability
+The Central Bank also promotes financial stability; an effective and efficient payment, clearing and settlement system; formulates and implements foreign exchange policies; holds and manages foreign exchange reserves; issuing of currency; and is the banker for, adviser to and fiscal agent of the Government
+ke/ Retirement Benefit Authority Retirement Benefits Authority is mandated to: Regulate and supervise the establishment and management of retirement benefits schemes; Protect the interests of members and sponsors of retirement benefits sector; Promote the development of the retirement benefits sector Advise the Cabinet Secretary, National Treasury on the national policy to be followed with regard to retirement benefits industry Implement all government policies relating to the industry https://www
+ke/ Sacco societies regulatory authority (sasra) The mandate of the Authority as provided by the Act includes the following: 1
+Licence Sacco societies to carry out deposit-taking business in accordance with this Act; 2
+Regulate and supervise Sacco societies; 3
+Hold, manage and apply the General Fund of the Authority in accordance with the provisions of this Act; 4
+Levy contributions in accordance with this Act; 5
+Do all such other things as may be lawfully directed by the Minister; and 6
+Perform such other functions as are conferred on it by this Act or by any other written law https://www
+php?option=com_content&view=featured&Itemid=101 The Kenya medical practitioners and dentist council To regulate the training, practice and licensing of medicine & dentistry and healthcare institutions that include private & mission hospitals, medical, dental centers & clinics, nursing and maternity homes and standalone funeral homes
+ke/licensing-of-a-health-facility/ The Nursing Council of Kenya The Nursing Council of Kenya is a body corporate established by the Nurses Act Cap 257 of the Laws of Kenya to regulate standards of nursing & midwifery education and practice
+com/accredation/ The Pharmacy and Poisons Board is the Drug Regulatory Authority The Pharmacy and Poisons Board is the Drug Regulatory Authority established under the Pharmacy and Poisons Act, Chapter 244 of the Laws of Kenya
+The Board regulates the Practice of Pharmacy and the Manufacture and Trade in drugs and poisons
+The Board aims to implement the appropriate regulatory measures to achieve the highest standards of safety, efficacy and quality for all drugs, chemical substances and medical devices, locally manufactured, imported, exported, distributed, sold, or used, to ensure the protection of the consumer as envisaged by the laws regulating drugs in force in Kenya
+org/downloads Kenya Nutritionist and Dieticians Institute KNDI is mandated: 1
+To provide for training, registration and licensing of Nutritionists and Dieticians
+To provide for the regulations of the standards and practice of the profession
+To ensure effective participation in matters relating to nutrition and dietetics and for connected purposes https://www
+institute/accreditation/ Public Health Officers and Technicians Council [PHOTC Public Health Officers and Technicians Council [PHOTC] is a professional regulatory body established by the Public Health Officers [Training, registration and Licensing] Act No
+12 of 2013 with a mandate of regulating the training, practice and employment of Public Health Officers and Technicians and to advise the Government in relation to all aspects thereof
+org/about/registration/ Kenya Plant Health Inspectorate Service (KEPHIS Kenya Plant Health Inspectorate Service (KEPHIS) is the government parastatal whose responsibility is to assure the quality of agricultural inputs and produce to prevent adverse impact on the economy, the environment and human health
+php/about-us/who-we-are National Construction Authority The National Construction Authority is empowered by the National Construction Authority Act no
+41 of 2011 to accredit and certify skilled construction workers and construction site supervisors as well as Project registration is so as to facilitate planning and maintaining of construction records that makes quality assurance not just easier but more systematic https://www
+ke/about-us/what-we-do National Environmental Management Authority NEMA exercises general supervision and coordination over all matters relating to the environment https://www
+php?option=com_content&view=featured&Itemid=101 Quick Links How to register your business Application for business permit Paying KRA taxes County Taxes Import-Export Requirements Product Quality Standard Requirements Government Services KenInvest eCitizen (Business Registration Service) Kenya Revenue Authority Kenya Bureau Of Standards (KEBS) Kenya Industrial Property Institute Kenya Export Promotion & Branding Agency Launch your Business Launch your Business Application for Single Business Permit Sector Specific Regulations Launch Stage Regulators Manage your Business Regulators Statutory Deductions Intellectual Property Product Quality Standards Business Support Human Resource Dispute Resolution Counties Scale your Business Scale your Business Scale Stage Regulators Private Sector Bodies Kenya National Chamber of Commerce and Industry KEPSA Kenya Association of Manufacturers Retail Trade Association of Kenya Kenya Bankers Association Regulatory Guide for Doing Business in Kenya Portal
+Developed by Viffa Consult | Privacy Policy #rs-demo-id {}

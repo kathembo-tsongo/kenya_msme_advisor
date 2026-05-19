@@ -1,0 +1,376 @@
+SOURCE: https://www.comesa.int/comesa-eac-sadc-tripartite-free-trade-area-to-come-into-force-on-25th-july-2024/
+
+COMESA-EAC-SADC Tripartite Free Trade Area Comes into Force - Common Market for Eastern and Southern Africa (COMESA) body
+wpml-ls-statics-footer { margin-bottom: 0px !important; background-color: #222222; border-left: none; border-right: none; border-bottom: none; font-family: Source Sans Pro, sans-serif; font-size: 1rem; padding-top:20px; padding-bottom: 20px; }
+wpml-ls-statics-footer a { color: #ffffff; margin-bottom: 0
+5rem + 10px); line-height: initial; }
+wpml-ls-statics-footer li { transition: all
+wpml-ls-current-language { opacity: 0
+9; } p#wpml_credit_footer { background-color: #222222; text-align: center; padding: 20px; margin-bottom: 0px; }
+wpml-ls-legacy-list-vertical { width: 100%; text-align: center; }
+wpml-ls-legacy-list-vertical ul { display: inline-block; } img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px} /*# sourceURL=wp-img-auto-sizes-contain-inline-css */ img
+emoji { display: inline !important; border: none !important; box-shadow: none !important; height: 1em !important; width: 1em !important; margin: 0 0
+07em !important; vertical-align: -0
+1em !important; background: none !important; padding: 0 !important; } /*# sourceURL=wp-emoji-styles-inline-css */
+wpml-ls-link:link {color:#444444;background-color:#ffffff;}
+wpml-ls-sub-menu a:link:focus {color:#000000;background-color:#eeeeee;}
+wpml-ls-current-language > a {color:#444444;background-color:#ffffff;}
+wpml-ls-current-language:hover>a,
+wpml-ls-current-language>a:focus {color:#000000;background-color:#eeeeee;} /*# sourceURL=wpml-legacy-horizontal-list-0-inline-css */ img
+custom-logo{width:auto;max-height:70px !important;} /*# sourceURL=mesmerize-style-inline-css */ div[id*='ajaxsearchlitesettings']
+asl_option_inner label { font-size: 0px !important; color: rgba(0, 0, 0, 0); } div[id*='ajaxsearchlitesettings']
+asl_option_inner label:after { font-size: 11px !important; position: absolute; top: 0; left: 0; z-index: 1; }
+asl_w_container { width: 100%; margin: 0px 0px 0px 0px; min-width: 200px; } div[id*='ajaxsearchlite']
+asl_m { width: 100%; } div[id*='ajaxsearchliteres']
+highlighted { font-weight: bold; color: rgba(217, 49, 43, 1); background-color: rgba(238, 238, 238, 1); } div[id*='ajaxsearchliteres']
+asl_image { width: 70px; height: 70px; object-fit: cover; } div[id*='ajaxsearchlite']
+results { max-height: none; } div[id*='ajaxsearchlite']
+asl_r { position: absolute; } div
+item::after { display: block; position: absolute; bottom: 0; content: ''; height: 1px; width: 100%; background: #D8D8D8; } div
+asl_last_item::after { display: none; } /*# sourceURL=wpdreams-asl-basic-inline-css */ /** cached kirki style */
+mesmerize-language-switcher{background-color:rgb(3,169,244) !important;}
+footer-content{background-color:#FFF;border-top-color:rgb(52,58,64);border-top-width:1px;border-top-style:solid;}
+footer{color:#989898;}body{font-family:"Open Sans", Helvetica, Arial, sans-serif;color:#6B7C93;}body h1{font-family:Muli, Helvetica, Arial, sans-serif;font-weight:600;font-size:2
+625rem;line-height:4rem;letter-spacing:normal;color:#3C424F;}body h2{font-family:Muli, Helvetica, Arial, sans-serif;font-weight:600;font-size:2
+188rem;line-height:3rem;letter-spacing:normal;text-transform:none;color:#3C424F;}body h3{font-family:Muli, Helvetica, Arial, sans-serif;font-weight:600;font-size:1
+25rem;letter-spacing:normal;text-transform:none;color:#3C424F;}body h4{font-family:Muli, Helvetica, Arial, sans-serif;font-weight:600;font-size:0
+0625rem;text-transform:none;color:#3C424F;}body h5{font-family:Muli, Helvetica, Arial, sans-serif;font-weight:800;font-size:0
+5rem;letter-spacing:2px;text-transform:none;color:#3C424F;}body h6{font-family:Muli, Helvetica, Arial, sans-serif;font-weight:800;font-size:0
+color-overlay:before{background:#000000;}
+color-overlay::before{opacity:0
+header-homepage-arrow{font-size:calc( 88px * 0
+84 );bottom:183px;background:rgba(255,255,255,0);}
+header-homepage-arrow > i{color:#ffffff;}
+color-overlay:before{background:#000000;}
+color-overlay::before{opacity:0
+header-subtitle2{margin-top:0;margin-bottom:20px;font-family:Roboto, Helvetica, Arial, sans-serif;font-weight:500;font-style:normal;font-size:1
+1em;line-height:130%;letter-spacing:
+5rem;text-transform:uppercase;color:#FFFFFF;background:rgba(0,0,0,0);padding-top:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;}
+hero-title{font-family:Lora, Georgia, serif;font-weight:700;font-style:normal;font-size:3
+5rem;text-transform:none;color:#FFFFFF;}
+hero-title{margin-top:0;margin-bottom:30px;background:rgba(0,0,0,0);padding-top:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;}
+header-subtitle{margin-top:0px;margin-bottom:30px;font-family:Roboto, Helvetica, Arial, sans-serif;font-weight:300;font-style:normal;font-size:1
+4em;line-height:130%;text-transform:none;color:#FFFFFF;background:rgba(0,0,0,0);padding-top:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;}
+header-buttons-wrapper{background:rgba(0,0,0,0);padding-top:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;}
+header-description-row{padding-top:27%;padding-bottom:30%;}
+inner-header-description{padding-top:3%;padding-bottom:2%;}
+header-subtitle{font-family:Muli, Helvetica, Arial, sans-serif;font-weight:300;font-style:normal;font-size:1
+3em;line-height:130%;letter-spacing:0px;text-transform:none;color:#ffffff;}
+hero-title{font-family:Muli, Helvetica, Arial, sans-serif;font-weight:300;font-style:normal;font-size:3
+5em;line-height:114%;letter-spacing:0
+9px;text-transform:none;color:#ffffff;}
+top-bar-social-icons i{color:#fff;}
+top-bar-social-icons i:hover{color:#fff;}
+top-bar-menu > li > a{color:#fff;}
+top-bar-menu > li > a:hover{color:#fff!important;}
+top-bar-menu > li > a:visited{color:#fff;}
+area-right span{color:#FFFFFF;}
+top-bar-social-icons i{color:#fff;}
+top-bar-social-icons i:hover{color:#fff;}
+top-bar-menu > li > a{color:#fff;}
+top-bar-menu > li > a:hover{color:#fff!important;}
+top-bar-menu > li > a:visited{color:#fff;}
+fixto-fixed){background-color:rgba(255, 255, 255, 1)!important;}
+main-menu{justify-content:flex-end!important;}
+fixto-fixed{background-color:rgba(255, 255, 255, 1)!important;}
+mesmerize-inner-page #main_menu > li > a{font-family:"Open Sans", Helvetica, Arial, sans-serif;font-weight:600;font-style:normal;font-size:14px;line-height:160%;letter-spacing:1px;text-transform:uppercase;}
+main-menu{justify-content:flex-end!important;}
+fixto-fixed{background-color:#FFFFFF!important;}
+mesmerize-front-page #main_menu > li > a{font-family:Roboto, Helvetica, Arial, sans-serif;font-weight:400;font-style:normal;font-size:14px;line-height:160%;letter-spacing:1px;text-transform:uppercase;}
+mesmerize-front-page #main_menu > li li > a{font-family:inherit;font-weight:400;font-style:normal;font-size:0
+85rem;line-height:100%;letter-spacing:0px;text-transform:none;}
+social-icons a{color:#FFFFFF!important;}
+social-icons a{color:#000000!important;}
+widget_search *{color:#FFFFFF;}
+widget_search input{border-color:#FFFFFF;}
+widget_search input::-webkit-input-placeholder{color:#FFFFFF;}
+widget_search input:-ms-input-placeholder{color:#FFFFFF;}
+widget_search input:-moz-placeholder{color:#FFFFFF;}
+widget_search *{color:#000000;}
+widget_search input{border-color:#000000;}
+widget_search input::-webkit-input-placeholder{color:#000000;}
+widget_search input:-ms-input-placeholder{color:#000000;}
+widget_search input:-moz-placeholder{color:#000000;}
+social-icons a{color:#FFFFFF!important;}
+social-icons a{color:#000000!important;}
+widget_search *{color:#FFFFFF;}
+widget_search input{border-color:#FFFFFF;}
+widget_search input::-webkit-input-placeholder{color:#FFFFFF;}
+widget_search input:-ms-input-placeholder{color:#FFFFFF;}
+widget_search input:-moz-placeholder{color:#FFFFFF;}
+widget_search *{color:#000000;}
+widget_search input{border-color:#000000;}
+widget_search input::-webkit-input-placeholder{color:#000000;}
+widget_search input:-ms-input-placeholder{color:#000000;}
+widget_search input:-moz-placeholder{color:#000000;}[data-component="offcanvas"] i
+fa{color:#FFFFFF!important;}[data-component="offcanvas"]
+bubble{background-color:#FFFFFF!important;}
+fixto-fixed [data-component="offcanvas"] i
+fixto-fixed [data-component="offcanvas"]
+bubble{background-color:#000000!important;}#offcanvas-wrapper{background-color:#222B34!important;}html
+has-offscreen body:after{background-color:rgba(34, 43, 52, 0
+7)!important;}#offcanvas-wrapper *:not(
+arrow){color:#ffffff!important;}#offcanvas_menu li
+current-menu-item, #offcanvas_menu li
+current-menu-item > a, #offcanvas_menu li
+current_page_item, #offcanvas_menu li
+current_page_item > a{background-color:#FFFFFF;}#offcanvas_menu li
+open > a > i, #offcanvas_menu li
+current-menu-item > a, #offcanvas_menu li
+current_page_item > a{color:#2395F6!important;}#offcanvas_menu li
+current-menu-item > a, #offcanvas_menu li
+current_page_item > a{border-left-color:#2395F6!important;}#offcanvas_menu li > ul{background-color:#686B77;}#offcanvas_menu li > a{font-family:"Open Sans", Helvetica, Arial, sans-serif;font-weight:400;font-style:normal;font-size:0
+875rem;line-height:100%;letter-spacing:0px;text-transform:none;}
+text-logo:hover{color:#FFFFFF;font-family:inherit;font-weight:600;font-style:normal;font-size:2em;line-height:100%;letter-spacing:0px;text-transform:uppercase;}
+text-logo{color:#000000!important;}
+text-logo:hover{color:#4a4a4a;font-family:inherit;font-weight:600;font-size:1
+6rem;line-height:100%;letter-spacing:0px;text-transform:uppercase;}
+text-logo{color:#4a4a4a!important;}
+slide-progress{background:rgba(3, 169, 244, 0
+owl-prev{margin-left:40px;margin-right:40px;}
+owl-prev{padding:0px;background:rgba(0, 0, 0, 0);}
+owl-prev i{font-size:50px;width:50px;height:50px;color:#ffffff;}
+owl-prev:hover{background:rgba(0, 0, 0, 0);}
+owl-dots{margin-bottom:0px;margin-top:0px;}
+owl-dot span{background:rgba(255,255,255,0
+owl-dot:hover span{background:#ffffff;}
+owl-dot{margin:0px 7px;}@media only screen and (min-width: 768px){
+mesmerize-language-switcher{top:80px !important;}body h1{font-size:3rem;}body h2{font-size:2
+1rem;}body h5{font-size:1rem;}body h6{font-size:0
+align-holder{width:90%!important;}
+inner-header-description{text-align:center!important;}
+5em;}}@media (min-width: 767px){
+footer-content{padding-top:40px;padding-bottom:40px;}}@media (max-width: 1023px){body{font-size:calc( 16px * 0
+875 );}}@media (min-width: 1024px){body{font-size:16px;}}@media screen and (min-width: 768px){
+header{background-position:center center;}}@media screen and (max-width:767px){
+header-description-row{padding-top:3%;padding-bottom:5%;}} /*# sourceURL=mesmerize-child-inline-css */ /** cached menu style */
+dropdown-menu > li { color: #000; }
+dropdown-menu > li { color: #000; }
+active-line-bottom > li > a, ul
+default > li > a { border-bottom: 3px solid transparent; }
+current-menu-item > a { border-bottom-color: #03a9f4; }
+current-menu-item > a { border-bottom-color: #03a9f4; }
+current-menu-item > a { color: #000; }
+current-menu-item > a { color: #000; }
+dropdown-menu ul { background-color: #FFFFFF; }
+dropdown-menu ul li { color: #343A40; }
+dropdown-menu ul li:hover { background-color: #F8F8F8; color: #343A40; }
+main_menu_col {justify-content:flex-end;}
+page-content { background-color: #F5FAFD; } /** cached colors style */ p
+color2{ color : #ff1f55; } span
+bg-color2{ background-color:#ff1f55; } a
+button):hover{ color:#FF3369; } button
+color2{ background-color:#ff1f55; border-color:#ff1f55; } button
+color2:hover{ background-color:#FF3369; border-color:#FF3369; } button
+color2{ background:none; border-color:#ff1f55; color:#ff1f55; } button
+color2:hover{ background:none; border-color:rgba(255,31,85,0
+color2{ border-color:#ff1f55; } i
+color2{ background-color:#ff1f55; color: #ffffff; } i
+color-white{ color: #d5d5d5; } i
+color2{ border-color:#ff1f55; } i
+color2{ background-color:#ff1f55; color: #ffffff; }
+color2{ border-right-color:#ff1f55; }
+decoration-color2 li:before { color:#ff1f55; }
+decoration-color2 li:before { color:#ff1f55; }
+card-color2{ background-color:#ff1f55; }
+bottom-border-color2{ border-bottom-color: #ff1f55; }
+grad-180-transparent-color2{ background-image: linear-gradient(180deg, rgba(255,31,85,0) 0%, rgba(255,31,85,0) 50%, rgba(255,31,85,0
+border-color2{ border-color: #ff1f55; }
+circle-bar{ stroke: #ff1f55; } p
+color5{ color : #4caf50; } span
+bg-color5{ background-color:#4caf50; } a
+button):hover{ color:#60C364; } button
+color5{ background-color:#4caf50; border-color:#4caf50; } button
+color5:hover{ background-color:#60C364; border-color:#60C364; } button
+color5{ background:none; border-color:#4caf50; color:#4caf50; } button
+color5:hover{ background:none; border-color:rgba(76,175,80,0
+color5{ border-color:#4caf50; } i
+color5{ background-color:#4caf50; color: #ffffff; } i
+color-white{ color: #d5d5d5; } i
+color5{ border-color:#4caf50; } i
+color5{ background-color:#4caf50; color: #ffffff; }
+color5{ border-right-color:#4caf50; }
+decoration-color5 li:before { color:#4caf50; }
+decoration-color5 li:before { color:#4caf50; }
+card-color5{ background-color:#4caf50; }
+bottom-border-color5{ border-bottom-color: #4caf50; }
+grad-180-transparent-color5{ background-image: linear-gradient(180deg, rgba(76,175,80,0) 0%, rgba(76,175,80,0) 50%, rgba(76,175,80,0
+border-color5{ border-color: #4caf50; }
+circle-bar{ stroke: #4caf50; } p
+color7{ color : rgb(242, 242, 242); } span
+color7{ color : rgb(242, 242, 242); } h1
+color7{ color : rgb(242, 242, 242); } h2
+color7{ color : rgb(242, 242, 242); } h3
+color7{ color : rgb(242, 242, 242); } h4
+color7{ color : rgb(242, 242, 242); } h5
+color7{ color : rgb(242, 242, 242); } h6
+color7{ color : rgb(242, 242, 242); }
+bg-color7{ background-color:rgb(242, 242, 242); } a
+button){ color:rgb(242, 242, 242); } a
+button):hover{ color:#FFFFFF; } button
+color7{ background-color:rgb(242, 242, 242); border-color:rgb(242, 242, 242); } button
+color7:hover{ background-color:#FFFFFF; border-color:#FFFFFF; } button
+color7{ background:none; border-color:rgb(242, 242, 242); color:rgb(242, 242, 242); } button
+color7:hover{ background:none; border-color:rgba(242,242,242,0
+color7{ color:rgb(242, 242, 242); } i
+color7{ border-color:rgb(242, 242, 242); } i
+color7{ background-color:rgb(242, 242, 242); color: #ffffff; } i
+color-white{ color: #d5d5d5; } i
+color7{ border-color:rgb(242, 242, 242); } i
+color7{ background-color:rgb(242, 242, 242); color: #ffffff; }
+color7{ border-right-color:rgb(242, 242, 242); }
+decoration-color7 li:before { color:rgb(242, 242, 242); }
+decoration-color7 li:before { color:rgb(242, 242, 242); }
+card-color7{ background-color:rgb(242, 242, 242); }
+bottom-border-color7{ border-bottom-color: rgb(242, 242, 242); }
+grad-180-transparent-color7{ background-image: linear-gradient(180deg, rgba(242,242,242,0) 0%, rgba(242,242,242,0) 50%, rgba(242,242,242,0
+border-color7{ border-color: rgb(242, 242, 242); }
+circle-bar{ stroke: rgb(242, 242, 242); } p
+color8{ color : #f6f6f6; } span
+bg-color8{ background-color:#f6f6f6; } a
+button):hover{ color:#FFFFFF; } button
+color8{ background-color:#f6f6f6; border-color:#f6f6f6; } button
+color8:hover{ background-color:#FFFFFF; border-color:#FFFFFF; } button
+color8{ background:none; border-color:#f6f6f6; color:#f6f6f6; } button
+color8:hover{ background:none; border-color:rgba(246,246,246,0
+color8{ border-color:#f6f6f6; } i
+color8{ background-color:#f6f6f6; color: #ffffff; } i
+color-white{ color: #d5d5d5; } i
+color8{ border-color:#f6f6f6; } i
+color8{ background-color:#f6f6f6; color: #ffffff; }
+color8{ border-right-color:#f6f6f6; }
+decoration-color8 li:before { color:#f6f6f6; }
+decoration-color8 li:before { color:#f6f6f6; }
+card-color8{ background-color:#f6f6f6; }
+bottom-border-color8{ border-bottom-color: #f6f6f6; }
+grad-180-transparent-color8{ background-image: linear-gradient(180deg, rgba(246,246,246,0) 0%, rgba(246,246,246,0) 50%, rgba(246,246,246,0
+border-color8{ border-color: #f6f6f6; }
+circle-bar{ stroke: #f6f6f6; } p
+color9{ color : #00b0ff; } span
+bg-color9{ background-color:#00b0ff; } a
+button):hover{ color:#14C4FF; } button
+color9{ background-color:#00b0ff; border-color:#00b0ff; } button
+color9:hover{ background-color:#14C4FF; border-color:#14C4FF; } button
+color9{ background:none; border-color:#00b0ff; color:#00b0ff; } button
+color9:hover{ background:none; border-color:rgba(0,176,255,0
+color9{ border-color:#00b0ff; } i
+color9{ background-color:#00b0ff; color: #ffffff; } i
+color-white{ color: #d5d5d5; } i
+color9{ border-color:#00b0ff; } i
+color9{ background-color:#00b0ff; color: #ffffff; }
+color9{ border-right-color:#00b0ff; }
+decoration-color9 li:before { color:#00b0ff; }
+decoration-color9 li:before { color:#00b0ff; }
+card-color9{ background-color:#00b0ff; }
+bottom-border-color9{ border-bottom-color: #00b0ff; }
+grad-180-transparent-color9{ background-image: linear-gradient(180deg, rgba(0,176,255,0) 0%, rgba(0,176,255,0) 50%, rgba(0,176,255,0
+border-color9{ border-color: #00b0ff; }
+circle-bar{ stroke: #00b0ff; } p
+color10{ color : #0076ab; } span
+bg-color10{ background-color:#0076ab; } a
+button):hover{ color:#148ABF; } button
+color10{ background-color:#0076ab; border-color:#0076ab; } button
+color10:hover{ background-color:#148ABF; border-color:#148ABF; } button
+color10{ background:none; border-color:#0076ab; color:#0076ab; } button
+color10:hover{ background:none; border-color:rgba(0,118,171,0
+color10{ border-color:#0076ab; } i
+color10{ background-color:#0076ab; color: #ffffff; } i
+color-white{ color: #d5d5d5; } i
+color10{ border-color:#0076ab; } i
+color10{ background-color:#0076ab; color: #ffffff; }
+color10{ border-right-color:#0076ab; }
+decoration-color10 li:before { color:#0076ab; }
+decoration-color10 li:before { color:#0076ab; }
+card-color10{ background-color:#0076ab; }
+bottom-border-color10{ border-bottom-color: #0076ab; }
+grad-180-transparent-color10{ background-image: linear-gradient(180deg, rgba(0,118,171,0) 0%, rgba(0,118,171,0) 50%, rgba(0,118,171,0
+border-color10{ border-color: #0076ab; }
+circle-bar{ stroke: #0076ab; } p
+color-white{ color : #ffffff; } span
+color-white{ color : #ffffff; } h1
+color-white{ color : #ffffff; } h2
+color-white{ color : #ffffff; } h3
+color-white{ color : #ffffff; } h4
+color-white{ color : #ffffff; } h5
+color-white{ color : #ffffff; } h6
+color-white{ color : #ffffff; }
+bg-color-white{ background-color:#ffffff; } a
+button):hover{ color:#FFFFFF; } button
+color-white{ background-color:#ffffff; border-color:#ffffff; } button
+color-white:hover{ background-color:#FFFFFF; border-color:#FFFFFF; } button
+color-white{ background:none; border-color:#ffffff; color:#ffffff; } button
+color-white:hover{ background:none; border-color:rgba(255,255,255,0
+color-white{ color:#ffffff; } i
+color-white{ border-color:#ffffff; } i
+color-white{ background-color:#ffffff; color: #ffffff; } i
+color-white{ color: #d5d5d5; } i
+color-white{ border-color:#ffffff; } i
+color-white{ background-color:#ffffff; color: #ffffff; }
+color-white{ border-right-color:#ffffff; }
+decoration-color-white li:before { color:#ffffff; }
+decoration-color-white li:before { color:#ffffff; }
+card-color-white{ background-color:#ffffff; }
+bottom-border-color-white{ border-bottom-color: #ffffff; }
+grad-180-transparent-color-white{ background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0
+border-color-white{ border-color: #ffffff; }
+circle-bar{ stroke: #ffffff; } p
+color-black{ color : #000000; } span
+color-black{ color : #000000; } h1
+color-black{ color : #000000; } h2
+color-black{ color : #000000; } h3
+color-black{ color : #000000; } h4
+color-black{ color : #000000; } h5
+color-black{ color : #000000; } h6
+color-black{ color : #000000; }
+bg-color-black{ background-color:#000000; } a
+button):hover{ color:#141414; } button
+color-black{ background-color:#000000; border-color:#000000; } button
+color-black:hover{ background-color:#141414; border-color:#141414; } button
+color-black{ background:none; border-color:#000000; color:#000000; } button
+color-black:hover{ background:none; border-color:rgba(0,0,0,0
+color-black{ color:#000000; } i
+color-black{ border-color:#000000; } i
+color-black{ background-color:#000000; color: #ffffff; } i
+color-white{ color: #d5d5d5; } i
+color-black{ border-color:#000000; } i
+color-black{ background-color:#000000; color: #ffffff; }
+color-black{ border-right-color:#000000; }
+decoration-color-black li:before { color:#000000; }
+decoration-color-black li:before { color:#000000; }
+card-color-black{ background-color:#000000; }
+bottom-border-color-black{ border-bottom-color: #000000; }
+grad-180-transparent-color-black{ background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0
+border-color-black{ border-color: #000000; }
+circle-bar{ stroke: #000000; } /** cached colors style */
+screen-reader-text[href="#page-content"]:focus { background-color: #f1f1f1; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0
+6); clip: auto !important; clip-path: none; color: #21759b; } Skip to content Home About Us Overview of COMESA Decision Making The Secretariat COMESA Institutions Contact Us Privacy Policy Our Programmes Infrastructure Development SATSD Programme The RIFF Project The RIFF GRM EGEE-ICT Programme ASCENT Project IDEA Project Agriculture, Industry &#038; Private Sector Development Trade &#038; Customs Services Budget &#038; Finance Legal &#038; Corporate Affairs Information Communications Technology (ICT) Gender &#038; Social Affairs Human Resources &#038; Administration Corporate Communications Governance, Peace &#038; Security Strategic Planning COMESA Statistics Conference Services Resource Mobilization &#038; International Cooperation Member States Opportunities Consultancies Open Tenders Awarded Tenders Employment COMESA Secretariat COMESA Institutions Agencies/Partners Donor Funded Grants Education/Training/Research COMESA Media Awards 2025 Call for Entries دعوة لتقديم الأعمال المشاركة English: CMA 2025 Call for Entries Français: Appel à candidatures CMA 2025 COMESA Job Application Forms News Events Latest News Press Releases Speeches/ Statements eCOMESA Newsletters GPS Quarterly Newsletters Quarterly Newsletters Photo Gallery Video Gallery All Posts Resources Publications COMESA Statistics Data Hub Online Platforms COVID-19 Portal COMESA Surveys Information Resource Center COMESA Seed Variety Catalogue Trade in Services Negotiations Portal Non-Tariff Barriers Online Monitoring Mechanism Monitoring and Evaluation System RAERESA IMS e-Resources Job Application Forms English العربية Français Home About Us Overview of COMESA Decision Making The Secretariat COMESA Institutions Contact Us Privacy Policy Our Programmes Infrastructure Development SATSD Programme The RIFF Project The RIFF GRM EGEE-ICT Programme ASCENT Project IDEA Project Agriculture, Industry &#038; Private Sector Development Trade &#038; Customs Services Budget &#038; Finance Legal &#038; Corporate Affairs Information Communications Technology (ICT) Gender &#038; Social Affairs Human Resources &#038; Administration Corporate Communications Governance, Peace &#038; Security Strategic Planning COMESA Statistics Conference Services Resource Mobilization &#038; International Cooperation Member States Opportunities Consultancies Open Tenders Awarded Tenders Employment COMESA Secretariat COMESA Institutions Agencies/Partners Donor Funded Grants Education/Training/Research COMESA Media Awards 2025 Call for Entries دعوة لتقديم الأعمال المشاركة English: CMA 2025 Call for Entries Français: Appel à candidatures CMA 2025 COMESA Job Application Forms News Events Latest News Press Releases Speeches/ Statements eCOMESA Newsletters GPS Quarterly Newsletters Quarterly Newsletters Photo Gallery Video Gallery All Posts Resources Publications COMESA Statistics Data Hub Online Platforms COVID-19 Portal COMESA Surveys Information Resource Center COMESA Seed Variety Catalogue Trade in Services Negotiations Portal Non-Tariff Barriers Online Monitoring Mechanism Monitoring and Evaluation System RAERESA IMS e-Resources Job Application Forms English العربية Français COMESA-EAC-SADC Tripartite Free Trade Area Comes into Force Latest News July 25, 2024: The COMESA-EAC-SADC Tripartite Free Trade Area (TFTA) Agreement, has today, 25 July 2024, come into force
+This follows the attainment of the required threshold of 14 ratification among the 29 Member/Partner States in the three regional economic communities
+The entry into force of the Agreement follows the depositing of Instrument of Ratification by Angola on 25 th June, 2024
+The attainment of this milestone was announced during the 37 th Tripartite Task Force (TTF) Meeting, which took place on 20 July, 2024 on the sidelines of the 6 th African Union Mid-Year Coordination Meeting in Accra, Ghana
+TTF is comprised of the Chief Executive Officers (CEOs) of the three Regional Economic Communities (RECs); H
+Elias Mpedi Magosi of Southern African Development Community (SADC), H
+Veronica Nduva, of the East African Community (EAC) and H
+Chileshe Mpundu Kapwepwe of the Common Market for Eastern and Southern Africa (COMESA)
+Magosi, who is current Chairman of the Tripartite Task Force, announced the attainment of the requisite threshold of ratifications
+Member/Partner States that have deposited their Instruments of Ratification include Angola, Botswana, Burundi, Egypt, Eswatini, Kenya, Lesotho, Malawi, Namibia, Rwanda, South Africa, Uganda, Zambia and Zimbabwe
+These countries together accounted for 75% of the Tripartite GDP in 2022
+The meeting was further informed that Djibouti had on 20 June 2024 notified COMESA Secretariat of its ratification of the Agreement and is therefore expected to deposit its instruments of ratification any time
+The Executive Secretary of SADC committed to continue the engagement with the Tripartite Member/Partner States that have yet to ratify the Agreement to do so
+“We urge the Member/Partner States to mobilize resources and support the implementation interventions, including setting up the necessary implementation structures,” he said
+The Decision to establish the Tripartite FTA was made way back on 22 October 2008 at the Tripartite Summit of Heads of State and Government
+The objective was to enhance market access, address multiple memberships and further the objectives of cooperation, harmonisation, and coordination of policies among the three RECs
+The 29 Tripartite Member/Partner States represent 53% of the African Union&#8217;s membership, more than 60% of continental GDP ($1
+88 trillion), and a combined population of 800 million
+The Tripartite framework is based on three pillars: Market Integratio n, which involves trade liberalisation through the creation of a Free Trade Area and arrangements for the movement of business persons; Infrastructure Development, which focuses on enhancing connectivity and reducing business costs; and Industrial Development, which aims to create a supportive environment by improving regulatory and legal frameworks, adding value, diversifying industries, increasing productivity and competitiveness, and implementing programmes for structural change
+COMESA Secretariat leads the Market Integration Pillar, SADC the Industrialisation Pillar and EAC the Infrastructure Pillar
+COMESA Secretary General expressed appreciation for the efforts that have achieved the required number of ratifications for the Tripartite FTA
+“To support the AfCFTA, we must ensure the Tripartite works effectively
+I urge the Tripartite RECs to lead the work under their respective pillars to avoid duplication of efforts,” she said
+She called for a careful examination of progress and strategies to upscale implementation levels, ensuring that benefits are realised by stakeholders in the Tripartite Member/Partner States
+Veronica Nduva, highlighted the need to consolidate the Tripartite FTA through the Agreement&#8217;s implementation, to harness potential benefits, preserve gains and strengthen the participation of Member/Partner States in the AfCFTA
+“The fact that we have reached the required ratification threshold of 14 ratifications, developed modalities for implementing the Tripartite Agreement, finalised most aspects of the Rules of Origin, continued with engagements on tariff offers and developed the Tripartite Protocol on Competition Policy demonstrates that the Member/Partner States are committed to the process,” she said
+Progress has been made with the online Non-Tariff Barrier (NTBs) reporting and elimination mechanism being under implementation by 25 Tripartite Member/Partner States
+The meeting concluded with an agreement on a roadmap for launching the TFTA&#8217;s entry into force at the 4th Tripartite Summit of Heads of State and Government, planned for later towards the end of the year
+by Willis Osemo on 25/07/2024 0 Post navigation Previous: Previous post: COMESA and AKADEMIYA2063 Sign MOU to Support Evidence-based Agri-food System Transformation Next: Next post: Civil Aviation Authority Seeks Collaboration with COMESA Generic selectors Exact matches only Search in title Search in content Post Type Selectors Filter by Categories Awarded Tenders COMESA News COMESA Surveys COVID 19 Bulletins and Special Reports Donor Grants eCOMESA Newsletter Education / Training Latest News News Open Tenders Opportunities Press Releases Publications Speeches/Statements Uncategorized Video Gallery Categories Categories Select Category Awarded Tenders COMESA News COMESA Surveys COVID 19 Bulletins and Special Reports Donor Grants eCOMESA Newsletter Education / Training Latest News News Open Tenders Opportunities Press Releases Publications Speeches/Statements Uncategorized Video Gallery COMESA @25 Anniversary https://www
+com/watch?v=VceX9CHXH9Y&#038;t=1s Recent Posts EU–COMESA Strategic Political Dialogue Strengthens Cooperation Amid Global Economic and Geopolitical Transformation Tender for Provision of Staff Medical Insurance Cover for Staff of The COMESA Secretariat Procurement of Consultancy Services to Review the Development of COMESA Regional Agri Food Systems Investment Plan (RASIP) 2026-2031 COMESA Chair Swears in COMESA Court Judges, Urges Integrity in Justice COMESA and UNECA Collaborate to Enhance and Diversify Regional Tourism Copyright © 2026 Common Market for Eastern and Southern Africa (COMESA) Secretariat
+English العربية Français English العربية Français

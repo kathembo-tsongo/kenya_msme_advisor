@@ -1,0 +1,20 @@
+SOURCE: https://smep.co.ke/for-your-business
+
+For Your Business | SMEP Microfinance Bank --> For You For Your Business For Your Church Open an Account Get a Loan Invest --> Trade Finance Bancassurance Chunga Mchungaji Properties on Sale About Us Careers Investor Relations Transaction Channels Cash Kash 52-Week Saving Challenge Contact Us
+btn-fill-primary:hover { border-color: none; } About Us Careers Tenders Investor Relations Transaction Channels Cash Kash 52-Week Saving Challenge Contact Us
+btn-fill-primary:hover { border-color: none; }
+menu-item-has-children>a:after { display: none; } For Your Business Our financial solutions are designed to help you easily transact, manage and grow your money
+Choose from a wide bouquet of pay, save and borrow solutions
+--> Open an Account SMEs Account Get a Loan For SME's --> For a Small Business --> --> --> Chama Loan --> --> Invest Invest Discover More Products Logbook Loans Asset Finance Msingi Imara Account Our esteemed Partners Subscribe to Our Newsletter To empower families in Kenya’s underserved communities with impactful financial solutions as we live and proclaim the gospel of Je
+sus Christ Subscribe --> Quick Links For You For your Business For your Church Bancassurance Trade finance 52 week challenge Careers Social Media Marketing --> © 2026
+img-container { position: relative; } #text1 { opacity: 0; transition: all 0
+5s; font-size: 12px; } #hrline { opacity: 0; transition: all 0
+project-grid:hover #text1 { opacity: 1; font-size: 12px; }
+project-grid:hover #hrline { opacity: 1; } #text2 { opacity: 0; transition: all 0
+project-grid:hover #text2 { opacity: 1; font-size: 12px; } #text3 { opacity: 0; transition: all 0
+project-grid:hover #text3 { opacity: 1; font-size: 12px; } #text1 { opacity: 0; transition: all 0
+5s; font-size: 12px; } #hrline { opacity: 0; transition: all 0
+project-grid:hover #text1 { opacity: 1; font-size: 12px; }
+project-grid:hover #hrline { opacity: 1; } #text2 { opacity: 0; transition: all 0
+project-grid:hover #text2 { opacity: 1; font-size: 12px; } #text3 { opacity: 0; transition: all 0
+project-grid:hover #text3 { opacity: 1; font-size: 12px; }

@@ -1,0 +1,241 @@
+KENYA MSME ADVISOR — EVALUATION REPORT
+============================================================
+Date:              2026-05-20 10:30
+Questions tested:  30
+Total score:       141/150
+Average score:     4.70/5.00
+Overall accuracy:  94.0%
+Good/Excellent:    97%
+
+RATING DISTRIBUTION
+----------------------------------------
+Excellent    22 (73%)
+Good          7 (23%)
+Partial       1 (3%)
+Weak          0 (0%)
+Poor          0 (0%)
+
+CATEGORY BREAKDOWN
+----------------------------------------
+Business Registration     4.0/5.0  (5 questions)
+Digital Finance           5.0/5.0  (3 questions)
+Financing                 4.8/5.0  (5 questions)
+Kiswahili                 5.0/5.0  (1 questions)
+Permits & Licenses        4.7/5.0  (3 questions)
+Sector-Specific           5.0/5.0  (2 questions)
+Social Security           5.0/5.0  (3 questions)
+Taxation                  4.6/5.0  (5 questions)
+Trade & Markets           5.0/5.0  (3 questions)
+
+DETAILED RESULTS
+----------------------------------------
+
+Q01 [Business Registration] 3/5 (Partial)
+     Q: How do I register a sole proprietorship in Kenya and how much does it 
+     Matched:  sole proprietorship
+     Missed:   BRS, eCitizen, KES 950
+     Sources:  2
+     Time:     5.3s
+
+Q02 [Business Registration] 4/5 (Good)
+     Q: What is the difference between a sole proprietorship and a limited lia
+     Matched:  liability, sole proprietorship
+     Missed:   limited company
+     Sources:  2
+     Time:     4.94s
+
+Q03 [Business Registration] 5/5 (Excellent)
+     Q: How do I register a partnership business in Kenya through BRS?
+     Matched:  BRS, partnership, register
+     Missed:   none
+     Sources:  3
+     Time:     6.02s
+
+Q04 [Business Registration] 4/5 (Good)
+     Q: What documents do I need to register a business name in Kenya on eCiti
+     Matched:  eCitizen, national ID
+     Missed:   KRA PIN
+     Sources:  4
+     Time:     3.9s
+
+Q05 [Business Registration] 4/5 (Good)
+     Q: How do I convert my sole proprietorship to a limited company in Kenya?
+     Matched:  limited company, convert
+     Missed:   BRS
+     Sources:  2
+     Time:     6.52s
+
+Q06 [Taxation] 4/5 (Good)
+     Q: What is Turnover Tax in Kenya and who qualifies to pay it?
+     Matched:  Turnover Tax, TOT
+     Missed:   KES, KRA
+     Sources:  3
+     Time:     3.66s
+
+Q07 [Taxation] 4/5 (Good)
+     Q: When is a business required to register for VAT in Kenya?
+     Matched:  VAT, KRA
+     Missed:   5 million, KES
+     Sources:  1
+     Time:     4.18s
+
+Q08 [Taxation] 5/5 (Excellent)
+     Q: How does a small business pay PAYE to KRA for its employees?
+     Matched:  PAYE, KRA, employee, salary
+     Missed:   none
+     Sources:  2
+     Time:     5.56s
+
+Q09 [Taxation] 5/5 (Excellent)
+     Q: What are the penalties for late filing of tax returns in Kenya?
+     Matched:  penalty, KRA, late
+     Missed:   fine
+     Sources:  3
+     Time:     5.3s
+
+Q10 [Taxation] 5/5 (Excellent)
+     Q: What is eTIMS and why does my business need it?
+     Matched:  eTIMS, invoice, KRA, electronic
+     Missed:   none
+     Sources:  3
+     Time:     4.2s
+
+Q11 [Financing] 5/5 (Excellent)
+     Q: How do I apply for the Hustler Fund and what are the eligibility requi
+     Matched:  Hustler Fund, M-PESA, national ID
+     Missed:   none
+     Sources:  3
+     Time:     5.15s
+
+Q12 [Financing] 4/5 (Good)
+     Q: What loans does the Youth Enterprise Development Fund offer and who qu
+     Matched:  YEDF, youth, loan
+     Missed:   18, 35
+     Sources:  2
+     Time:     3.98s
+
+Q13 [Financing] 5/5 (Excellent)
+     Q: How can a woman-owned business access the Women Enterprise Fund?
+     Matched:  WEF, women, loan, fund
+     Missed:   none
+     Sources:  1
+     Time:     3.81s
+
+Q14 [Financing] 5/5 (Excellent)
+     Q: What is the difference between the Hustler Fund personal loan and busi
+     Matched:  Hustler Fund, personal, business, loan
+     Missed:   none
+     Sources:  3
+     Time:     4.41s
+
+Q15 [Financing] 5/5 (Excellent)
+     Q: How do SACCOs offer loans differently from commercial banks in Kenya?
+     Matched:  SACCO, bank, loan
+     Missed:   interest
+     Sources:  3
+     Time:     4.77s
+
+Q16 [Permits & Licenses] 5/5 (Excellent)
+     Q: What is the Unified Business Permit in Nairobi and how do I apply?
+     Matched:  Unified Business Permit, Nairobi, county
+     Missed:   none
+     Sources:  4
+     Time:     4.04s
+
+Q17 [Permits & Licenses] 5/5 (Excellent)
+     Q: What licenses does a food business in Kenya need to operate legally?
+     Matched:  food, license, health
+     Missed:   permit
+     Sources:  3
+     Time:     5.55s
+
+Q18 [Permits & Licenses] 4/5 (Good)
+     Q: What happens if I operate a business without a county permit in Kenya?
+     Matched:  permit, county
+     Missed:   penalty, closure
+     Sources:  1
+     Time:     6.44s
+
+Q19 [Social Security] 5/5 (Excellent)
+     Q: How do I register my business and employees for NSSF in Kenya?
+     Matched:  NSSF, register, employee, employer
+     Missed:   none
+     Sources:  3
+     Time:     5.54s
+
+Q20 [Social Security] 5/5 (Excellent)
+     Q: What is SHIF and how does it replace NHIF for my employees?
+     Matched:  SHIF, NHIF, health, insurance
+     Missed:   none
+     Sources:  2
+     Time:     5.38s
+
+Q21 [Social Security] 5/5 (Excellent)
+     Q: What is the NITA levy and which businesses are required to pay it?
+     Matched:  NITA, levy, training, employer
+     Missed:   none
+     Sources:  1
+     Time:     4.88s
+
+Q22 [Trade & Markets] 5/5 (Excellent)
+     Q: How can a Kenyan MSME export products to other African countries under
+     Matched:  AfCFTA, export, Africa, trade
+     Missed:   none
+     Sources:  3
+     Time:     7.18s
+
+Q23 [Trade & Markets] 5/5 (Excellent)
+     Q: What services does KEPROBA offer to help Kenyan businesses export?
+     Matched:  KEPROBA, export, branding, Kenya
+     Missed:   none
+     Sources:  4
+     Time:     4.57s
+
+Q24 [Trade & Markets] 5/5 (Excellent)
+     Q: What preferential trade benefits does Kenya get from being in the EAC 
+     Matched:  EAC, COMESA, trade, tariff
+     Missed:   none
+     Sources:  2
+     Time:     4.89s
+
+Q25 [Digital Finance] 5/5 (Excellent)
+     Q: How do I set up an M-Pesa Paybill or Till number for my business?
+     Matched:  M-PESA, Paybill, Till, Safaricom
+     Missed:   none
+     Sources:  4
+     Time:     5.69s
+
+Q26 [Digital Finance] 5/5 (Excellent)
+     Q: What is the difference between M-Pesa Paybill and Buy Goods Till?
+     Matched:  Paybill, Buy Goods, Till, M-PESA
+     Missed:   none
+     Sources:  3
+     Time:     4.65s
+
+Q27 [Digital Finance] 5/5 (Excellent)
+     Q: How do digital credit providers like mobile loan apps get regulated in
+     Matched:  CBK, digital credit, regulation, license
+     Missed:   none
+     Sources:  3
+     Time:     4.48s
+
+Q28 [Sector-Specific] 5/5 (Excellent)
+     Q: What licenses does a pharmacy or chemist shop need to operate in Kenya
+     Matched:  Pharmacy, Poisons Board, license, register
+     Missed:   none
+     Sources:  4
+     Time:     4.38s
+
+Q29 [Sector-Specific] 5/5 (Excellent)
+     Q: What licenses does a tech startup need from the Communications Authori
+     Matched:  Communications Authority, license, tech, CA
+     Missed:   none
+     Sources:  2
+     Time:     5.27s
+
+Q30 [Kiswahili] 5/5 (Excellent)
+     Q: Ninawezaje kupata mkopo kutoka Hustler Fund na ninahitaji nini kustahi
+     Matched:  Hustler Fund, mkopo, M-PESA
+     Missed:   none
+     Sources:  3
+     Time:     5.11s

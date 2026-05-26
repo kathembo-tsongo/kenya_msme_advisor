@@ -16,12 +16,52 @@ import time
 import uuid
 from pathlib import Path
 import streamlit as st
+from datetime import datetime
 import anthropic
 from sklearn.metrics.pairwise import cosine_similarity
 import sys
 
-BASE_DIR = Path(__file__).parent.parent
-DB_DIR   = BASE_DIR / "knowledge_base"
+BASE_DIR  = Path(__file__).parent.parent
+DB_DIR    = BASE_DIR / "knowledge_base"
+CONV_DIR  = BASE_DIR / "logs" / "conversations"
+CONV_DIR.mkdir(parents=True, exist_ok=True)
+
+
+# ── Conversation persistence ───────────────────────────────────────────────────
+def save_conversation(session_id: str, history: list):
+    """Save current conversation to disk."""
+    if not history:
+        return
+    conv_file = CONV_DIR / f"{session_id}.json"
+    data = {
+        "session_id": session_id,
+        "timestamp":  datetime.now().isoformat(),
+        "title":      history[0]["user"][:50] if history else "New Conversation",
+        "history":    history,
+    }
+    conv_file.write_text(json.dumps(data, ensure_ascii=False, indent=2))
+
+
+def load_all_conversations() -> list:
+    """Load all saved conversations sorted by most recent."""
+    convs = []
+    for f in sorted(CONV_DIR.glob("*.json"), key=lambda x: x.stat().st_mtime,
+                    reverse=True):
+        try:
+            data = json.loads(f.read_text())
+            convs.append(data)
+        except Exception:
+            pass
+    return convs[:20]  # Show last 20 conversations
+
+
+def load_conversation(session_id: str) -> list:
+    """Load a specific conversation by session_id."""
+    conv_file = CONV_DIR / f"{session_id}.json"
+    if conv_file.exists():
+        data = json.loads(conv_file.read_text())
+        return data.get("history", [])
+    return []
 
 sys.path.insert(0, str(Path(__file__).parent))
 from logger import log_conversation
@@ -41,13 +81,6 @@ st.markdown("""
     border-radius: 10px;
     margin-bottom: 1rem;
 }
-.source-box {
-    background: #f0f4f0;
-    border-left: 4px solid #006600;
-    padding: 0.5rem 0.8rem;
-    border-radius: 4px;
-    font-size: 0.78rem;
-    color: #555;
     margin-top: 0.4rem;
 }
 .lang-badge {
@@ -79,12 +112,13 @@ st.markdown("""
 
 # ── Header ─────────────────────────────────────────────────────────────────────
 st.markdown("""
-<div class="header">
+<div class="header" style="text-align: center;">
     <h2 style="margin:0">🇰🇪 Kenya MSME Business Advisor</h2>
     <p style="margin:0.3rem 0 0 0;opacity:0.9;font-size:0.9rem">
-        AI-powered guidance — English, Kiswahili, Dholuo, Kikuyu, Kalenjin na zaidi
+        AI-powered guidance — English and Kiswahili
     </p>
 </div>
+
 """, unsafe_allow_html=True)
 
 
@@ -147,13 +181,21 @@ def detect_language(text: str) -> str:
         "dholuo":    sum(1 for w in ["ere","kaka","nyalo","tero","chandruok",
                                       "osiep","awuon","bende","adhi","ohala"]
                          if w in t),
-        "kikuyu":    sum(1 for w in ["niwega","niguo","ndungata","ngwataniro",
-                                      "murata","niwahota","thogora","mboroto"]
-                         if w in t),
+        "kikuyu":    sum(1 for w in [
+                             "niwega","niguo","ndungata","ngwataniro",
+                             "murata","niwahota","thogora","mboroto",
+                             "gukora","guika","mahiu","mucii","murimi",
+                             "ngumo","ugaruruku","thimu","kirigo",
+                         ] if w in t),
         "kalenjin":  sum(1 for w in ["amun","mising","tugul","kamusto","nebo"]
                          if w in t),
-        "kamba":     sum(1 for w in ["nesa","kwata","mwende","mwethya","mwatu"]
-                         if w in t),
+        "kamba":     sum(1 for w in [
+                             "mwi aseo","mwi","aseo","kwata","mwende",
+                             "mwethya","mwatu","nesa","niki","ndeto",
+                             "muthanga","ngwatanio","muunda","musyi",
+                             "mbesa","utunga","utethya","niwe","niko",
+                             "mawio","nthini","mwaki","muuo","kiveti",
+                         ] if w in t),
         "kiswahili": sum(1 for w in ["biashara","kodi","ushuru","mkopo","akiba",
                                       "benki","leseni","usajili","nina","nataka",
                                       "niambie","ninaweza","pesa","shilingi",
@@ -161,6 +203,9 @@ def detect_language(text: str) -> str:
                          if w in t),
     }
     best  = max(scores, key=scores.get)
+    # For indigenous languages, even 1 word match is enough
+    if scores[best] >= 1 and best not in ["kiswahili", "english"]:
+        return best
     return best if scores[best] >= 2 else "english"
 
 
@@ -227,43 +272,174 @@ CONTEXT FROM KNOWLEDGE BASE:
     return response.content[0].text
 
 
+# ── Hide admin and analytics from sidebar using CSS ───────────────────────────
+st.markdown("""
+<style>
+[data-testid="stSidebarNav"] { display: none !important; }
+</style>
+""", unsafe_allow_html=True)
+
 # ── Sidebar — operator focused ─────────────────────────────────────────────────
 with st.sidebar:
-    st.markdown("### 💡 Sample Questions")
-    st.caption("Click any question to get started:")
 
-    samples = [
-        "How do I register a business in Kenya?",
-        "What taxes does a small business pay?",
-        "How do I apply for the Hustler Fund?",
-        "What licenses do I need to open a shop?",
-        "How do I register for NSSF and SHA?",
-        "Ninawezaje kupata mkopo wa biashara?",
-        "What is eTIMS and does my business need it?",
-        "How do I export my products to other countries?",
-        "What is a SACCO and how can it help my business?",
-        "How do I pay PAYE for my employees?",
-    ]
-    for q in samples:
-        if st.button(q, key=q, use_container_width=True):
-            st.session_state["prefill"] = q
-
-    st.markdown("---")
-    st.markdown("### 🌍 Languages Supported")
+    # ── Branding ───────────────────────────────────────────────────────────────
     st.markdown("""
-- 🇬🇧 **English** — Full support
-- 🇰🇪 **Kiswahili** — Full support
-- 🐟 **Dholuo** — Partial
-- 🏔️ **Kikuyu** — Partial
-- 🏃 **Kalenjin** — Partial
-- 🎨 **Kamba** — Partial
-""")
+    <div style="padding:0.5rem 0 0.8rem 0;">
+        <span style="font-size:1.3rem;font-weight:700;color:#006600">
+        🇰🇪 MSME Advisor
+        </span>
+    </div>
+    """, unsafe_allow_html=True)
 
-    st.markdown("---")
-    if st.button("🗑️ Clear conversation", use_container_width=True):
+    # ── New conversation ───────────────────────────────────────────────────────
+    if st.button("＋  New Conversation",
+                 use_container_width=True, type="primary"):
+        if st.session_state.get("history"):
+            save_conversation(
+                st.session_state["session_id"],
+                st.session_state["history"]
+            )
         st.session_state["history"]        = []
         st.session_state["question_count"] = 0
+        st.session_state["session_id"]     = str(uuid.uuid4())[:8]
         st.rerun()
+    # ── Persistent conversations — like ChatGPT ──────────────────────────────
+    current   = st.session_state.get("session_id", "")
+    all_convs = load_all_conversations()
+
+    if all_convs:
+        st.markdown(
+            "<div style='font-size:0.72rem;color:#888;"
+            "margin:0.8rem 0 0.3rem 0;font-weight:600;"
+            "text-transform:uppercase;letter-spacing:0.05em'>"
+            "Conversations</div>",
+            unsafe_allow_html=True
+        )
+        for conv in all_convs:
+            sid   = conv.get("session_id", "")
+            title = conv.get("title", "Conversation")
+            short = title[:36] + "…" if len(title) > 36 else title
+            is_active = sid == current
+            if is_active:
+                col_a, col_b = st.columns([5, 1])
+                col_a.markdown(
+                    f"<div style='background:#e8f5e9;border-left:3px solid"
+                    f" #006600;padding:6px 10px;border-radius:4px;"
+                    f"font-size:0.82rem;'>"
+                    f"▶ {short}</div>",
+                    unsafe_allow_html=True
+                )
+                if col_b.button("🗑️", key=f"del_{sid}",
+                                help="Delete this conversation"):
+                    (CONV_DIR / f"{sid}.json").unlink(missing_ok=True)
+                    st.session_state["history"]        = []
+                    st.session_state["question_count"] = 0
+                    st.session_state["session_id"]     = str(uuid.uuid4())[:8]
+                    st.rerun()
+            else:
+                col_a, col_b = st.columns([5, 1])
+                if col_a.button(f"💬 {short}", key=f"conv_{sid}",
+                                use_container_width=True):
+                    if st.session_state.get("history"):
+                        save_conversation(current,
+                                          st.session_state["history"])
+                    st.session_state["history"]        = load_conversation(sid)
+                    st.session_state["session_id"]     = sid
+                    st.session_state["question_count"] = len(
+                        st.session_state["history"])
+                    st.rerun()
+                if col_b.button("🗑️", key=f"del_{sid}",
+                                help="Delete this conversation"):
+                    (CONV_DIR / f"{sid}.json").unlink(missing_ok=True)
+                    st.rerun()
+
+    st.markdown("---")
+
+    # ── Language selector ──────────────────────────────────────────────────────
+    st.markdown("#### 🌍 Select Language")
+    lang_choice = st.radio(
+        "Choose your language",
+        options=["English", "Kiswahili"],
+        label_visibility="collapsed",
+        horizontal=True,
+    )
+    if lang_choice == "Kiswahili":
+        st.session_state["force_lang"] = "kiswahili"
+    else:
+        st.session_state["force_lang"] = None
+
+    st.markdown("---")
+
+    # ── Quick topics ───────────────────────────────────────────────────────────
+    st.markdown("#### 💡 Quick Topics")
+
+    TOPICS = {
+        "📋 Business Registration": [
+            "How do I register a sole proprietorship in Kenya?",
+            "What documents do I need to register a business?",
+            "How much does business registration cost?",
+        ],
+        "💰 Financing & Loans": [
+            "How do I apply for the Hustler Fund?",
+            "What loans does the Youth Enterprise Development Fund offer?",
+            "How can a women-owned business get the Women Enterprise Fund?",
+            "What is a SACCO and how can it help my business?",
+        ],
+        "🏛️ Tax & KRA": [
+            "What taxes does a small business pay to KRA?",
+            "What is Turnover Tax and who qualifies?",
+            "When must I register for VAT?",
+            "What is eTIMS and does my business need it?",
+        ],
+        "🪪 Permits & Licenses": [
+            "What licenses do I need to open a shop?",
+            "What is the Unified Business Permit in Nairobi?",
+            "What happens if I operate without a county permit?",
+        ],
+        "👥 Social Security": [
+            "How do I register for NSSF?",
+            "What is SHIF and how does it replace NHIF?",
+            "What is the NITA levy?",
+        ],
+        "📦 Trade & Export": [
+            "How do I export my products to other countries?",
+            "What is AfCFTA and how does it help Kenyan businesses?",
+            "What does KEPROBA do for Kenyan exporters?",
+        ],
+        "📱 Digital Finance": [
+            "How do I set up an M-Pesa Paybill for my business?",
+            "What is the difference between Paybill and Buy Goods Till?",
+            "How are mobile loan apps regulated in Kenya?",
+        ],
+    }
+
+    for topic, questions in TOPICS.items():
+        with st.expander(topic):
+            for q in questions:
+                if st.button(q, key=f"topic_{q}",
+                             use_container_width=True):
+                    st.session_state["prefill"] = q
+                    st.rerun()
+
+    st.markdown("---")
+
+    # ── Recent questions this session ──────────────────────────────────────────
+    if st.session_state.get("history"):
+        st.markdown("#### 💬 Recent Questions")
+        recent = st.session_state["history"][-5:][::-1]
+        for i, turn in enumerate(recent):
+            short = turn["user"][:45] + "…"                     if len(turn["user"]) > 45 else turn["user"]
+            if st.button(f"↩ {short}", key=f"recent_{i}",
+                         use_container_width=True):
+                st.session_state["prefill"] = turn["user"]
+                st.rerun()
+        st.markdown("---")
+
+    # ── Disclaimer ─────────────────────────────────────────────────────────────
+    st.caption(
+        "⚠️ General guidance only. Consult a qualified lawyer "
+        "or accountant for complex decisions."
+    )
 
 
 # ── Load resources ─────────────────────────────────────────────────────────────
@@ -283,12 +459,6 @@ for turn in st.session_state["history"]:
             )
     with st.chat_message("assistant", avatar="🇰🇪"):
         st.write(turn["assistant"])
-        if turn.get("sources"):
-            st.markdown(
-                "<div class='source-box'>📄 Sources: " +
-                " | ".join(turn["sources"]) + "</div>",
-                unsafe_allow_html=True,
-            )
 
 # ── Input ──────────────────────────────────────────────────────────────────────
 prefill  = st.session_state.pop("prefill", "")
@@ -305,7 +475,9 @@ if question:
         )
         st.stop()
 
-    lang = detect_language(question)
+    # Respect forced language from sidebar selector
+    forced = st.session_state.get("force_lang")
+    lang   = forced if forced else detect_language(question)
     st.session_state["question_count"] += 1
 
     with st.chat_message("user"):
@@ -331,12 +503,6 @@ if question:
             elapsed          = time.time() - start
 
         st.write(answer)
-        if sources:
-            st.markdown(
-                "<div class='source-box'>📄 Sources: " +
-                " | ".join(sources) + "</div>",
-                unsafe_allow_html=True,
-            )
 
     # Log silently — operator never sees this
     log_conversation(
@@ -356,6 +522,12 @@ if question:
         "sources":   sources,
         "lang":      lang,
     })
+
+    # Auto-save conversation after every message
+    save_conversation(
+        st.session_state["session_id"],
+        st.session_state["history"]
+    )
 
 # ── Disclaimer ─────────────────────────────────────────────────────────────────
 st.markdown(

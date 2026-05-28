@@ -1,0 +1,27 @@
+{
+  "session_id": "8c82d03e",
+  "timestamp": "2026-05-27T18:28:00.325355",
+  "title": "how do I configure my phone number to pochi",
+  "history": [
+    {
+      "user": "how do I configure my phone number to pochi",
+      "assistant": "# Setting Up M-Pesa on Your Phone\n\nI'd like to help, but I need to clarify what you mean by \"configure my phone number to pochi.\"\n\n**If you mean M-Pesa** (which Kenyans often call mobile money):\n\n## Basic Steps to Activate M-Pesa:\n1. **Dial `*150#`** on your Safaricom phone\n2. Follow the prompts to set up your M-Pesa account\n3. Create a **4-digit M-Pesa PIN** (keep this secret!)\n4. You'll get an **M-Pesa number** (usually your phone number with a prefix)\n\n## Using M-Pesa for Business:\n- **Send money** to customers or suppliers\n- **Receive payments** from customers\n- **Pay bills** and salaries\n- **Access loans** (like Safaricom's Mshwari or KCB M-Pesa)\n\n---\n\n**Could you clarify:**\n- Are you setting up personal M-Pesa or business M-Pesa?\n- Which phone provider are you using (Safaricom, Airtel, Equity)?\n- Are you trying to register a business payment account?\n\nOnce I know more, I can give you exact steps!\n\n**For business payments**, you might also want to explore:\n- **M-Pesa Business Account** (for shops/traders)\n- Integration with point-of-sale (POS) systems\n\nLet me know! 📱",
+      "sources": [
+        "yedf_loan_application_form_individual.pdf",
+        "kenya_national_digital_masterplan_2022_2032.pdf",
+        "gsma_state_mobile_money_report_2024.pdf",
+        "tveta_journal_vol5_2022.pdf"
+      ],
+      "lang": "english"
+    },
+    {
+      "user": "I mean pochi la biashara",
+      "assistant": "# Setting Up Pochi La Biashara (Business Wallet)\n\nGreat! Here are the **three ways to register**:\n\n---\n\n## **Method 1 — Via USSD (Dial Code)**\n1. Dial **`*334#`** on your Safaricom phone\n2. Select \"Register\" or \"Jiandikishe\"\n3. Choose your **business category** (duka, food, salon, etc.)\n4. Enter your details\n5. You'll get an **SMS confirmation**\n\n---\n\n## **Method 2 — Via M-PESA Super App**\n1. Open the **M-PESA Super App** on your smartphone\n2. Tap **\"Pay\"**\n3. Select **\"Pochi La Biashara\"**\n4. Follow the registration steps\n5. Confirm your details\n\n---\n\n## **Method 3 — Via MySafaricom App**\n1. Open **MySafaricom App**\n2. Go to **M-Pesa**\n3. Select **\"Pochi La Biashara\"**\n4. Complete registration\n\n---\n\n## **Available Business Categories:**\n- Retail shop / Duka\n- Food and beverages\n- Clothing and fashion\n- Electronics\n- Hardware\n- Agriculture\n- Services (salon, repair, etc.)\n\n**Choose the category that matches YOUR business!**\n\n---\n\n## **After Registration:**\n- Customers can pay you by dialing **`*334#`** and selecting Pochi La Biashara\n- You can check your balance anytime\n- Transfer funds to your main M-Pesa wallet whenever you want\n- Withdraw cash from any M-Pesa agent\n\nNeed help with anything else? 📱",
+      "sources": [
+        "safaricom_pochi_la_biashara.txt",
+        "kenya_cultural_entrepreneurship_kiswahili.txt"
+      ],
+      "lang": "english"
+    }
+  ]
+}

@@ -1,16 +1,23 @@
 """
-analytics.py — Kenya MSME Advisor: Analytics Dashboard
-Access at: http://localhost:8501/analytics
+analytics.py — Kenya MSME Advisor: Researcher Analytics Dashboard
+Organised with sidebar navigation — no scrolling needed.
 """
 
 import csv
+import json
 from pathlib import Path
-from collections import Counter
+from collections import Counter, defaultdict
 from datetime import datetime
 import streamlit as st
+import sys
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from auth import verify_password, update_password, update_profile, load_credentials
+from generate_report import generate_pdf_report
+from collections import defaultdict as _defaultdict
 
-BASE_DIR = Path(__file__).parent.parent.parent
-LOG_FILE = BASE_DIR / "logs" / "conversations.csv"
+BASE_DIR  = Path(__file__).parent.parent.parent
+LOG_FILE  = BASE_DIR / "logs" / "conversations.csv"
+EVAL_FILE = BASE_DIR / "logs" / "evaluation_results.csv"
 
 st.set_page_config(
     page_title="MSME Advisor — Analytics",
@@ -18,26 +25,62 @@ st.set_page_config(
     layout="wide"
 )
 
+# ── Hide streamlit nav ─────────────────────────────────────────────────────────
 st.markdown("""
 <style>
-.dash-header{background:linear-gradient(135deg,#006600 0%,#cc0000 100%);
-  color:white;padding:1.2rem 1.5rem;border-radius:10px;margin-bottom:1.5rem;}
-.find-card{background:#f8f9fa;border-left:4px solid #006600;
-  border-radius:0 8px 8px 0;padding:12px 16px;margin-bottom:10px;}
-.find-title{font-weight:600;color:#1a1a1a;margin-bottom:4px;font-size:14px;}
-.find-body{color:#444;font-size:13px;line-height:1.6;}
+[data-testid="stSidebarNav"] { display: none !important; }
+.section-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    padding-bottom: 0.4rem;
+    border-bottom: 3px solid #006600;
+    margin-bottom: 1.2rem;
+}
+.nav-btn {
+    width: 100%;
+    text-align: left;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+.active-nav {
+    background: #e8f5e9;
+    border-left: 4px solid #006600;
+    color: #006600;
+    font-weight: 700;
+}
+.kpi-box {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 1.2rem;
+    text-align: center;
+    border-top: 4px solid #006600;
+}
+.kpi-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #006600;
+}
+.kpi-label {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 4px;
+}
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown("""
-<div class="dash-header">
-    <h2 style="margin:0">📊 Kenya MSME Advisor — Analytics Dashboard</h2>
-    <p style="margin:0.3rem 0 0 0;opacity:0.9;font-size:0.9rem">
-        Real-time conversation analysis for thesis findings
-    </p>
-</div>
-""", unsafe_allow_html=True)
-
+# ── Login gate ─────────────────────────────────────────────────────────────────
+if not st.session_state.get("logged_in"):
+    st.switch_page("pages/login.py")
+if st.session_state.get("role") not in ["researcher", "admin"]:
+    st.error("❌ Access denied. Researcher role required.")
+    if st.button("← Back to Login"):
+        st.session_state.clear()
+        st.switch_page("pages/login.py")
+    st.stop()
 
 # ── Load data ──────────────────────────────────────────────────────────────────
 def load_data():
@@ -46,28 +89,30 @@ def load_data():
     with open(LOG_FILE, encoding="utf-8") as f:
         return list(csv.DictReader(f))
 
-
 rows = load_data()
-
-if not rows:
-    st.warning("No conversations logged yet. Start chatting to generate data!")
-    st.stop()
 
 # ── Compute stats ──────────────────────────────────────────────────────────────
 total     = len(rows)
-sessions  = len(set(r["session_id"] for r in rows))
-times     = [float(r["response_time_seconds"]) for r in rows if r["response_time_seconds"]]
-avg_time  = sum(times) / len(times) if times else 0
-words     = [int(r["answer_length_words"]) for r in rows if r["answer_length_words"]]
-avg_words = sum(words) / len(words) if words else 0
+sessions  = len(set(r["session_id"] for r in rows)) if rows else 0
+times     = [float(r["response_time_seconds"]) for r in rows
+             if r.get("response_time_seconds")]
+avg_time  = round(sum(times) / len(times), 1) if times else 0
+words     = [int(r["answer_length_words"]) for r in rows
+             if r.get("answer_length_words")]
+avg_words = round(sum(words) / len(words)) if words else 0
 topics    = Counter(r["topic_category"] for r in rows)
 languages = Counter(r["language_detected"] for r in rows)
 dates     = Counter(r["date"] for r in rows)
 
 all_sources = []
 for r in rows:
-    all_sources.extend(r["sources"].split(" | "))
-src_count = Counter(s for s in all_sources if s not in ["none", ""])
+    if r.get("sources") and r["sources"] != "none":
+        all_sources.extend(r["sources"].split(" | "))
+src_count = Counter(s for s in all_sources if s.strip())
+
+fast   = sum(1 for t in times if t < 10)
+medium = sum(1 for t in times if 10 <= t < 30)
+slow   = sum(1 for t in times if t >= 30)
 
 lang_labels = {
     "english":   "🇬🇧 English",
@@ -78,106 +123,573 @@ lang_labels = {
     "kamba":     "🎨 Kamba",
 }
 
-# ── Row 1: Key metrics ─────────────────────────────────────────────────────────
-st.subheader("📈 Key Metrics")
-c1, c2, c3, c4, c5, c6 = st.columns(6)
-c1.metric("Total Q&As",   total)
-c2.metric("Sessions",     sessions)
-c3.metric("Avg Response", f"{avg_time:.1f}s")
-c4.metric("Avg Answer",   f"{avg_words:.0f} words")
-c5.metric("Fastest",      f"{min(times):.1f}s" if times else "N/A")
-c6.metric("Slowest",      f"{max(times):.1f}s" if times else "N/A")
+# ── Navigation state ───────────────────────────────────────────────────────────
+if "analytics_page" not in st.session_state:
+    st.session_state["analytics_page"] = "Overview"
 
-st.markdown("---")
+PAGES = [
+    ("📈", "Overview"),
+    ("🗂️", "Topic Analysis"),
+    ("🌍", "Language Analysis"),
+    ("⏱️", "Response Times"),
+    ("📚", "Knowledge Sources"),
+    ("🧪", "Evaluation Results"),
+    ("💬", "Conversations"),
+    ("📥", "Export Data"),
+    ("👤", "My Profile"),
+]
 
-# ── Row 2: Topic + Language ────────────────────────────────────────────────────
-col_left, col_right = st.columns(2)
+# ── Sidebar ────────────────────────────────────────────────────────────────────
+with st.sidebar:
+    st.markdown("""
+    <div style='padding:0.5rem 0 0.8rem 0;'>
+        <span style='font-size:1.1rem;font-weight:700;color:#006600'>
+        📊 Analytics
+        </span><br>
+        <span style='font-size:0.72rem;color:#888'>Researcher Dashboard</span>
+    </div>
+    """, unsafe_allow_html=True)
 
-with col_left:
-    st.subheader("🗂️ Questions by Topic")
+    st.markdown(f"👤 **{st.session_state.get('user_name','Researcher')}**")
+    st.caption(f"📊 {total} Q&As · {sessions} sessions")
+
+    st.markdown("---")
+    st.markdown("**Dashboard Sections**")
+
+    for icon, page in PAGES:
+        is_active = st.session_state["analytics_page"] == page
+        if st.button(
+            f"{icon}  {page}",
+            key=f"nav_{page}",
+            use_container_width=True,
+            type="primary" if is_active else "secondary",
+        ):
+            st.session_state["analytics_page"] = page
+            st.rerun()
+
+    st.markdown("---")
+    st.markdown("**System**")
+    if st.button("🇰🇪 Go to Chat", use_container_width=True):
+        st.switch_page("app.py")
+    if st.button("🚪 Logout", use_container_width=True):
+        st.session_state.clear()
+        st.switch_page("pages/login.py")
+
+    st.markdown("---")
+    st.caption(
+        f"Last updated: {datetime.now().strftime('%H:%M:%S')}"
+    )
+
+# ── Page header ────────────────────────────────────────────────────────────────
+current_page = st.session_state["analytics_page"]
+current_icon = next(i for i, p in PAGES if p == current_page)
+
+st.markdown(f"""
+<div style="background:linear-gradient(135deg,#006600 0%,#cc0000 100%);
+color:white;padding:1rem 1.5rem;border-radius:10px;margin-bottom:1.5rem;
+display:flex;align-items:center;gap:12px;">
+    <span style="font-size:1.8rem">{current_icon}</span>
+    <div>
+        <h2 style="margin:0;font-size:1.3rem">{current_page}</h2>
+        <p style="margin:0;opacity:0.85;font-size:0.82rem">
+            Kenya MSME Advisor — Researcher Analytics
+        </p>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+# ==============================================================================
+# PAGE 1 — OVERVIEW
+# ==============================================================================
+if current_page == "Overview":
+    if not rows:
+        st.warning("No data yet. Start the chatbot and ask some questions.")
+        st.stop()
+
+    # KPI cards
+    kpis = [
+        ("Total Q&As",        total,         "Questions answered"),
+        ("Sessions",          sessions,      "Unique user sessions"),
+        ("Avg Response",      f"{avg_time}s","Time to generate answer"),
+        ("Avg Answer",        f"{avg_words}w","Words per response"),
+        ("Fastest",           f"{min(times):.1f}s" if times else "N/A", "Best response time"),
+        ("Slowest",           f"{max(times):.1f}s" if times else "N/A", "Longest response"),
+    ]
+    cols = st.columns(6)
+    for col, (label, value, caption) in zip(cols, kpis):
+        with col:
+            st.markdown(f"""
+            <div class="kpi-box">
+                <div class="kpi-value">{value}</div>
+                <div class="kpi-label">{label}</div>
+                <div style="font-size:0.7rem;color:#999">{caption}</div>
+            </div>
+            """, unsafe_allow_html=True)
+
+    st.markdown("---")
+
+    # Quick summary charts side by side
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.markdown("**Top Topics**")
+        for topic, count in topics.most_common(5):
+            pct = count / total * 100
+            st.markdown(f"`{pct:.0f}%` {topic}")
+            st.progress(pct / 100)
+
+    with col2:
+        st.markdown("**Languages Used**")
+        for lang, count in languages.most_common():
+            pct   = count / total * 100
+            label = lang_labels.get(lang, lang)
+            st.markdown(f"`{pct:.0f}%` {label}")
+            st.progress(pct / 100)
+
+    with col3:
+        st.markdown("**Response Speed**")
+        st.markdown(f"`{fast/total*100:.0f}%` ⚡ Fast (under 10s)")
+        st.progress(fast / total if total else 0)
+        st.markdown(f"`{medium/total*100:.0f}%` 🕐 Medium (10-30s)")
+        st.progress(medium / total if total else 0)
+        st.markdown(f"`{slow/total*100:.0f}%` 🐢 Slow (over 30s)")
+        st.progress(slow / total if total else 0)
+
+    st.markdown("---")
+    st.markdown("**Daily Activity**")
+    if dates:
+        max_d = max(dates.values())
+        d_cols = st.columns(min(len(dates), 7))
+        for col, (date, count) in zip(d_cols, sorted(dates.items())):
+            col.metric(date, count)
+
+# ==============================================================================
+# PAGE 2 — TOPIC ANALYSIS
+# ==============================================================================
+elif current_page == "Topic Analysis":
+    st.markdown("**Distribution of questions across MSME topic categories**")
+    st.caption(f"Based on {total} total questions logged")
+    st.markdown("---")
+
     total_t = sum(topics.values())
     for topic, count in topics.most_common():
-        pct = (count / total_t) * 100
-        st.markdown(f"**{topic}** — {count} questions ({pct:.0f}%)")
+        pct = count / total_t * 100
+        c1, c2, c3 = st.columns([3, 1, 1])
+        c1.markdown(f"**{topic}**")
+        c2.markdown(f"`{count} questions`")
+        c3.markdown(f"`{pct:.1f}%`")
         st.progress(pct / 100)
+        st.markdown("")
 
-with col_right:
-    st.subheader("🌍 Language Distribution")
+    st.markdown("---")
+    st.info(
+        f"**Finding:** The most queried topic is "
+        f"**{topics.most_common(1)[0][0]}** with "
+        f"{topics.most_common(1)[0][1]} questions "
+        f"({topics.most_common(1)[0][1]/total*100:.0f}% of total). "
+        f"This is consistent with World Bank identification of "
+        f"regulatory and financing barriers as top MSME challenges."
+    )
+
+# ==============================================================================
+# PAGE 3 — LANGUAGE ANALYSIS
+# ==============================================================================
+elif current_page == "Language Analysis":
+    st.markdown("**Language detection results across all conversations**")
+    st.caption(f"System supports 6 Kenyan languages")
+    st.markdown("---")
+
     total_l = sum(languages.values())
     for lang, count in languages.most_common():
-        pct   = (count / total_l) * 100
+        pct   = count / total_l * 100
         label = lang_labels.get(lang, lang)
-        st.markdown(f"**{label}** — {count} questions ({pct:.0f}%)")
+        c1, c2, c3 = st.columns([3, 1, 1])
+        c1.markdown(f"**{label}**")
+        c2.markdown(f"`{count} questions`")
+        c3.markdown(f"`{pct:.1f}%`")
         st.progress(pct / 100)
+        st.markdown("")
 
     st.markdown("---")
-    st.subheader("⏱️ Response Time Distribution")
-    fast   = sum(1 for t in times if t < 10)
-    medium = sum(1 for t in times if 10 <= t < 30)
-    slow   = sum(1 for t in times if t >= 30)
-    st.markdown(f"**Fast** (under 10s) — {fast} responses")
-    st.progress(fast / total if total else 0)
-    st.markdown(f"**Medium** (10–30s) — {medium} responses")
-    st.progress(medium / total if total else 0)
-    st.markdown(f"**Slow** (over 30s) — {slow} responses")
-    st.progress(slow / total if total else 0)
+    detected_langs = len([l for l, c in languages.items() if l != "english"])
+    st.info(
+        f"**Finding:** English dominates at "
+        f"{languages.get('english',0)/total_l*100:.0f}% of queries. "
+        f"{detected_langs} non-English language(s) detected, "
+        f"confirming multilingual usage among Kenyan MSME operators."
+    )
 
-st.markdown("---")
-
-# ── Row 3: Top sources ─────────────────────────────────────────────────────────
-st.subheader("📚 Most Used Knowledge Sources")
-top_sources = src_count.most_common(10)
-if top_sources:
-    col_s1, col_s2 = st.columns(2)
-    mid = len(top_sources) // 2
-    with col_s1:
-        for src, count in top_sources[:mid + 1]:
-            short = src[:45] + "…" if len(src) > 45 else src
-            st.markdown(f"**{short}** — {count} uses")
-            st.progress(count / top_sources[0][1])
-    with col_s2:
-        for src, count in top_sources[mid + 1:]:
-            short = src[:45] + "…" if len(src) > 45 else src
-            st.markdown(f"**{short}** — {count} uses")
-            st.progress(count / top_sources[0][1])
-
-st.markdown("---")
-
-# ── Row 4: Daily activity ──────────────────────────────────────────────────────
-if len(dates) > 1:
-    st.subheader("📅 Daily Activity")
-    for date, count in sorted(dates.items()):
-        st.markdown(f"**{date}** — {count} questions")
-        st.progress(count / max(dates.values()))
+# ==============================================================================
+# PAGE 4 — RESPONSE TIMES
+# ==============================================================================
+elif current_page == "Response Times":
+    st.markdown("**System performance — time from query to response**")
     st.markdown("---")
 
-# ── Row 5: Recent conversations ───────────────────────────────────────────────
-st.subheader("💬 Recent Conversations")
-for r in rows[-10:][::-1]:
-    with st.expander(f"🕐 {r['time']} — {r['question'][:60]}..."):
-        st.markdown(f"**Topic:** {r['topic_category']}")
-        st.markdown(f"**Language:** {lang_labels.get(r['language_detected'], r['language_detected'])}")
-        st.markdown(f"**Response time:** {r['response_time_seconds']}s")
-        st.markdown(f"**Answer length:** {r['answer_length_words']} words")
-        st.markdown(f"**Sources:** {r['sources']}")
-        st.markdown("**Answer preview:**")
-        st.info(r['answer'][:300] + "...")
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Average",  f"{avg_time}s")
+    c2.metric("Fastest",  f"{min(times):.1f}s" if times else "N/A")
+    c3.metric("Slowest",  f"{max(times):.1f}s" if times else "N/A")
+    c4.metric("Median",
+              f"{sorted(times)[len(times)//2]:.1f}s" if times else "N/A")
 
-st.markdown("---")
+    st.markdown("---")
+    st.markdown("**Speed Distribution**")
 
-# ── Row 6: Download ────────────────────────────────────────────────────────────
-st.subheader("📥 Export Data")
-col_d1 = st.columns(1)[0]
+    for label, count, color, note in [
+        ("⚡ Fast — under 10 seconds",  fast,   "#006600",
+         "Ideal for mobile users"),
+        ("🕐 Medium — 10 to 30 seconds", medium, "#ff9800",
+         "Acceptable for advisory responses"),
+        ("🐢 Slow — over 30 seconds",    slow,   "#cc0000",
+         "May indicate complex queries or API latency"),
+    ]:
+        pct = count / total * 100 if total else 0
+        st.markdown(f"**{label}**")
+        st.markdown(f"{count} responses ({pct:.1f}%) — *{note}*")
+        st.progress(pct / 100)
+        st.markdown("")
 
-with col_d1:
-    with open(LOG_FILE, "rb") as f:
-        st.download_button(
-            "📥 Download Full Conversation Log (CSV)",
-            data=f,
-            file_name="msme_conversations.csv",
-            mime="text/csv",
-            use_container_width=True,
+    st.markdown("---")
+    st.markdown("**Individual Response Times**")
+    st.caption("All recorded response times")
+    time_rows = [(r.get("time",""), r.get("question","")[:50],
+                  float(r.get("response_time_seconds",0)))
+                 for r in rows if r.get("response_time_seconds")]
+    time_rows.sort(key=lambda x: x[2], reverse=True)
+    for t, q, rt in time_rows[:20]:
+        badge = "⚡" if rt < 10 else "🕐" if rt < 30 else "🐢"
+        st.markdown(f"{badge} `{rt:.1f}s` — {q}...")
+
+# ==============================================================================
+# PAGE 5 — KNOWLEDGE SOURCES
+# ==============================================================================
+elif current_page == "Knowledge Sources":
+    st.markdown("**Documents most frequently retrieved during conversations**")
+    st.caption(f"From {len(all_sources)} total source retrievals")
+    st.markdown("---")
+
+    if src_count:
+        top = src_count.most_common(20)
+        max_count = top[0][1]
+        for rank, (src, count) in enumerate(top, 1):
+            short = src.replace("_", " ").replace(".pdf", "").replace(".txt", "")
+            short = short[:55] + "…" if len(short) > 55 else short
+            c1, c2, c3 = st.columns([1, 5, 1])
+            c1.markdown(f"**#{rank}**")
+            c2.markdown(f"`{short}`")
+            c3.markdown(f"`{count}x`")
+            st.progress(count / max_count)
+    else:
+        st.info("No source retrieval data available yet.")
+
+# ==============================================================================
+# PAGE 6 — EVALUATION RESULTS
+# ==============================================================================
+elif current_page == "Evaluation Results":
+    st.markdown("**Structured evaluation of chatbot accuracy across 30 test questions**")
+    st.markdown("---")
+
+    if EVAL_FILE.exists():
+        with open(EVAL_FILE, encoding="utf-8") as f:
+            eval_rows = list(csv.DictReader(f))
+
+        if eval_rows:
+            scores    = [int(r["score"]) for r in eval_rows]
+            avg_score = sum(scores) / len(scores)
+            total_q   = len(eval_rows)
+            excellent = sum(1 for s in scores if s == 5)
+            good      = sum(1 for s in scores if s == 4)
+            partial   = sum(1 for s in scores if s == 3)
+            weak      = sum(1 for s in scores if s <= 2)
+            rate      = (excellent + good) / total_q * 100
+
+            # KPI row
+            k1, k2, k3, k4, k5 = st.columns(5)
+            k1.metric("Questions",      total_q)
+            k2.metric("Mean Score",     f"{avg_score:.2f}/5.0")
+            k3.metric("Accuracy",       f"{avg_score/5*100:.1f}%")
+            k4.metric("Good/Excellent", f"{rate:.0f}%")
+            k5.metric("Perfect (5/5)",  excellent)
+
+            st.markdown("---")
+
+            col_e1, col_e2 = st.columns(2)
+
+            with col_e1:
+                st.markdown("**Score Distribution**")
+                for label, count, icon in [
+                    ("Excellent (5/5)", excellent, "🟢"),
+                    ("Good (4/5)",      good,      "🔵"),
+                    ("Partial (3/5)",   partial,   "🟡"),
+                    ("Weak/Poor (≤2)",  weak,      "🔴"),
+                ]:
+                    pct = count / total_q * 100
+                    c1, c2, c3 = st.columns([1, 3, 1])
+                    c1.markdown(icon)
+                    c2.markdown(f"**{label}**")
+                    c3.markdown(f"`{count} ({pct:.0f}%)`")
+                    st.progress(count / total_q)
+
+            with col_e2:
+                st.markdown("**Score by Category**")
+                cat_scores = defaultdict(list)
+                for r in eval_rows:
+                    cat_scores[r["category"]].append(int(r["score"]))
+                for cat, sc in sorted(cat_scores.items(),
+                                      key=lambda x: -sum(x[1])/len(x[1])):
+                    avg = sum(sc) / len(sc)
+                    icon = "🟢" if avg >= 4.5 else "🔵" if avg >= 4.0 else "🟡"
+                    c1, c2 = st.columns([4, 1])
+                    c1.markdown(f"{icon} **{cat}**")
+                    c2.markdown(f"`{avg:.1f}`")
+                    st.progress(avg / 5)
+
+            st.markdown("---")
+            st.markdown("**All Test Questions and Scores**")
+            filter_cat = st.selectbox(
+                "Filter by category",
+                ["All"] + sorted(set(r["category"] for r in eval_rows))
+            )
+            filtered = eval_rows if filter_cat == "All" else [
+                r for r in eval_rows if r["category"] == filter_cat
+            ]
+            for r in filtered:
+                score = int(r["score"])
+                icon  = "🟢" if score == 5 else "🔵" if score == 4 \
+                        else "🟡" if score == 3 else "🔴"
+                with st.expander(
+                    f"{icon} Q{r['id']:>2} [{r['category']}] "
+                    f"Score: {score}/5 — {r['question'][:50]}..."
+                ):
+                    st.markdown(f"**Question:** {r['question']}")
+                    st.markdown(f"**Score:** {score}/5 — **{r['rating']}**")
+                    if r.get("answer"):
+                        st.markdown("**Answer preview:**")
+                        st.info(r["answer"][:300] + "...")
+
+            st.markdown("---")
+            with open(EVAL_FILE, "rb") as f:
+                st.download_button(
+                    "📥 Download Evaluation Results (CSV)",
+                    data=f,
+                    file_name="evaluation_results.csv",
+                    mime="text/csv",
+                    use_container_width=True,
+                )
+    else:
+        st.warning("No evaluation results yet.")
+        st.info("Go to Admin Panel → Test Questions → Run Evaluation.")
+
+# ==============================================================================
+# PAGE 7 — CONVERSATIONS
+# ==============================================================================
+elif current_page == "Conversations":
+    st.markdown("**Full conversation log with filters**")
+    st.caption(f"{total} conversations recorded")
+    st.markdown("---")
+
+    col_f1, col_f2, col_f3 = st.columns(3)
+    with col_f1:
+        filter_topic = st.selectbox(
+            "Filter by topic",
+            ["All"] + sorted(set(r["topic_category"] for r in rows))
+        )
+    with col_f2:
+        filter_lang = st.selectbox(
+            "Filter by language",
+            ["All"] + sorted(set(r["language_detected"] for r in rows))
+        )
+    with col_f3:
+        filter_date = st.selectbox(
+            "Filter by date",
+            ["All"] + sorted(set(r["date"] for r in rows), reverse=True)
         )
 
+    filtered = rows
+    if filter_topic != "All":
+        filtered = [r for r in filtered if r["topic_category"] == filter_topic]
+    if filter_lang != "All":
+        filtered = [r for r in filtered if r["language_detected"] == filter_lang]
+    if filter_date != "All":
+        filtered = [r for r in filtered if r["date"] == filter_date]
 
-st.caption("Dashboard auto-refreshes with each new conversation logged.")
+    st.caption(f"Showing {len(filtered)} conversations")
+    st.markdown("---")
+
+    for r in filtered[::-1]:
+        lang_label = lang_labels.get(r.get("language_detected", ""), "")
+        with st.expander(
+            f"🕐 {r.get('time','')} {r.get('date','')} | "
+            f"{r.get('topic_category','')} | "
+            f"{lang_label} | "
+            f"{r.get('question','')[:45]}..."
+        ):
+            col_a, col_b = st.columns(2)
+            col_a.markdown(f"**Topic:** {r.get('topic_category','')}")
+            col_a.markdown(f"**Language:** {lang_label}")
+            col_a.markdown(f"**Response time:** {r.get('response_time_seconds','')}s")
+            col_b.markdown(f"**Words:** {r.get('answer_length_words','')}")
+            col_b.markdown(f"**Session:** `{r.get('session_id','')}`")
+            st.markdown("**Question:**")
+            st.info(r.get("question", ""))
+            st.markdown("**Answer:**")
+            st.success(r.get("answer", "")[:500] + "...")
+
+# ==============================================================================
+# PAGE 8 — EXPORT DATA
+# ==============================================================================
+elif current_page == "Export Data":
+    st.markdown("**Download research data for analysis**")
+    st.markdown("---")
+
+    st.markdown("### 📊 Conversation Log")
+    st.caption(f"Full log of all {total} Q&A interactions")
+    if LOG_FILE.exists():
+        with open(LOG_FILE, "rb") as f:
+            st.download_button(
+                "📥 Download Conversation Log (CSV)",
+                data=f,
+                file_name="msme_conversations.csv",
+                mime="text/csv",
+                use_container_width=True,
+            )
+
+    st.markdown("---")
+    st.markdown("### 🧪 Evaluation Results")
+    if EVAL_FILE.exists():
+        with open(EVAL_FILE, "rb") as f:
+            st.download_button(
+                "📥 Download Evaluation Results (CSV)",
+                data=f,
+                file_name="evaluation_results.csv",
+                mime="text/csv",
+                use_container_width=True,
+            )
+    else:
+        st.info("No evaluation results yet.")
+
+    st.markdown("---")
+    st.markdown("### 📄 Summary Report")
+    st.caption("Auto-generated text report for thesis findings")
+
+    eval_summary = ""
+    if EVAL_FILE.exists():
+        with open(EVAL_FILE, encoding="utf-8") as f:
+            eval_rows = list(csv.DictReader(f))
+        if eval_rows:
+            scores    = [int(r["score"]) for r in eval_rows]
+            avg_score = sum(scores) / len(scores)
+            excellent = sum(1 for s in scores if s == 5)
+            good      = sum(1 for s in scores if s == 4)
+            eval_summary = f"""
+EVALUATION RESULTS
+------------------
+Questions tested:     {len(eval_rows)}
+Mean score:           {avg_score:.2f}/5.0
+Accuracy:             {avg_score/5*100:.1f}%
+Good/Excellent rate:  {(excellent+good)/len(eval_rows)*100:.0f}%
+Perfect scores (5/5): {excellent}
+"""
+
+    summary = f"""KENYA MSME ADVISOR — RESEARCH SUMMARY REPORT
+Researcher: {st.session_state.get('user_name','Researcher')}
+Generated:  {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+Institution: Strathmore University — MSIT Thesis 2026
+Author:      Kathembo Tsongo Dieudonne (112721)
+=====================================================
+
+SYSTEM USAGE STATISTICS
+------------------------
+Total Q&As logged:        {total}
+Total sessions:           {sessions}
+Average response time:    {avg_time}s
+Average answer length:    {avg_words} words
+Fastest response:         {min(times):.1f}s
+Slowest response:         {max(times):.1f}s
+
+TOPIC DISTRIBUTION
+------------------
+{chr(10).join(f'{topic:<30} {count:>3} questions ({count/total*100:.1f}%)' for topic, count in topics.most_common())}
+
+LANGUAGE DISTRIBUTION
+---------------------
+{chr(10).join(f'{lang_labels.get(lang,lang):<20} {count:>3} questions ({count/total*100:.1f}%)' for lang, count in languages.most_common())}
+
+RESPONSE TIME DISTRIBUTION
+---------------------------
+Fast (under 10s):    {fast:>3} ({fast/total*100:.1f}%)
+Medium (10-30s):     {medium:>3} ({medium/total*100:.1f}%)
+Slow (over 30s):     {slow:>3} ({slow/total*100:.1f}%)
+
+TOP KNOWLEDGE SOURCES
+---------------------
+{chr(10).join(f'{rank:>2}. {src:<50} {count} uses' for rank, (src, count) in enumerate(src_count.most_common(10), 1))}
+
+DAILY ACTIVITY
+--------------
+{chr(10).join(f'{date}: {count} questions' for date, count in sorted(dates.items()))}
+{eval_summary}
+=====================================================
+END OF REPORT
+"""
+    if st.button("📊 Generate PDF Report",
+                 type="primary",
+                 use_container_width=True):
+        with st.spinner("Building professional PDF report..."):
+            from collections import defaultdict as dd
+            cat_scores_pdf = dd(list)
+            eval_file = BASE_DIR / "logs" / "evaluation_results.csv"
+            avg_score_val="N/A"; accuracy_val="N/A"; rate_val="N/A"
+            total_q_val=0; excellent_val=0; good_val=0
+            partial_val=0; weak_val=0
+            if eval_file.exists():
+                with open(eval_file, encoding="utf-8") as ef:
+                    er = list(csv.DictReader(ef))
+                if er:
+                    sc = [int(r["score"]) for r in er]
+                    avg_s = sum(sc)/len(sc)
+                    total_q_val   = len(er)
+                    excellent_val = sum(1 for s in sc if s==5)
+                    good_val      = sum(1 for s in sc if s==4)
+                    partial_val   = sum(1 for s in sc if s==3)
+                    weak_val      = sum(1 for s in sc if s<=2)
+                    avg_score_val = f"{avg_s:.2f}"
+                    accuracy_val  = f"{avg_s/5*100:.1f}"
+                    rate_val = f"{(excellent_val+good_val)/total_q_val*100:.0f}"
+                    for r in er:
+                        cat_scores_pdf[r["category"]].append(int(r["score"]))
+            pdf_data = {
+                "total":      total,
+                "sessions":   sessions,
+                "avg_time":   avg_time,
+                "avg_words":  avg_words,
+                "times":      times if times else [0],
+                "fast":       fast,
+                "medium":     medium,
+                "slow":       slow,
+                "topics":     topics,
+                "languages":  languages,
+                "dates":      dates,
+                "src_count":  src_count,
+                "avg_score":  avg_score_val,
+                "accuracy":   accuracy_val,
+                "rate":       rate_val,
+                "total_q":    total_q_val,
+                "excellent":  excellent_val,
+                "good":       good_val,
+                "partial":    partial_val,
+                "weak":       weak_val,
+                "cat_scores": cat_scores_pdf,
+                "author":     "Kathembo Tsongo Dieudonne (112721)",
+                "generated":  datetime.now().strftime("%Y-%m-%d %H:%M"),
+            }
+            pdf_bytes = generate_pdf_report(pdf_data)
+        fname = f"msme_report_{datetime.now().strftime('%Y%m%d')}.pdf"
+        st.download_button(
+            "📥 Download PDF Report Now",
+            data=pdf_bytes,
+            file_name=fname,
+            mime="application/pdf",
+            use_container_width=True,
+        )

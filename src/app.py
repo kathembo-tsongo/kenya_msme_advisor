@@ -72,6 +72,10 @@ st.set_page_config(
     layout="centered"
 )
 
+# ── Login gate ─────────────────────────────────────────────────────────────────
+if not st.session_state.get("logged_in"):
+    st.switch_page("pages/login.py")
+
 st.markdown("""
 <style>
 .header {
@@ -115,7 +119,7 @@ st.markdown("""
 <div class="header" style="text-align: center;">
     <h2 style="margin:0">🇰🇪 Kenya MSME Business Advisor</h2>
     <p style="margin:0.3rem 0 0 0;opacity:0.9;font-size:0.9rem">
-        AI-powered guidance — English and Kiswahili
+        AI-powered guidance — English (full) · Kiswahili (full) · Dholuo, Kikuyu, Kalenjin, Kamba (partial)
     </p>
 </div>
 

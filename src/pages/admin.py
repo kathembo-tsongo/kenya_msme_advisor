@@ -14,6 +14,10 @@ from pathlib import Path
 from datetime import datetime
 from collections import Counter
 import streamlit as st
+import sys
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from auth import (verify_password, update_password, update_username,
+                  update_profile, list_users, load_credentials)
 
 BASE_DIR   = Path(__file__).parent.parent.parent
 DB_DIR     = BASE_DIR / "knowledge_base"
@@ -29,7 +33,24 @@ st.set_page_config(
     layout="wide"
 )
 
-# ── Password protection ────────────────────────────────────────────────────────
+# ── Hide streamlit default nav ─────────────────────────────────────────────────
+st.markdown("""
+<style>
+[data-testid="stSidebarNav"] { display: none !important; }
+</style>
+""", unsafe_allow_html=True)
+
+# ── Login gate ─────────────────────────────────────────────────────────────────
+if not st.session_state.get("logged_in"):
+    st.switch_page("pages/login.py")
+if st.session_state.get("role") != "admin":
+    st.error("❌ Access denied. Admin role required.")
+    if st.button("← Back to Login"):
+        st.session_state.clear()
+        st.switch_page("pages/login.py")
+    st.stop()
+
+# ── Password protection (fallback for direct URL access) ──────────────────────
 if "admin_auth" not in st.session_state:
     st.session_state["admin_auth"] = False
 
@@ -53,6 +74,32 @@ if not st.session_state["admin_auth"]:
             st.error("Incorrect password.")
     st.stop()
 
+# ── Sidebar ────────────────────────────────────────────────────────────────────
+with st.sidebar:
+    st.markdown("""
+    <div style='padding:0.5rem 0 1rem 0;'>
+        <span style='font-size:1.1rem;font-weight:700;color:#1a1a2e'>
+        ⚙️ Admin Panel
+        </span><br>
+        <span style='font-size:0.75rem;color:#888'>System Administration</span>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown(f"👤 **{st.session_state.get('user_name','Admin')}**")
+    st.caption("System Administrator")
+    st.markdown("---")
+
+    st.markdown("**Navigate to**")
+    if st.button("🇰🇪 Operator Chat", use_container_width=True):
+        st.switch_page("app.py")
+    if st.button("📊 Analytics", use_container_width=True):
+        st.switch_page("pages/analytics.py")
+
+    st.markdown("---")
+    if st.button("🚪 Logout", use_container_width=True):
+        st.session_state.clear()
+        st.switch_page("pages/login.py")
+
 # ── Header ─────────────────────────────────────────────────────────────────────
 st.markdown("""
 <div style="background:#1a1a2e;color:white;padding:1.2rem 1.5rem;
@@ -64,25 +111,15 @@ border-radius:10px;margin-bottom:1.5rem;">
 </div>
 """, unsafe_allow_html=True)
 
-# Role badges
-c1, c2, c3 = st.columns(3)
-c1.info("👤 **MSME Operator** → /app")
-c2.success("🔬 **Researcher** → /analytics")
-c3.warning("⚙️ **Admin** → /admin (current)")
-
-# Logout
-if st.button("🚪 Logout"):
-    st.session_state["admin_auth"] = False
-    st.rerun()
-
 st.markdown("---")
 
 # ── Four tabs ──────────────────────────────────────────────────────────────────
-tab1, tab2, tab3, tab4 = st.tabs([
+tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "📊 System Status",
     "📄 Document Management",
     "📝 Test Questions",
-    "🗂️ Data Management"
+    "🗂️ Data Management",
+    "👤 User Management"
 ])
 
 # ==============================================================================
@@ -503,3 +540,112 @@ Built:              May 2026
 Author:             Kathembo Tsongo Dieudonne (112721)
 Institution:        Strathmore University
 """)
+
+# ==============================================================================
+# TAB 5 — USER MANAGEMENT
+# ==============================================================================
+with tab5:
+    st.subheader("👤 User Management")
+    st.caption("Change usernames, passwords and profiles without touching the code.")
+
+    current_user = st.session_state.get("username", "admin")
+
+    col1, col2 = st.columns(2)
+
+    # ── Change own password ────────────────────────────────────────────────────
+    with col1:
+        st.markdown("### 🔑 Change Your Password")
+        with st.form("change_password"):
+            old_pwd  = st.text_input("Current password", type="password")
+            new_pwd  = st.text_input("New password",     type="password",
+                                     help="At least 6 characters")
+            conf_pwd = st.text_input("Confirm new password", type="password")
+            if st.form_submit_button("Update Password", type="primary",
+                                     use_container_width=True):
+                if not old_pwd or not new_pwd or not conf_pwd:
+                    st.error("Please fill in all fields.")
+                elif not verify_password(current_user, old_pwd):
+                    st.error("❌ Current password is incorrect.")
+                elif new_pwd != conf_pwd:
+                    st.error("❌ New passwords do not match.")
+                elif len(new_pwd) < 6:
+                    st.error("❌ Password must be at least 6 characters.")
+                else:
+                    update_password(current_user, new_pwd)
+                    st.success("✅ Password updated successfully.")
+
+    # ── Update profile ─────────────────────────────────────────────────────────
+    with col2:
+        st.markdown("### 📋 Update Your Profile")
+        creds   = load_credentials()
+        my_info = creds["users"].get(current_user, {})
+        with st.form("update_profile"):
+            new_name  = st.text_input("Display name",
+                                      value=my_info.get("name", ""))
+            new_email = st.text_input("Email address",
+                                      value=my_info.get("email", ""))
+            if st.form_submit_button("Save Profile", use_container_width=True):
+                update_profile(current_user, new_name, new_email)
+                st.session_state["user_name"] = new_name
+                st.success("✅ Profile updated.")
+
+    st.markdown("---")
+
+    # ── Change username ────────────────────────────────────────────────────────
+    st.markdown("### 🏷️ Change Your Username")
+    with st.form("change_username"):
+        confirm_pwd  = st.text_input("Confirm current password",
+                                     type="password")
+        new_username = st.text_input("New username",
+                                     placeholder="e.g. john_admin")
+        if st.form_submit_button("Update Username"):
+            if not confirm_pwd or not new_username:
+                st.error("Please fill in all fields.")
+            elif not verify_password(current_user, confirm_pwd):
+                st.error("❌ Password incorrect.")
+            elif " " in new_username:
+                st.error("❌ Username cannot contain spaces.")
+            else:
+                from auth import update_username
+                if update_username(current_user, new_username):
+                    st.session_state["username"] = new_username
+                    st.success(
+                        f"✅ Username changed to **{new_username}**. "
+                        "Use this username next time you log in."
+                    )
+                else:
+                    st.error("❌ Username already taken.")
+
+    st.markdown("---")
+
+    # ── All users ──────────────────────────────────────────────────────────────
+    st.markdown("### 👥 All System Users")
+    users = list_users()
+    for u in users:
+        role_icon = "⚙️" if u["role"] == "admin" else "🔬"
+        with st.expander(
+            f"{role_icon} **{u['name']}** — "
+            f"@{u['username']} ({u['role']})"
+        ):
+            st.markdown(f"**Username:** `{u['username']}`")
+            st.markdown(f"**Role:** {u['role']}")
+            st.markdown(f"**Email:** {u.get('email','Not set')}")
+
+            if u["username"] != current_user:
+                st.markdown("**Reset password for this user:**")
+                new_p = st.text_input(
+                    "New password",
+                    type="password",
+                    key=f"reset_{u['username']}"
+                )
+                if st.button(
+                    f"🔑 Reset {u['username']} password",
+                    key=f"btn_{u['username']}"
+                ):
+                    if new_p and len(new_p) >= 6:
+                        update_password(u["username"], new_p)
+                        st.success(
+                            f"✅ Password reset for {u['username']}."
+                        )
+                    else:
+                        st.error("Minimum 6 characters required.")

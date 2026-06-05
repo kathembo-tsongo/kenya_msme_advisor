@@ -65,6 +65,7 @@ def load_conversation(session_id: str) -> list:
 
 sys.path.insert(0, str(Path(__file__).parent))
 from logger import log_conversation
+from router import smart_retrieve
 
 st.set_page_config(
     page_title="Kenya MSME Business Advisor",
@@ -497,9 +498,7 @@ if question:
     with st.chat_message("assistant", avatar="🇰🇪"):
         with st.spinner("Searching knowledge base..."):
             start            = time.time()
-            context, sources = retrieve(
-                question, vectorizer, matrix, chunks, metadata
-            )
+            context, sources, kb_used = smart_retrieve(question)
             answer           = ask_claude(
                 api_key, question, context,
                 st.session_state["history"], lang

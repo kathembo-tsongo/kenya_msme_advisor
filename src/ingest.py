@@ -1,129 +1,253 @@
 """
-ingest.py — Kenya MSME Advisor: Document Ingestion Script
-Reads documents from the /documents folder and builds a searchable index.
-
-Run once whenever you add new documents:
-    python3 src/ingest.py
+ingest.py — Kenya MSME Advisor Knowledge Base Builder
+Reads documents/ folder and builds 7 focused sub-knowledge bases.
+Run: python3 src/ingest.py
 """
 
-import sys
-import json
-import pickle
+import os, json, pickle, re, sys
 from pathlib import Path
-from pypdf import PdfReader
-from docx import Document
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-BASE_DIR      = Path(__file__).parent.parent
-DOCUMENTS_DIR = BASE_DIR / "documents"
-DB_DIR        = BASE_DIR / "knowledge_base"
+try:
+    import pdfplumber
+    PDF_OK = True
+except ImportError:
+    PDF_OK = False
+    print("⚠ pdfplumber not found — PDFs will be skipped")
+    print("  Install: pip install pdfplumber")
 
+BASE_DIR = Path(__file__).parent.parent
+DOCS_DIR = BASE_DIR / "documents"
+KB_DIR   = BASE_DIR / "knowledge_base"
+KB_DIR.mkdir(exist_ok=True)
 
-def read_pdf(path):
-    reader = PdfReader(str(path))
-    return "\n".join(p.extract_text() or "" for p in reader.pages)
+# ── Category definitions ───────────────────────────────────────────────────────
+CATEGORIES = {
+    "kb1_legal_regulatory": {
+        "name": "Legal & Regulatory",
+        "description": "Business registration, permits, licenses, county regulations",
+        "keywords": ["register","permit","license","certificate","BRS","county","eCitizen"],
+        "patterns": ["brs_","business_registration","ca_licens","ca_annual","ca_market",
+                     "ca_telecom","nairobi_","mombasa_county","kisumu_business",
+                     "kebs_","ppb_","ktb_","doing_business_kenya",
+                     "kenya_single_business","msea_msme_policy","kenya_sacco_societies"],
+    },
+    "kb2_tax_kra": {
+        "name": "Tax & KRA",
+        "description": "KRA tax guides, eTIMS, VAT, PAYE, Turnover Tax",
+        "keywords": ["tax","KRA","VAT","PAYE","eTIMS","turnover","income tax","pin"],
+        "patterns": ["kra_","etims","income_tax_act","vat_act","tax_procedures"],
+    },
+    "kb3_financing_credit": {
+        "name": "Financing & Credit",
+        "description": "Hustler Fund, YEDF, WEF, CBK, MFIs, SACCOs, loans",
+        "keywords": ["loan","fund","financing","credit","sacco","bank","hustler","YEDF","WEF"],
+        "patterns": ["hustler","yedf_","wef_","cbk_","kwft_","faulu_","smep_",
+                     "microfinance","fsd_kenya","finaccess","ifc_msme","credit_guarantee"],
+    },
+    "kb4_social_security": {
+        "name": "Social Security",
+        "description": "NSSF, SHA, NITA, IRA, insurance contributions",
+        "keywords": ["NSSF","SHA","insurance","NHIF","NITA","levy","pension","SHIF"],
+        "patterns": ["nssf_","sha_","shif_","nita_","ira_","aki_",
+                     "social_health_insurance","insurance_industry","claims_report"],
+    },
+    "kb5_digital_trade": {
+        "name": "Digital & Trade",
+        "description": "M-Pesa, AfCFTA, EAC, ICT, e-commerce, electricity",
+        "keywords": ["mpesa","paybill","mobile money","export","trade","digital","AfCFTA","EAC"],
+        "patterns": ["safaricom_","pochi","fuliza","gsma_","keproba_","afcfta",
+                     "eac_","comesa_","icta_","ecommerce","kenya_trade","ajira_",
+                     "kplc_","epra_","krb_","digital_payments","kenya_national_digital",
+                     "kenya_data_protection","kenya_ecommerce"],
+    },
+    "kb6_county_geospatial": {
+        "name": "County & Geospatial",
+        "description": "47 counties, KNBS statistics, research reports",
+        "keywords": ["county","nairobi","mombasa","kisumu","nakuru","statistics","KNBS"],
+        "patterns": ["knbs_","cra_kenya","county_abstract","county_economic",
+                     "county_product","worldbank_kenya","un_kenya","unctad_","kippra_",
+                     "kepsa_","strathmore_","kenya_economic_report","county_government",
+                     "gross_county","census_2019","ifc_msme_day","ifc_msme_platform"],
+    },
+    "kb7_culture_context": {
+        "name": "Culture & Context",
+        "description": "Jua Kali, chama, cultural context, TVET, skills, climate",
+        "keywords": ["jua kali","chama","informal","culture","TVET","skills","climate","youth"],
+        "patterns": ["jua_kali","chama_","cultural","culture","tvet","tveta_",
+                     "labour_market","skills_","acf_kenya","climate","ndma_","lse_climate",
+                     "unfccc","youth_entrepreneurship","entrepreneurial_culture",
+                     "community_financing","informal_economy","socio_cultural",
+                     "kenya_sme_management","kenya_sme_business","kenya_sme_financial",
+                     "kenya_business_plan","kenya_sbdc","fke_skills","kenya_labour",
+                     "local_languages","cultural_norms","cultural_geo","cultural_business",
+                     "kenya_cultural","insurance_climate","kenya_nap","kenya_unfccc"],
+    },
+}
 
+def categorise(filename: str) -> str:
+    fn = filename.lower()
+    for kb_id, kb_def in CATEGORIES.items():
+        for pattern in kb_def["patterns"]:
+            if pattern.lower() in fn:
+                return kb_id
+    return "kb1_legal_regulatory"
 
-def read_docx(path):
-    doc = Document(str(path))
-    return "\n".join(p.text for p in doc.paragraphs if p.text.strip())
+def extract_pdf(path: Path) -> str:
+    if not PDF_OK:
+        return ""
+    try:
+        text = ""
+        with pdfplumber.open(path) as pdf:
+            for page in pdf.pages[:60]:
+                t = page.extract_text()
+                if t:
+                    text += t + "\n"
+        return text
+    except Exception as e:
+        print(f"  ⚠ PDF error {path.name}: {e}")
+        return ""
 
-
-def read_txt(path):
-    return path.read_text(encoding="utf-8", errors="ignore")
-
-
-def load_documents():
-    supported = {".pdf": read_pdf, ".docx": read_docx, ".txt": read_txt}
-    docs = []
-
-    if not DOCUMENTS_DIR.exists():
-        print(f"[ERROR] Documents folder not found: {DOCUMENTS_DIR}")
-        sys.exit(1)
-
-    files = list(DOCUMENTS_DIR.rglob("*"))
-    if not any(f.suffix.lower() in supported for f in files):
-        print("  No supported files found (PDF, DOCX, TXT).")
-        return docs
-
-    for file in files:
-        if file.suffix.lower() not in supported:
-            continue
-        print(f"  Loading: {file.name} ...", end=" ", flush=True)
+def extract_txt(path: Path) -> str:
+    for enc in ["utf-8", "latin-1", "cp1252"]:
         try:
-            content = supported[file.suffix.lower()](file)
-            if content.strip():
-                docs.append({
-                    "content":  content,
-                    "filename": file.name,
-                    "source":   str(file.relative_to(BASE_DIR))
-                })
-                print(f"✓  ({len(content):,} chars)")
-            else:
-                print("⚠  empty, skipped")
-        except Exception as e:
-            print(f"✗  {e}")
-    return docs
+            return path.read_text(encoding=enc)
+        except Exception:
+            continue
+    return ""
 
+def extract_text(path: Path) -> str:
+    return extract_pdf(path) if path.suffix.lower() == ".pdf" else extract_txt(path)
 
-def split_chunks(docs, size=1000, overlap=150):
-    chunks, metas = [], []
-    for doc in docs:
-        text, i, start = doc["content"], 0, 0
-        while start < len(text):
-            chunk = text[start:start + size].strip()
-            if chunk:
-                chunks.append(chunk)
-                metas.append({
-                    "filename": doc["filename"],
-                    "source":   doc["source"],
-                    "chunk":    i
-                })
-                i += 1
-            start += size - overlap
-    return chunks, metas
+def chunk_text(text: str, size=500, overlap=100) -> list:
+    text   = re.sub(r'\s+', ' ', text).strip()
+    chunks = []
+    start  = 0
+    while start < len(text):
+        end   = min(start + size, len(text))
+        chunk = text[start:end].strip()
+        if len(chunk) > 80:
+            chunks.append(chunk)
+        start += size - overlap
+    return chunks
 
+def build_kb(kb_id: str, kb_def: dict, all_files: list) -> int:
+    # Filter files for this KB
+    kb_files = [f for f in all_files if categorise(f.name) == kb_id]
 
-def build_index(chunks, metas):
-    DB_DIR.mkdir(parents=True, exist_ok=True)
+    if not kb_files:
+        print(f"  ⚠ No files matched for {kb_id}")
+        return 0
+
+    chunks   = []
+    metadata = []
+
+    for f in sorted(kb_files):
+        text = extract_text(f)
+        if not text.strip():
+            continue
+        doc_chunks = chunk_text(text)
+        for ch in doc_chunks:
+            chunks.append(ch)
+            metadata.append({
+                "filename": f.name,
+                "kb":       kb_id,
+                "kb_name":  kb_def["name"],
+            })
+
+    if not chunks:
+        return 0
+
     vectorizer = TfidfVectorizer(
-        max_features=10000,
-        ngram_range=(1, 2),
-        stop_words="english"
+        max_features=15000, ngram_range=(1,2),
+        min_df=1, stop_words="english",
     )
     matrix = vectorizer.fit_transform(chunks)
 
-    with open(DB_DIR / "vectorizer.pkl", "wb") as f:
+    kb_path = KB_DIR / kb_id
+    kb_path.mkdir(exist_ok=True)
+
+    with open(kb_path / "chunks.json", "w", encoding="utf-8") as f:
+        json.dump({
+            "kb_id":       kb_id,
+            "kb_name":     kb_def["name"],
+            "description": kb_def["description"],
+            "keywords":    kb_def["keywords"],
+            "chunks":      chunks,
+            "metadata":    metadata,
+        }, f, ensure_ascii=False, indent=2)
+
+    with open(kb_path / "vectorizer.pkl", "wb") as f:
         pickle.dump(vectorizer, f)
-    with open(DB_DIR / "matrix.pkl", "wb") as f:
+    with open(kb_path / "matrix.pkl", "wb") as f:
         pickle.dump(matrix, f)
-    with open(DB_DIR / "chunks.json", "w") as f:
-        json.dump({"chunks": chunks, "metadata": metas}, f, indent=2)
 
-    print(f"  ✓ Index saved — {len(chunks)} chunks → {DB_DIR}")
-
-
-def main():
-    print("=" * 60)
-    print("  Kenya MSME Advisor — Document Ingestion")
-    print("=" * 60)
-
-    print(f"\n[1/3] Loading documents from: {DOCUMENTS_DIR}")
-    docs = load_documents()
-    if not docs:
-        print("\n  Add PDF, DOCX, or TXT files to documents/ and re-run.")
-        return
-
-    print(f"\n[2/3] Splitting {len(docs)} document(s) into chunks...")
-    chunks, metas = split_chunks(docs)
-    print(f"  → {len(chunks)} chunks created")
-
-    print("\n[3/3] Building offline TF-IDF search index...")
-    build_index(chunks, metas)
-
-    print("\n✅ Knowledge base is ready!")
-    print("   Launch the app with:  streamlit run src/app.py")
-
+    return len(chunks)
 
 if __name__ == "__main__":
-    main()
+    print("═"*60)
+    print("KENYA MSME ADVISOR — KNOWLEDGE BASE BUILDER")
+    print("═"*60)
+
+    # Load all files from documents/
+    all_files = (list(DOCS_DIR.glob("*.pdf")) +
+                 list(DOCS_DIR.glob("*.txt")) +
+                 list(DOCS_DIR.glob("*.docx")))
+
+    if not all_files:
+        print(f"⚠ No documents found in {DOCS_DIR}")
+        sys.exit(1)
+
+    print(f"\n[1/3] Found {len(all_files)} documents in {DOCS_DIR}")
+
+    # Show categorisation preview
+    print("\n[2/3] Categorising documents...")
+    preview = {}
+    for f in all_files:
+        kb_id = categorise(f.name)
+        preview[kb_id] = preview.get(kb_id, 0) + 1
+    for kb_id, count in preview.items():
+        print(f"  {CATEGORIES[kb_id]['name']:<30} {count:>3} documents")
+
+    # Build each KB
+    print("\n[3/3] Building TF-IDF indexes...")
+    manifest = {"total_chunks": 0, "total_kbs": 0, "knowledge_bases": {}}
+    results  = {}
+
+    for kb_id, kb_def in CATEGORIES.items():
+        print(f"\n  ▶ {kb_def['name']}...", end=" ", flush=True)
+        count = build_kb(kb_id, kb_def, all_files)
+        results[kb_id] = count
+
+        if count > 0:
+            manifest["total_chunks"] += count
+            manifest["total_kbs"]    += 1
+            srcs = preview.get(kb_id, 0)
+            manifest["knowledge_bases"][kb_id] = {
+                "name":        kb_def["name"],
+                "description": kb_def["description"],
+                "keywords":    kb_def["keywords"],
+                "chunks":      count,
+                "sources":     srcs,
+            }
+            print(f"{count} chunks ✅")
+        else:
+            print("⚠ No chunks")
+
+    # Save manifest
+    with open(KB_DIR / "manifest.json", "w") as f:
+        json.dump(manifest, f, indent=2)
+
+    # Final report
+    print("\n" + "═"*60)
+    print("BUILD COMPLETE")
+    print("═"*60)
+    for kb_id, count in results.items():
+        name   = CATEGORIES[kb_id]["name"]
+        status = "✅" if count > 0 else "❌"
+        print(f"  {status} {name:<30} {count:>6} chunks")
+    print(f"{'─'*60}")
+    print(f"  {'TOTAL':<30} {sum(results.values()):>6} chunks")
+    print("═"*60)
+    print(f"\nKnowledge base saved to: {KB_DIR}")
+    print("Launch the app: streamlit run src/app.py")

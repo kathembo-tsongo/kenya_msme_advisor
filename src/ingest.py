@@ -190,9 +190,9 @@ if __name__ == "__main__":
     print("═"*60)
 
     # Load all files from documents/
-    all_files = (list(DOCS_DIR.glob("*.pdf")) +
-                 list(DOCS_DIR.glob("*.txt")) +
-                 list(DOCS_DIR.glob("*.docx")))
+    all_files = (list(DOCS_DIR.rglob("*.pdf")) +
+                 list(DOCS_DIR.rglob("*.txt")) +
+                 list(DOCS_DIR.rglob("*.docx")))
 
     if not all_files:
         print(f"⚠ No documents found in {DOCS_DIR}")

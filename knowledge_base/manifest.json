@@ -1,5 +1,5 @@
 {
-  "total_chunks": 25068,
+  "total_chunks": 35208,
   "total_kbs": 7,
   "knowledge_bases": {
     "kb1_legal_regulatory": {
@@ -14,8 +14,8 @@
         "county",
         "eCitizen"
       ],
-      "chunks": 3122,
-      "sources": 48
+      "chunks": 7989,
+      "sources": 57
     },
     "kb2_tax_kra": {
       "name": "Tax & KRA",
@@ -30,8 +30,8 @@
         "income tax",
         "pin"
       ],
-      "chunks": 1147,
-      "sources": 21
+      "chunks": 1727,
+      "sources": 22
     },
     "kb3_financing_credit": {
       "name": "Financing & Credit",
@@ -47,8 +47,8 @@
         "YEDF",
         "WEF"
       ],
-      "chunks": 4848,
-      "sources": 50
+      "chunks": 3761,
+      "sources": 52
     },
     "kb4_social_security": {
       "name": "Social Security",
@@ -63,8 +63,8 @@
         "pension",
         "SHIF"
       ],
-      "chunks": 1237,
-      "sources": 27
+      "chunks": 1170,
+      "sources": 22
     },
     "kb5_digital_trade": {
       "name": "Digital & Trade",
@@ -79,8 +79,8 @@
         "AfCFTA",
         "EAC"
       ],
-      "chunks": 3281,
-      "sources": 35
+      "chunks": 5919,
+      "sources": 36
     },
     "kb6_county_geospatial": {
       "name": "County & Geospatial",
@@ -94,8 +94,8 @@
         "statistics",
         "KNBS"
       ],
-      "chunks": 6757,
-      "sources": 31
+      "chunks": 5665,
+      "sources": 36
     },
     "kb7_culture_context": {
       "name": "Culture & Context",
@@ -110,8 +110,8 @@
         "climate",
         "youth"
       ],
-      "chunks": 4676,
-      "sources": 36
+      "chunks": 8977,
+      "sources": 41
     }
   }
 }

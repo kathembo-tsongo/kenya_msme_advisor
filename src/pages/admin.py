@@ -307,7 +307,7 @@ with tab2:
             col_n.markdown(f"📄 `{doc.name}`")
             col_s.caption(f"{size_kb:.0f} KB")
             col_c.caption(f"{chunks} chunks" if chunks else indexed)
-            if col_d.button("🗑️", key=f"del_{doc.name}",
+            if col_d.button("🗑️", key=f"del_{doc.parent.name}_{doc.name}",
                             help=f"Delete {doc.name}"):
                 doc.unlink()
                 st.warning(f"Deleted `{doc.name}` — rebuild to update index.")

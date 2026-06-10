@@ -1,6 +1,6 @@
 {
   "total_chunks": 35208,
-  "total_kbs": 7,
+  "total_kbs": 8,
   "knowledge_bases": {
     "kb1_legal_regulatory": {
       "name": "Legal & Regulatory",
@@ -14,8 +14,8 @@
         "county",
         "eCitizen"
       ],
-      "chunks": 7989,
-      "sources": 57
+      "chunks": 7544,
+      "sources": 51
     },
     "kb2_tax_kra": {
       "name": "Tax & KRA",
@@ -112,6 +112,20 @@
       ],
       "chunks": 8977,
       "sources": 41
+    },
+    "kb8_national_policy_strategy": {
+      "name": "National Policy & Strategy",
+      "description": "Vision 2030, national strategies, World Bank, WEF, KIPPRA policy",
+      "keywords": [
+        "vision 2030",
+        "policy",
+        "strategy",
+        "national plan",
+        "World Bank",
+        "WEF"
+      ],
+      "chunks": 445,
+      "sources": 6
     }
   }
 }

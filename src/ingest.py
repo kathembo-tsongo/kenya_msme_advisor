@@ -83,6 +83,24 @@ CATEGORIES = {
                      "local_languages","cultural_norms","cultural_geo","cultural_business",
                      "kenya_cultural","insurance_climate","kenya_nap","kenya_unfccc"],
     },
+    "kb8_national_policy_strategy": {
+        "name": "National Policy & Strategy",
+        "description": "Vision 2030, national strategies, World Bank, WEF, KIPPRA policy",
+        "keywords": ["vision 2030","policy","strategy","national plan","World Bank","WEF"],
+        "patterns": ["kenya_vision2030","kenya_national_digital_masterplan",
+                     "kenya_nap_climate","kenya_unfccc","kenya_national_climate",
+                     "ndma_strategic_plan","national_treasury_budget",
+                     "kippra_policy","kippra_economic_report","kippra_kenya_economic",
+                     "kippra_county_business_environment","kippra_ict_msme",
+                     "worldbank_kenya_economic_update","worldbank_kenya_skills_demand",
+                     "worldbank_kenya_overview","worldbank_kenya_msme_safer_report",
+                     "worldbank_kenya_urban_sector","icta_strategic","afdb_kenya",
+                     "gsma_mobile_economy","gsma_state_mobile","ifc_msme_finance_factsheet",
+                     "acf_kenya_climate","un_kenya_annual","un_kenya_msme_sdgs",
+                     "un_kenya_sdgs","unctad_kenya_msme_report",
+                     "wef_services_report","wef_strategic_plan",
+                     "fsd_kenya_msme_outlook","ifc_g20_msme"],
+    },
 }
 
 def categorise(filename: str) -> str:

@@ -68,9 +68,19 @@ def get_coach_insights(api_key: str, question: str, answer: str, lang: str) -> d
     """Use Claude to generate coaching insights after answering."""
     client = anthropic.Anthropic(api_key=api_key)
     
-    system = """You are an AI literacy coach helping Kenyan MSME owners 
+    lang_instruction = {
+        "kiswahili": "Jibu YOTE kwa Kiswahili tu. Usitumie Kiingereza kabisa.",
+        "english":   "Respond entirely in English only.",
+        "dholuo":    "Respond in Kiswahili only.",
+        "kikuyu":    "Respond in Kiswahili only.",
+        "kalenjin":  "Respond in Kiswahili only.",
+        "kamba":     "Respond in Kiswahili only.",
+    }.get(lang, "Respond entirely in English only.")
+
+    system = f"""You are an AI literacy coach helping Kenyan MSME owners 
 get better at using AI advisory tools. Be concise, practical, and encouraging.
-Always respond in the same language as the user's question."""
+LANGUAGE RULE: {lang_instruction}
+Never mix languages. Use only one language throughout your entire response."""
 
     prompt = f"""The user asked: "{question}"
 The AI advisor answered with information about Kenyan business regulations.
@@ -174,8 +184,10 @@ def render_coach_panel(api_key: str, question: str, answer: str, lang: str):
         
         # Follow-up questions
         st.markdown("**💡 Follow-up Questions to Ask**")
+        import time as _time
+        _ts = str(int(_time.time() * 1000))[-6:]
         for i, q in enumerate(insights.get("follow_up_questions", [])[:3]):
-            if st.button(f"❓ {q}", key=f"coach_followup_{i}_{question[:10]}",
+            if st.button(f"❓ {q}", key=f"coach_followup_{i}_{_ts}_{i}",
                         use_container_width=True):
                 st.session_state["prefill"] = q
                 st.rerun()

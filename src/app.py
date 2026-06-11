@@ -67,7 +67,6 @@ sys.path.insert(0, str(Path(__file__).parent))
 from logger import log_conversation
 from router import smart_retrieve
 from coach import render_coach_panel, render_idea_validator
-from coach import render_coach_panel, render_idea_validator
 
 st.set_page_config(
     page_title="Kenya MSME Business Advisor",
@@ -219,7 +218,12 @@ def detect_language(text: str) -> str:
         "kiswahili": sum(1 for w in ["biashara","kodi","ushuru","mkopo","akiba",
                                       "benki","leseni","usajili","nina","nataka",
                                       "niambie","ninaweza","pesa","shilingi",
-                                      "malipo","habari","hustler","jinsi"]
+                                      "malipo","habari","hustler","jinsi",
+                                      "naweza","kuanza","ndiyo","lakini",
+                                      "hapa","kama","yangu","yako","wako",
+                                      "kwamba","hivyo","pia","zaidi","sasa",
+                                      "tafadhali","asante","karibu","pamoja",
+                                      "kuhusu","kutoka","kwenye","katika"]
                          if w in t),
     }
     best  = max(scores, key=scores.get)
@@ -412,17 +416,6 @@ with st.sidebar:
 
     st.markdown("---")
 
-    # ── Coach Mode toggle ──────────────────────────────────────────────────────
-    st.markdown("#### 🎓 Coach Mode")
-    st.session_state["coach_mode"] = coach_mode
-    if coach_mode:
-        st.caption("✅ Coach active — you'll get AI literacy tips after each answer")
-    
-    # ── Business Idea Validator ────────────────────────────────────────────────
-    with st.expander("💡 Validate a Business Idea"):
-        st.session_state["show_idea_validator"] = True
-        st.caption("👇 Scroll down to use the idea validator")
-
     st.markdown("---")
 
     # ── Quick topics ───────────────────────────────────────────────────────────
@@ -573,8 +566,6 @@ if question:
         render_coach_panel(api_key, question, answer, lang)
 
     # Show coach panel if coach mode is on
-    if st.session_state.get("coach_mode") and api_key:
-        render_coach_panel(api_key, question, answer, lang)
 
     st.session_state["history"].append({
         "user":      question,

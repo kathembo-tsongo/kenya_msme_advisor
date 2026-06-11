@@ -66,6 +66,8 @@ def load_conversation(session_id: str) -> list:
 sys.path.insert(0, str(Path(__file__).parent))
 from logger import log_conversation
 from router import smart_retrieve
+from coach import render_coach_panel, render_idea_validator
+from coach import render_coach_panel, render_idea_validator
 
 st.set_page_config(
     page_title="Kenya MSME Business Advisor",
@@ -138,25 +140,27 @@ if "question_count" not in st.session_state:
 
 # ── API key ────────────────────────────────────────────────────────────────────
 def get_api_key():
-    # 1. Try Streamlit secrets (cloud deployment)
-    try:
-        import streamlit as st
-        key = st.secrets.get("ANTHROPIC_API_KEY")
-        if key:
-            return key
-    except Exception:
-        pass
-    # 2. Try .env file (local development)
+    # 1. Try .env file (local development) - check first
     env_file = BASE_DIR / ".env"
     if env_file.exists():
         for line in env_file.read_text().splitlines():
             if line.startswith("ANTHROPIC_API_KEY="):
                 key = line.split("=", 1)[1].strip()
-                if key and key != "your_actual_key_here":
+                if key and key != "your_actual_key_here" and len(key) > 20:
                     return key
-    # 3. Try environment variable
+    # 2. Try environment variable
     import os
-    return os.environ.get("ANTHROPIC_API_KEY")
+    key = os.environ.get("ANTHROPIC_API_KEY")
+    if key:
+        return key
+    # 3. Try Streamlit secrets (cloud deployment)
+    try:
+        key = st.secrets.get("ANTHROPIC_API_KEY")
+        if key:
+            return key
+    except Exception:
+        pass
+    return None
 
 
 # ── Knowledge base ─────────────────────────────────────────────────────────────
@@ -288,6 +292,9 @@ CONTEXT FROM KNOWLEDGE BASE:
     return response.content[0].text
 
 
+# ── Load API key early (needed in sidebar) ───────────────────────────────────
+api_key = get_api_key()
+
 # ── Hide admin and analytics from sidebar using CSS ───────────────────────────
 st.markdown("""
 <style>
@@ -386,6 +393,38 @@ with st.sidebar:
 
     st.markdown("---")
 
+    # ── Coach Mode toggle ──────────────────────────────────────────────────────
+    st.markdown("#### 🎓 Coach Mode")
+    coach_mode = st.toggle(
+        "Enable AI Literacy Coach",
+        key="coach_mode_toggle",
+        value=st.session_state.get("coach_mode", False),
+        help="Get prompt quality scores, follow-up suggestions, and lean innovation tips after each answer"
+    )
+    st.session_state["coach_mode"] = coach_mode
+    if coach_mode:
+        st.caption("✅ Coach active — you'll get AI literacy tips after each answer")
+    
+    # ── Business Idea Validator ────────────────────────────────────────────────
+    with st.expander("💡 Validate a Business Idea"):
+        st.session_state["show_idea_validator"] = True
+        st.caption("👇 Scroll down to use the idea validator")
+
+    st.markdown("---")
+
+    # ── Coach Mode toggle ──────────────────────────────────────────────────────
+    st.markdown("#### 🎓 Coach Mode")
+    st.session_state["coach_mode"] = coach_mode
+    if coach_mode:
+        st.caption("✅ Coach active — you'll get AI literacy tips after each answer")
+    
+    # ── Business Idea Validator ────────────────────────────────────────────────
+    with st.expander("💡 Validate a Business Idea"):
+        st.session_state["show_idea_validator"] = True
+        st.caption("👇 Scroll down to use the idea validator")
+
+    st.markdown("---")
+
     # ── Quick topics ───────────────────────────────────────────────────────────
     st.markdown("#### 💡 Quick Topics")
 
@@ -459,7 +498,6 @@ with st.sidebar:
 
 
 # ── Load resources ─────────────────────────────────────────────────────────────
-api_key                              = get_api_key()
 vectorizer, matrix, chunks, metadata = load_index()
 
 # ── Chat history ───────────────────────────────────────────────────────────────
@@ -529,6 +567,14 @@ if question:
         response_time   = elapsed,
         had_card        = False,
     )
+
+    # Show coach panel if coach mode is on
+    if st.session_state.get("coach_mode") and api_key:
+        render_coach_panel(api_key, question, answer, lang)
+
+    # Show coach panel if coach mode is on
+    if st.session_state.get("coach_mode") and api_key:
+        render_coach_panel(api_key, question, answer, lang)
 
     st.session_state["history"].append({
         "user":      question,

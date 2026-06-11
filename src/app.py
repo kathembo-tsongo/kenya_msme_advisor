@@ -138,6 +138,15 @@ if "question_count" not in st.session_state:
 
 # ── API key ────────────────────────────────────────────────────────────────────
 def get_api_key():
+    # 1. Try Streamlit secrets (cloud deployment)
+    try:
+        import streamlit as st
+        key = st.secrets.get("ANTHROPIC_API_KEY")
+        if key:
+            return key
+    except Exception:
+        pass
+    # 2. Try .env file (local development)
     env_file = BASE_DIR / ".env"
     if env_file.exists():
         for line in env_file.read_text().splitlines():
@@ -145,7 +154,9 @@ def get_api_key():
                 key = line.split("=", 1)[1].strip()
                 if key and key != "your_actual_key_here":
                     return key
-    return None
+    # 3. Try environment variable
+    import os
+    return os.environ.get("ANTHROPIC_API_KEY")
 
 
 # ── Knowledge base ─────────────────────────────────────────────────────────────

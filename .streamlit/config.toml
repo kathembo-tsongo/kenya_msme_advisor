@@ -7,3 +7,6 @@ primaryColor = "#006600"
 backgroundColor = "#ffffff"
 secondaryBackgroundColor = "#f0f2f6"
 textColor = "#262730"
+
+[runner]
+fastRerenderEnabled = true

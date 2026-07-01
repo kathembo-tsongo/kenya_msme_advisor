@@ -67,6 +67,10 @@ sys.path.insert(0, str(Path(__file__).parent))
 from logger import log_conversation
 from router import smart_retrieve
 from coach import render_coach_panel, render_idea_validator
+from kenya_msme_db import (get_or_create_user, update_user, has_baseline,
+                            has_endline, log_prompt_score, get_prompt_scores)
+from ask_generic import ask_generic_claude
+from coach import score_prompt
 
 st.set_page_config(
     page_title="Kenya MSME Business Advisor",
@@ -78,6 +82,48 @@ st.set_page_config(
 if not st.session_state.get("logged_in"):
     st.switch_page("pages/login.py")
 
+# ── Session ID must exist before ALFA checks ──────────────────────────────────
+import uuid as _uuid
+if "session_id" not in st.session_state:
+    st.session_state["session_id"]     = str(_uuid.uuid4())[:8]
+if "history" not in st.session_state:
+    st.session_state["history"]        = []
+if "question_count" not in st.session_state:
+    st.session_state["question_count"] = 0
+
+# ── ALFA Research: Onboarding & Endline Triggers ──────────────────────────────
+_sid  = st.session_state["session_id"]
+_user = get_or_create_user(_sid)
+
+# Show baseline survey on first visit
+if _user and not has_baseline(_sid) and not st.session_state.get("skip_baseline"):
+    col_s1, col_s2 = st.columns([3,1])
+    with col_s1:
+        st.info("👋 Welcome! Please complete a quick 2-minute survey before starting.")
+    with col_s2:
+        if st.button("Skip Survey", key="skip_onboard"):
+            st.session_state["skip_baseline"] = True
+            st.rerun()
+    if st.button("✅ Start Survey →", type="primary", key="go_onboard"):
+        st.switch_page("pages/onboarding.py")
+    st.stop()
+
+# Show endline survey after 5 sessions
+_qcount = st.session_state.get("question_count", 0)
+if (_user and _qcount >= 5 and has_baseline(_sid)
+        and not has_endline(_sid)
+        and not st.session_state.get("skip_endline")):
+    st.warning("📋 You have used this system 5 times. Please complete a quick follow-up survey.")
+    col_e1, col_e2 = st.columns([3,1])
+    with col_e1:
+        if st.button("📝 Complete Follow-up Survey", type="primary", key="go_endline"):
+            st.switch_page("pages/endline.py")
+    with col_e2:
+        if st.button("Later", key="skip_endline_btn"):
+            st.session_state["skip_endline"] = True
+            st.rerun()
+
+# ── Styles ─────────────────────────────────────────────────────────────────────
 st.markdown("""
 <style>
 .header {
@@ -539,13 +585,39 @@ if question:
 
     with st.chat_message("assistant", avatar="🇰🇪"):
         with st.spinner("Searching knowledge base..."):
-            start            = time.time()
-            context, sources, kb_used = smart_retrieve(question)
-            answer           = ask_claude(
-                api_key, question, context,
-                st.session_state["history"], lang
+            start  = time.time()
+            _u     = get_or_create_user(st.session_state.get("session_id",""))
+            _arm   = _u.get("arm", "T1") if _u else "T1"
+
+            if _arm == "T2":
+                # T2 — Generic Claude without RAG (comparison arm)
+                context, sources, kb_used = "", [], "Generic"
+                answer = ask_generic_claude(
+                    api_key, question,
+                    st.session_state["history"], lang
+                )
+            else:
+                # T1 — Localised RAG system (treatment arm)
+                context, sources, kb_used = smart_retrieve(question)
+                answer = ask_claude(
+                    api_key, question, context,
+                    st.session_state["history"], lang
+                )
+            elapsed = time.time() - start
+
+            # Log prompt quality score to kenya_msme_db
+            _score = score_prompt(question)
+            log_prompt_score(
+                st.session_state.get("session_id",""),
+                question,
+                _score["score"]
             )
-            elapsed          = time.time() - start
+            # Update user question count
+            update_user(
+                st.session_state.get("session_id",""),
+                {"total_questions": _u.get("total_questions",0)+1
+                 if _u else 1}
+            )
 
         st.write(answer)
 

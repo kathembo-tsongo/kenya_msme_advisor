@@ -36,7 +36,7 @@ if st.session_state.get("logged_in"):
         if col1.button("Go to Admin Panel →", type="primary", use_container_width=True):
             st.switch_page("pages/admin.py")
     elif role == "researcher":
-        if col1.button("Go to Analytics →", type="primary", use_container_width=True):
+        if col1.button("Go to ALFA Research Dashboard →", type="primary", use_container_width=True):
             st.switch_page("pages/analytics.py")
     if col2.button("Logout", use_container_width=True):
         st.session_state.clear()

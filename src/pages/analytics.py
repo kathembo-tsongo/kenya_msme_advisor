@@ -721,17 +721,20 @@ elif current_page == "ALFA Research":
     alfa_scores  = get_all_prompt_scores()
     t1_users = [u for u in alfa_users if u.get("arm") == "T1"]
     t2_users = [u for u in alfa_users if u.get("arm") == "T2"]
+    c_users  = [u for u in alfa_users if u.get("arm") == "C"]
     t1_ids   = {u["user_id"] for u in t1_users}
     t2_ids   = {u["user_id"] for u in t2_users}
+    c_ids    = {u["user_id"] for u in c_users}
 
     # KPI row
-    c1,c2,c3,c4,c5,c6 = st.columns(6)
+    c1,c2,c3,c4,c5,c6,c7 = st.columns(7)
     c1.metric("Total Participants", alfa_summary["total_users"])
     c2.metric("T1 Localised", alfa_summary["t1_count"])
     c3.metric("T2 Generic", alfa_summary["t2_count"])
-    c4.metric("Baselines", alfa_summary["baseline_count"])
-    c5.metric("Endlines", alfa_summary["endline_count"])
-    c6.metric("Total Questions", alfa_summary["total_questions"])
+    c4.metric("C Control", len(c_users))
+    c5.metric("Baselines", alfa_summary["baseline_count"])
+    c6.metric("Endlines", alfa_summary["endline_count"])
+    c7.metric("Total Questions", alfa_summary["total_questions"])
 
     st.markdown("---")
 

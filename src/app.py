@@ -554,6 +554,37 @@ for turn in st.session_state["history"]:
         st.write(turn["assistant"])
 
 # ── Input ──────────────────────────────────────────────────────────────────────
+# ── Control Group — no chat access during study ───────────────────────────────
+_current_arm = get_or_create_user(
+    st.session_state.get("session_id","")).get("arm","T1")
+if _current_arm == "C":
+    st.markdown("""
+    <div style="background:#fff8e1;border:2px solid #f9a825;
+    border-radius:12px;padding:2rem;text-align:center;margin:2rem 0;">
+    <h3 style="color:#e65100">📋 Research Participant — Control Group</h3>
+    <p style="font-size:1.1rem;color:#555">
+    Thank you for participating in the Kenya MSME AI Literacy Study.<br><br>
+    As part of our research design, your group will receive access to the 
+    AI advisory tool <strong>after the study period ends</strong>.<br><br>
+    You will be notified when full access is available.
+    </p>
+    <p style="color:#888;font-size:0.85rem;margin-top:1rem">
+    Strathmore University · Kenya MSME ALFA Study 2026
+    </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Control group still gets endline survey
+    _qcount_c = st.session_state.get("question_count", 0)
+    if (has_baseline(st.session_state.get("session_id",""))
+            and not has_endline(st.session_state.get("session_id",""))
+            and not st.session_state.get("skip_endline")):
+        st.info("📋 Please complete our follow-up survey.")
+        if st.button("📝 Complete Follow-up Survey",
+                     type="primary", key="c_endline"):
+            st.switch_page("pages/endline.py")
+    st.stop()
+
 prefill  = st.session_state.pop("prefill", "")
 question = st.chat_input(
     "Ask about business registration, tax, financing..."

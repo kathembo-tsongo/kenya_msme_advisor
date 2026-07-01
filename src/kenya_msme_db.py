@@ -61,11 +61,18 @@ def get_user(session_id: str) -> dict:
 def get_or_create_user(session_id: str) -> dict:
     user = get_user(session_id)
     if not user:
-        # Assign arm: alternate T1/T2 for comparison
+        # Assign arm: rotate T1/T2/C for balanced groups
         all_users = list_all_users()
         t1 = sum(1 for u in all_users if u.get("arm") == "T1")
         t2 = sum(1 for u in all_users if u.get("arm") == "T2")
-        arm = "T1" if t1 <= t2 else "T2"
+        c  = sum(1 for u in all_users if u.get("arm") == "C")
+        # Assign to smallest group
+        if t1 <= t2 and t1 <= c:
+            arm = "T1"
+        elif t2 <= t1 and t2 <= c:
+            arm = "T2"
+        else:
+            arm = "C"
         user = create_user(session_id, arm)
     return user
 
@@ -199,10 +206,13 @@ def get_alfa_summary() -> dict:
         elif s["session_id"] in t2_ids:
             scores_t2.append(s["score"])
 
+    c = [u for u in users if u.get("arm") == "C"]
+
     return {
         "total_users":    len(users),
         "t1_count":       len(t1),
         "t2_count":       len(t2),
+        "c_count":        len(c),
         "baseline_count": baseline_count,
         "endline_count":  endline_count,
         "avg_score_t1":   round(sum(scores_t1)/len(scores_t1), 2) if scores_t1 else 0,

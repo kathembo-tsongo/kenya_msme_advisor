@@ -1,5 +1,5 @@
 {
-  "total_chunks": 35208,
+  "total_chunks": 35525,
   "total_kbs": 8,
   "knowledge_bases": {
     "kb1_legal_regulatory": {
@@ -14,8 +14,8 @@
         "county",
         "eCitizen"
       ],
-      "chunks": 7544,
-      "sources": 51
+      "chunks": 7577,
+      "sources": 55
     },
     "kb2_tax_kra": {
       "name": "Tax & KRA",
@@ -79,8 +79,8 @@
         "AfCFTA",
         "EAC"
       ],
-      "chunks": 5919,
-      "sources": 36
+      "chunks": 6203,
+      "sources": 41
     },
     "kb6_county_geospatial": {
       "name": "County & Geospatial",

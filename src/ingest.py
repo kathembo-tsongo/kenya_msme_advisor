@@ -83,6 +83,14 @@ CATEGORIES = {
                      "local_languages","cultural_norms","cultural_geo","cultural_business",
                      "kenya_cultural","insurance_climate","kenya_nap","kenya_unfccc"],
     },
+    "kb9_bank_lending": {
+        "name": "Bank Lending & Credit",
+        "description": "Commercial bank SME lending criteria, loan products, credit assessment",
+        "keywords": ["bank loan","lending criteria","credit assessment","collateral","KCB","Equity Bank"],
+        "patterns": ["kenya_commercial_bank","bank_lending","lending_criteria",
+                     "kcb_sme","equity_bank_sme","coop_bank","ncba_sme",
+                     "loan_criteria","credit_assessment","bank_sme"],
+    },
     "kb8_national_policy_strategy": {
         "name": "National Policy & Strategy",
         "description": "Vision 2030, national strategies, World Bank, WEF, KIPPRA policy",

@@ -82,7 +82,7 @@ st.set_page_config(
 if not st.session_state.get("logged_in"):
     st.switch_page("pages/login.py")
 
-# ── Session ID must exist before ALFA checks ──────────────────────────────────
+# ── Session ID must exist before research checks ──────────────────────────────
 import uuid as _uuid
 if "session_id" not in st.session_state:
     st.session_state["session_id"]     = str(_uuid.uuid4())[:8]
@@ -91,7 +91,7 @@ if "history" not in st.session_state:
 if "question_count" not in st.session_state:
     st.session_state["question_count"] = 0
 
-# ── ALFA Research: Onboarding & Endline Triggers ──────────────────────────────
+# ── Research: Onboarding & Endline Triggers ────────────────────────────────────
 _sid  = st.session_state["session_id"]
 _user = get_or_create_user(_sid)
 
@@ -136,7 +136,7 @@ if _user and _user.get("arm") == "C":
     You will be notified when full access is available.
     </p>
     <p style="color:#888;font-size:0.85rem;margin-top:1rem">
-    Strathmore University · Kenya MSME ALFA Study 2026
+    Strathmore University · Kenya MSME Research Study 2026
     </p>
     </div>
     """, unsafe_allow_html=True)

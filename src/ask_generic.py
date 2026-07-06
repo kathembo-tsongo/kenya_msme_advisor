@@ -1,8 +1,8 @@
 """
 ask_generic.py — T2 Generic AI Arm
 Plain Claude without RAG knowledge base.
-Used as comparison group in Kenya MSME ALFA replication.
-Equivalent to Ghana's "Westernized AI" treatment arm.
+Used as comparison group (T2) in Kenya MSME research study.
+Provides generic AI responses without Kenyan knowledge base.
 """
 
 import anthropic

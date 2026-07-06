@@ -1,7 +1,7 @@
 """
-endline.py — ALFA Endline Survey
+endline.py — Kenya MSME Advisor Follow-up Survey
 Shown to MSME operators after 5+ sessions.
-Measures post-intervention outcomes matching Ghana ALFA design.
+Measures post-intervention outcomes for Kenya MSME research study.
 """
 
 import streamlit as st

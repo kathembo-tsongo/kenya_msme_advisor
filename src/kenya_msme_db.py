@@ -1,9 +1,9 @@
 """
 kenya_msme_db.py — Kenya MSME Research Database
 Stores user profiles, baseline surveys, endline surveys,
-and prompt quality trends for Kenya MSME ALFA replication.
+and prompt quality trends for Kenya MSME research study.
 
-Storage: JSON files in logs/alfa/ directory
+Storage: JSON files in logs/kenya_msme_bd/ directory
 - users/{phone_or_id}.json     — user profile + arm assignment
 - baseline/{user_id}.json      — baseline survey responses
 - endline/{user_id}.json       — endline survey responses  
@@ -16,11 +16,11 @@ from pathlib import Path
 from datetime import datetime
 
 BASE_DIR  = Path(__file__).parent.parent
-ALFA_DIR  = BASE_DIR / "logs" / "kenya_msme_bd"
-USERS_DIR = ALFA_DIR / "users"
-BASE_SUR  = ALFA_DIR / "baseline"
-END_SUR   = ALFA_DIR / "endline"
-SESS_DIR  = ALFA_DIR / "sessions"
+DB_DIR    = BASE_DIR / "logs" / "kenya_msme_bd"
+USERS_DIR = DB_DIR / "users"
+BASE_SUR  = DB_DIR / "baseline"
+END_SUR   = DB_DIR / "endline"
+SESS_DIR  = DB_DIR / "sessions"
 
 for d in [USERS_DIR, BASE_SUR, END_SUR, SESS_DIR]:
     d.mkdir(parents=True, exist_ok=True)
@@ -29,7 +29,7 @@ for d in [USERS_DIR, BASE_SUR, END_SUR, SESS_DIR]:
 # ── User Management ────────────────────────────────────────────────────────────
 
 def create_user(session_id: str, arm: str = "T1") -> dict:
-    """Create a new ALFA user profile."""
+    """Create a new user profile."""
     user = {
         "user_id":        session_id,
         "arm":            arm,          # T1=localised, T2=generic, C=control
@@ -185,7 +185,7 @@ def get_all_prompt_scores() -> list:
 
 # ── Research Summary ───────────────────────────────────────────────────────────
 
-def get_alfa_summary() -> dict:
+def get_research_summary() -> dict:
     users = list_all_users()
     t1 = [u for u in users if u.get("arm") == "T1"]
     t2 = [u for u in users if u.get("arm") == "T2"]

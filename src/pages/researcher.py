@@ -1,6 +1,6 @@
 """
-researcher.py — Kenya MSME ALFA Research Dashboard
-Displays research outcomes matching Ghana ALFA design.
+researcher.py — Kenya MSME Research Dashboard
+Displays research outcomes for Kenya MSME study.
 Access: Researcher role only.
 """
 
@@ -15,14 +15,14 @@ from collections import defaultdict
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from kenya_msme_db import (
     list_all_users, get_baseline, get_endline,
-    get_all_prompt_scores, get_alfa_summary
+    get_all_prompt_scores, get_research_summary
 )
 
 BASE_DIR = Path(__file__).parent.parent.parent
 LOG_FILE = BASE_DIR / "logs" / "conversations.csv"
 
 st.set_page_config(
-    page_title="MSME Advisor — ALFA Research",
+    page_title="MSME Advisor — Research Dashboard",
     page_icon="🔬",
     layout="wide"
 )
@@ -49,16 +49,16 @@ if st.session_state.get("role") not in ["researcher", "admin"]:
 st.markdown("""
 <div style="background:linear-gradient(135deg,#006600,#1a3a6e);
 color:white;padding:1.2rem 1.5rem;border-radius:10px;margin-bottom:1.5rem;">
-<h2 style="margin:0">🔬 Kenya MSME ALFA — Research Dashboard</h2>
+<h2 style="margin:0">🔬 Kenya MSME — Research Dashboard</h2>
 <p style="margin:0.3rem 0 0;opacity:0.85;font-size:0.9rem">
-Replication of Ghana ALFA (Lewis et al., 2026) · Strathmore University 2026
+Kenya MSME AI Advisory Study · Strathmore University 2026
 </p>
 </div>
 """, unsafe_allow_html=True)
 
 # Sidebar navigation
 with st.sidebar:
-    st.markdown("### 🔬 ALFA Research")
+    st.markdown("### 🔬 Research")
     section = st.radio("Section", [
         "📊 Overview",
         "👥 Participants",
@@ -76,7 +76,7 @@ with st.sidebar:
         st.switch_page("app.py")
 
 # Load all data
-summary = get_alfa_summary()
+summary = get_research_summary()
 users   = list_all_users()
 scores  = get_all_prompt_scores()
 

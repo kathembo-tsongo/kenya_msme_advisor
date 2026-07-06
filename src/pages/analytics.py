@@ -76,10 +76,10 @@ st.markdown("""
 if not st.session_state.get("logged_in"):
     st.switch_page("pages/login.py")
 
-# ── ALFA Research Dashboard shortcut ──────────────────────────────────────────
+# ── Research Dashboard shortcut ─────────────────────────────────────────────
 with st.sidebar:
     st.markdown("---")
-    if st.button("🔬 ALFA Research Dashboard", use_container_width=True, type="primary"):
+    if st.button("🔬 Research Dashboard", use_container_width=True, type="primary"):
         st.switch_page("pages/researcher.py")
     st.markdown("---")
 
@@ -90,11 +90,11 @@ if st.session_state.get("role") not in ["researcher", "admin"]:
         st.switch_page("pages/login.py")
     st.stop()
 
-# ── Load ALFA data ────────────────────────────────────────────────────────────
+# ── Load research data ───────────────────────────────────────────────────────
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from kenya_msme_db import (list_all_users, get_baseline, get_endline,
-                            get_all_prompt_scores, get_alfa_summary)
+                            get_all_prompt_scores, get_research_summary)
 from collections import defaultdict as _dd
 
 # ── Load data ──────────────────────────────────────────────────────────────────
@@ -145,7 +145,7 @@ if "analytics_page" not in st.session_state:
 PAGES = [
     ("📈", "Overview"),
     ("🗂️", "Topic Analysis"),
-    ("🔬", "ALFA Research"),
+    ("🔬", "Research"),
     ("🌍", "Language Analysis"),
     ("⏱️", "Response Times"),
     ("📚", "Knowledge Sources"),
@@ -711,34 +711,34 @@ END OF REPORT
         )
 
 
-# ── ALFA RESEARCH DASHBOARD ───────────────────────────────────────────────────
-elif current_page == "ALFA Research":
-    st.markdown("## 🔬 Kenya MSME ALFA Research Dashboard")
-    st.caption("Replication of Ghana ALFA (Lewis et al., 2026) · Strathmore University 2026")
+# ── RESEARCH DASHBOARD ──────────────────────────────────────────────────────
+elif current_page == "Research":
+    st.markdown("## 🔬 Kenya MSME Research Dashboard")
+    st.caption("Kenya MSME AI Advisory Study · Strathmore University 2026")
 
-    alfa_summary = get_alfa_summary()
-    alfa_users   = list_all_users()
-    alfa_scores  = get_all_prompt_scores()
-    t1_users = [u for u in alfa_users if u.get("arm") == "T1"]
-    t2_users = [u for u in alfa_users if u.get("arm") == "T2"]
-    c_users  = [u for u in alfa_users if u.get("arm") == "C"]
+    research_summary = get_research_summary()
+    research_users = list_all_users()
+    research_scores = get_all_prompt_scores()
+    t1_users = [u for u in research_users if u.get("arm") == "T1"]
+    t2_users = [u for u in research_users if u.get("arm") == "T2"]
+    c_users  = [u for u in research_users if u.get("arm") == "C"]
     t1_ids   = {u["user_id"] for u in t1_users}
     t2_ids   = {u["user_id"] for u in t2_users}
     c_ids    = {u["user_id"] for u in c_users}
 
     # KPI row
     c1,c2,c3,c4,c5,c6,c7 = st.columns(7)
-    c1.metric("Total Participants", alfa_summary["total_users"])
-    c2.metric("T1 Localised", alfa_summary["t1_count"])
-    c3.metric("T2 Generic", alfa_summary["t2_count"])
+    c1.metric("Total Participants", research_summary["total_users"])
+    c2.metric("T1 Localised", research_summary["t1_count"])
+    c3.metric("T2 Generic", research_summary["t2_count"])
     c4.metric("C Control", len(c_users))
-    c5.metric("Baselines", alfa_summary["baseline_count"])
-    c6.metric("Endlines", alfa_summary["endline_count"])
-    c7.metric("Total Questions", alfa_summary["total_questions"])
+    c5.metric("Baselines", research_summary["baseline_count"])
+    c6.metric("Endlines", research_summary["endline_count"])
+    c7.metric("Total Questions", research_summary["total_questions"])
 
     st.markdown("---")
 
-    # Tabs inside ALFA section
+    # Tabs inside Research section
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "👥 Participants",
         "📋 Baseline",
@@ -749,12 +749,12 @@ elif current_page == "ALFA Research":
 
     with tab1:
         st.markdown("### Participant Profiles")
-        if not alfa_users:
+        if not research_users:
             st.info("No participants yet.")
         else:
             counties   = _dd(int)
             biz_types  = _dd(int)
-            for u in alfa_users:
+            for u in research_users:
                 if u.get("county"):       counties[u["county"]] += 1
                 if u.get("business_type"): biz_types[u["business_type"]] += 1
             col1, col2 = st.columns(2)
@@ -767,7 +767,7 @@ elif current_page == "ALFA Research":
                 for k,v in sorted(biz_types.items(), key=lambda x:-x[1]):
                     st.markdown(f"- {k}: **{v}**")
             st.markdown("---")
-            for u in sorted(alfa_users, key=lambda x: x.get("created_at",""), reverse=True):
+            for u in sorted(research_users, key=lambda x: x.get("created_at",""), reverse=True):
                 arm = "🟢 T1" if u.get("arm")=="T1" else "🔴 T2"
                 bl  = "✅" if u.get("has_baseline") else "⏳"
                 el  = "✅" if u.get("has_endline")  else "⏳"
@@ -778,7 +778,7 @@ elif current_page == "ALFA Research":
 
     with tab2:
         st.markdown("### Baseline Survey Results")
-        bl_users = [u for u in alfa_users if u.get("has_baseline")]
+        bl_users = [u for u in research_users if u.get("has_baseline")]
         if not bl_users:
             st.info("No baseline surveys yet.")
         else:
@@ -811,7 +811,7 @@ elif current_page == "ALFA Research":
 
     with tab3:
         st.markdown("### Endline Outcomes")
-        el_users = [u for u in alfa_users if u.get("has_endline")]
+        el_users = [u for u in research_users if u.get("has_endline")]
         if not el_users:
             st.info("No endline surveys yet. Triggered after 5 questions.")
         else:
@@ -857,28 +857,28 @@ elif current_page == "ALFA Research":
 
     with tab4:
         st.markdown("### AI Literacy — Prompt Quality Trends")
-        if not alfa_scores:
+        if not research_scores:
             st.info("No prompt scores yet.")
         else:
-            all_s = [s["score"] for s in alfa_scores]
+            all_s = [s["score"] for s in research_scores]
             avg   = round(sum(all_s)/len(all_s),2)
             st.metric("Overall Avg Prompt Quality", f"{avg}/10")
             dist = _dd(int)
-            for s in alfa_scores: dist[s["score"]] += 1
+            for s in research_scores: dist[s["score"]] += 1
             st.markdown("**Score Distribution**")
             for sv in range(1,11):
                 cnt = dist.get(sv,0)
                 bar = "█" * cnt
                 st.markdown(f"**{sv}/10** {bar} ({cnt})")
             st.markdown("**Recent Questions**")
-            for s in sorted(alfa_scores, key=lambda x:x.get("timestamp",""), reverse=True)[:10]:
+            for s in sorted(research_scores, key=lambda x:x.get("timestamp",""), reverse=True)[:10]:
                 arm = "🟢 T1" if s.get("session_id") in t1_ids else "🔴 T2"
                 st.markdown(f"{arm} Score **{s['score']}/10** | _{s.get('question','')[:80]}_")
 
     with tab5:
         st.markdown("### T1 vs T2 Comparison")
-        t1_sc = [s["score"] for s in alfa_scores if s.get("session_id") in t1_ids]
-        t2_sc = [s["score"] for s in alfa_scores if s.get("session_id") in t2_ids]
+        t1_sc = [s["score"] for s in research_scores if s.get("session_id") in t1_ids]
+        t2_sc = [s["score"] for s in research_scores if s.get("session_id") in t2_ids]
         col1, col2 = st.columns(2)
         with col1:
             st.markdown("### 🟢 T1 — Localised RAG")

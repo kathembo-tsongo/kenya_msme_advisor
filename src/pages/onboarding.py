@@ -1,7 +1,7 @@
 """
-onboarding.py — ALFA Baseline Survey
+onboarding.py — Kenya MSME Advisor Baseline Survey
 Shown to MSME operators on their first visit.
-Collects pre-intervention data matching Ghana ALFA design.
+Collects pre-intervention data for Kenya MSME research study.
 """
 
 import streamlit as st
@@ -53,7 +53,7 @@ st.caption("⏱ Takes about 2 minutes · Your answers are confidential · Used f
 
 with st.form("baseline_form"):
 
-    st.markdown("### 📍 About You and Your Business")
+    st.markdown("###  About You and Your Business")
 
     col1, col2 = st.columns(2)
     with col1:
@@ -95,7 +95,7 @@ with st.form("baseline_form"):
         horizontal=False
     )
 
-    st.markdown("### 🎯 Your Confidence (Ghana ALFA Self-Efficacy Scale)")
+    st.markdown("### Your Confidence Level")
     st.caption("Rate your confidence from 1 (not at all confident) to 5 (very confident)")
 
     col_a, col_b = st.columns(2)
